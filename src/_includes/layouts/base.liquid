@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <script>
-    // Add loading class immediately to prevent FOUC
     document.documentElement.classList.add('is-loading');
-
     try {
       const theme = localStorage.getItem('theme');
       if (theme) document.documentElement.dataset.theme = theme;
@@ -21,8 +19,8 @@
   <script type="importmap">
     {
       "imports": {
-        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        "three": "/assets/js/three.module.js",
+        "three/addons/": "/assets/js/jsm/"
       }
     }
   </script>
