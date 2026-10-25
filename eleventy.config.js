@@ -14,6 +14,9 @@ module.exports = function (eleventyConfig) {
   // Inside your module.exports function
   eleventyConfig.addPassthroughCopy("src/admin");
 
+  // Inside your module.exports function
+  eleventyConfig.addPassthroughCopy("src/assets");
+
   // Shuffle filter
   eleventyConfig.addFilter("pickRandom", function (arr, n) {
     if (!Array.isArray(arr) || arr.length === 0) return [];
