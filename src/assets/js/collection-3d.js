@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 THREE.Cache.enabled = true;
 
@@ -56,7 +56,7 @@ const mat = new THREE.LineBasicMaterial({ color: 0x000000, transparent: true, op
 return new THREE.LineSegments(lines, mat);
 }
 
-const loader = new STLLoader();
+const loader = new GLTFLoader();
 const tiles  = [];
 
 let _scrollUntil = 0;
@@ -125,14 +125,23 @@ tile.el.parentElement.classList.add('is-ready');
 }
 
 function loadTile(tile) {
-if (tile.loading) return;
-tile.loading = true;
-loader.load(tile.el.dataset.model,
-    g => buildScene(tile, g),
+  if (tile.loading) return;
+  tile.loading = true;
+  
+  loader.load(tile.el.dataset.model,
+    (gltf) => {
+      // GLTF loads a whole scene. We need to find the mesh and extract its geometry.
+      let geometry = null;
+      gltf.scene.traverse((child) => {
+        if (child.isMesh && !geometry) geometry = child.geometry;
+      });
+      
+      if (geometry) buildScene(tile, geometry);
+    },
     undefined,
     () => {
-    io.unobserve(tile.el);
-    window.dispatchEvent(new CustomEvent('model-missing', { detail: tile.el.closest('.model-card') }));
+      io.unobserve(tile.el);
+      window.dispatchEvent(new CustomEvent('model-missing', { detail: tile.el.closest('.model-card') }));
     });
 }
 

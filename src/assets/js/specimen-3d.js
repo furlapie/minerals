@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 THREE.Cache.enabled = true;
 
@@ -188,22 +188,34 @@ const container3d = visualBlock?.querySelector('.comp-3d-container');
 const containerSvg = visualBlock?.querySelector('.comp-svg-container');
 if (!visualBlock || !container3d || !containerSvg) return;
 
-const loader = new STLLoader();
+const loader = new GLTFLoader();
 
-loader.load(urlSpecific, geometry => {
-    visualBlock.classList.add('solo-3d');
-    containerSvg.style.display = 'none';
-    container3d.style.display = 'block';
-    init3D(container, geometry, urlSpecific);
+loader.load(urlSpecific, (gltf) => {
+  let geometry = null;
+  gltf.scene.traverse((child) => {
+    if (child.isMesh && !geometry) geometry = child.geometry;
+  });
+  
+  visualBlock.classList.add('solo-3d');
+  containerSvg.style.display = 'none';
+  container3d.style.display = 'block';
+  if (geometry) init3D(container, geometry, urlSpecific);
 }, undefined, () => {
-    loader.load(urlGeneric, geometry => {
+  
+  // Generic fallback
+  loader.load(urlGeneric, (gltf) => {
+    let geometry = null;
+    gltf.scene.traverse((child) => {
+      if (child.isMesh && !geometry) geometry = child.geometry;
+    });
+    
     containerSvg.style.display = 'block';
     container3d.style.display = 'block';
-    init3D(container, geometry, urlGeneric);
-    }, undefined, () => {
+    if (geometry) init3D(container, geometry, urlGeneric);
+  }, undefined, () => {
     container3d.style.display = 'none';
     containerSvg.style.display = 'block';
-    });
+  });
 });
 }
 
