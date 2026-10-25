@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: furlapie/Minerals
+  repo: furlapie/minerals
   branch: main
   base_url: https://api.netlify.com
 
