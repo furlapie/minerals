@@ -2,7 +2,7 @@ backend:
   name: github
   repo: furlapie/Minerals
   branch: main
-  base_url: https://minerale.netlify.app/
+  base_url: https://api.netlify.com
 
 # Allows you to edit the CMS locally without logging in
 local_backend: true
