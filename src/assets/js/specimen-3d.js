@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 THREE.Cache.enabled = true;
 
@@ -188,7 +189,11 @@ const container3d = visualBlock?.querySelector('.comp-3d-container');
 const containerSvg = visualBlock?.querySelector('.comp-svg-container');
 if (!visualBlock || !container3d || !containerSvg) return;
 
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('/assets/js/jsm/libs/draco/');
+
 const loader = new GLTFLoader();
+loader.setDRACOLoader(dracoLoader);
 
 loader.load(urlSpecific, (gltf) => {
   let geometry = null;

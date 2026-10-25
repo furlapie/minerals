@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 THREE.Cache.enabled = true;
 
@@ -56,7 +57,11 @@ const mat = new THREE.LineBasicMaterial({ color: 0x000000, transparent: true, op
 return new THREE.LineSegments(lines, mat);
 }
 
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('/assets/js/jsm/libs/draco/');
+
 const loader = new GLTFLoader();
+loader.setDRACOLoader(dracoLoader);
 const tiles  = [];
 
 let _scrollUntil = 0;
