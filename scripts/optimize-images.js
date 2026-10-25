@@ -32,8 +32,8 @@ const kb = n => (n / 1024).toFixed(0).padStart(6) + ' KB';
 
 async function main() {
   if (!fs.existsSync(SRC)) {
-    console.error('Originals folder not found:', SRC);
-    process.exit(1);
+    console.log('Originals folder not found. Skipping image optimization (images are already optimized in src/images).');
+    process.exit(0);
   }
   const files = fs.readdirSync(SRC).filter(f => /\.(jpe?g|png)$/i.test(f)).sort();
   console.log(`${DRY ? '[dry run] ' : ''}Found ${files.length} original(s) in ${SRC}\n`);
