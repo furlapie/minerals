@@ -9,18 +9,82 @@
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
   <style>
-    /* Override Sveltia CMS CSS variables to match your site's theme */
     :root {
+      /* Typography */
       --font-family--default: "Consolas", "Courier New", monospace;
-      --color--background: #111;      /* Your dark background */
-      --color--surface: #2a2a29;      /* Your surface color */
-      --color--text: #f2efe6;         /* Your ink color */
-      --color--text-muted: #8c8a82;   /* Your muted color */
-      --color--primary: #ffd700;      /* Your gold accent */
+      
+      /* Core Colors (Matching your site's dark theme) */
+      --color--background: #111;
+      --color--surface: #2a2a29;
+      --color--surface-hover: #3a3a39;
+      --color--text: #f2efe6;
+      --color--text-muted: #8c8a82;
+      
+      /* Accent Color (Your Gold) */
+      --color--primary: #ffd700; 
+      --color--primary-hover: #e6c200;
+      
+      /* Borders & Layout */
       --color--border: #555;
       --border-radius: 8px;
+      --control--border-radius: 6px;
     }
-    /* You can inspect the CMS in your browser's dev tools to find more variable names to override */
+
+    /* Style the specific fields to stand out slightly */
+    [data-key-path="weight_g"] input,
+    [data-key-path="price"] input,
+    [data-key-path="quantity"] input {
+      color: #7cafe3; /* Your Crystal blue for numbers */
+      font-weight: bold;
+    }
+
+    /* Highlight the 'slug' field (make it look read-only/technical) */
+    [data-key-path="slug"] input {
+      background-color: #1a1a1a;
+      color: #8c8a82;
+      font-style: italic;
+    }
+
+    /* Style the Sidebar/Navigation */
+    nav, .sidebar {
+      border-right: 1px solid var(--color--border);
+      background: #151515 !important;
+    }
+
+    /* Make the top header pop slightly */
+    header {
+      border-bottom: 1px solid var(--color--border);
+      background: #1a1a1a !important;
+    }
+
+    /* Make the List/Table rows feel more like your site's UI */
+    table tr:hover {
+      background-color: #2a2a29 !important;
+    }
+
+    /* Customize the "Save" / "Publish" button to look like your CTA */
+    button[type="submit"], .primary-action {
+      background-color: var(--color--primary) !important;
+      color: #111 !important;
+      font-weight: bold;
+      border: none;
+    }
+    button[type="submit"]:hover, .primary-action:hover {
+      background-color: var(--color--primary-hover) !important;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+    
+    /* Slight styling for the form inputs */
+    input, textarea, select {
+      background-color: #222 !important;
+      border: 1px solid var(--color--border) !important;
+      color: #fff !important;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--color--primary) !important;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+    }
   </style>
 </body>
 </html>
