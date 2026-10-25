@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <script>
+    // Add loading class immediately to prevent FOUC
+    document.documentElement.classList.add('is-loading');
+
     try {
       const theme = localStorage.getItem('theme');
       if (theme) document.documentElement.dataset.theme = theme;
