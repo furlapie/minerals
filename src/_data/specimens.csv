@@ -1,0 +1,284 @@
+shelf,box,number,color,shiny,type,display_name,main,habit,matrix,from_who,from_where,country,description,date_acquired,weight_g,quantity,price,tier,wip
+1,1,1,7 1 3,0,Mineral,"Pirite, Quarzo","Pirite, Quarzo","cubico, massiccio",,Me,"Lago Blu, VdA",Italia,"Cristallo di pirite, formato su quarzite e matrice grigio scura.",2022,212,1,8,2,1
+1,1,2,8 2,1,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,"Lago Blu, VdA",Italia,"Cristalli di piccola grandezza, color verdastro scuro, matrice danneggiata.",2021,270,1,10,3,0
+1,1,3,5 4,0,Mineral,Orneblenda,Orneblenda,massiccio,,Margherita Rei,,Marocco,"Sfera levigata, l’agglomerato si chiama Dalmantina dal pattern di puà neri di Orneblenda sulla matrice beige.",2019,50,1,20,2,0
+1,1,4,3 7,0,Mineral,Agata,Quarzo,botroidale,,Margherita Rei,"Champoluc, VdA",Italia,Agata piramidale levigata color marrone e grigia. Non conosco l’attuale origine del pezzo.,2018,51,1,15,2,0
+1,1,5,16,0,Mineral,Agata,Quarzo,botroidale,,Lauren,Rio Grande do Sul ,Brasile,"Scaglia di agata colore blu scuro, comprata al museo di storia naturale di londra, non conosco l’attuale origine.",2025,25,1,5,1,0
+1,1,6,19,0,Crystal,Ametista,Quarzo,massiccio,,Nonna,,,"Matrice color verde, poco colorito viola.",2024,293,1,8,1,0
+1,1,7,10 11,0,Gem,Topazio,Topazio,prismatico,,Mamma,,,Gemma di topazio giallo rotta da un vecchio anello di mia mamma comprato da Pomellato.,2025,1,1,5,1,0
+1,1,8,6,0,Mineral,Occhio di Tigre,Quarzo,fibroso,,Nonna,,,"Cristallo lungo, con appiglio per ciondolo.",2025,17,1,5,2,0
+1,1,9,14,0,Mineral,Larimar,Pectolite,massiccio,,Mamma,Laromana,Repubblica Domenicana,"Minerale azzurro cielo, trasparente se preso sotto luce, matrice grigio scuro.",2025,23,1,20,2,0
+1,1,10,15,0,Mineral,Larimar,Pectolite,massiccio,,Mamma,Puerto Plata,Repubblica Domenicana,"Scaglia di larimar, con inclusioni di matrice, trasparente se preso sotto luce, matrice grigio scuro.",2025,45,1,70,4,0
+1,2,1,5 1,0,Geode,Geode Quarzo,Quarzo,geodico,,Nonna,,,"Scaglia spessa di agata, con all'interno un inclusione raggruppata a cerchio di quarzo semitrasparente",2021,485,1,40,2,0
+1,2,2,2,0,Crystal,Smithsonite,Smithsonite,botroidale,,Nonna,,Grecia,"Cristallo molto spesso, attaccato ancora alla matrice di sabbia indurita e roccia scura, infiltrazioni ferrose (magnetite) la colorano di grigio",2021,76,1,20,2,0
+1,2,3,3 19,0,Mineral,Rodonite,Rodonite,massiccio,,Nonna,Valsesia,Italia,"Cristallo rosa, con inclusioni di un altro minerale color beige sul lato opposto, accompagnato da un mantello scuro che potrebbe essere un'altra specie.",2021,59,1,10,2,0
+1,2,4,3 8,1,Crystal,Piropo,Piropo,dodecaedrico,,Nonna,Messina,Italia,"Cristalli di grossularia rosso intenso, abbinati da clorite (grigia) su matrice arancione e a tratti bianca",2021,30,1,15,3,0
+1,2,5,19,0,Crystal,Smithsonite,Smithsonite,botroidale,,Nonna,,Messico,"Smithsonite circolare, rosa agli estremi e bianca all'interno, tracce interne di cobalto le donano il colore rosa.",2021,16,1,10,2,0
+1,2,6,4 1,0,Rock,Ossidiana,Ossidiana,,,Nonna,,,Ossidiana varietà fiocco di neve,2021,14,1,5,2,0
+1,2,7,9,0,Crystal,Rubino,Corindone,prismatico,,Nonna,Winza Region,Tanzania,Rubino Grezzo,2021,4,2,10,3,0
+1,2,8,16,0,Crystal,Apatite,Apatite,prismatico,,Nonna,,Myanmar,"Monocristallo di apatite blu, accompagnato su uno dei lati da un altro cristallo semiformato",2021,60,1,30,5,0
+1,2,9,5 7,0,Rock,Pietra Paesina,Pietra Paesina,,,Nonna,Sardegna,Italia,Scaglia di pietra giallo-arancio con formazione dendridica grigio scura,2021,119,1,40,2,0
+1,2,10,4 8,1,Crystal,"Vesuvianite, Piropo","Vesuvianite, Piropo","prismatico, dodecaedrico",,Guido,,,"Cristalli scuri di piccola grandezza, probabile ci siano anche dei granati, su matrice piena di dettagli e inclusioni, possibilità clorite.",2025,53,1,10,3,0
+1,2,11,6,0,Mineral,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Aggruppamento di cristalli trasparenti, WIP",2023,90,1,5,1,1
+1,2,12,6 1,0,Mineral,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Aggruppamento di cristalli non trasparenti, WIP",2023,60,1,5,1,1
+1,2,13,6,0,Mineral,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Coppia di cristalli trasparenti, WIP",2023,54,1,5,1,1
+1,2,14,1 12,1,Crystal,"Calcite, Smithsonite","Calcite, Smithsonite","romboedrico, botroidale",,Nonna,,,"Cristalli cubici e non, di calcite su smithsonite verde (credo), la smithsonite ha colore verde date le tracce di rame.",2020,29,1,30,4,1
+1,2,15,3 14,1,Crystal,Bornite,Bornite,massiccio,,Nonna Franca,,,"Cristallo grigio scuro/nero, con una texture arcobaleno petrolea quando esposta alla luce, chiamato anche peacock ore.",2023,1,1,5,4,1
+1,2,16,6,0,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Una costellazione con un cristallo eretto tutto su matrice, WIP",2023,11,1,10,2,1
+1,2,17,1,0,Mineral,Calcite,Calcite,massiccio,,Zia Pia,Vulcano,Italia,Calcite senza cristalli visibili,2022,11,1,1,1,0
+1,2,18,5,0,Rock,Tufo Giallo,Tufo Giallo,,,Zia Pia,Vulcano,Italia,Pietra lavica,2022,7,1,3,1,0
+1,2,19,11,0,Mineral,Zolfo,Zolfo,massiccio,,Zia Pia,Vulcano,Italia,Cheese,2022,8,1,5,1,0
+1,2,20,2,0,Rock,Pomice,Pomice,,,Zia Pia,Vulcano,Italia,Pietra lavica,2022,1,1,1,1,0
+1,2,21,8,0,Rock,Pietra Lavica,Pietra Lavica,,,Zia Pia,Vulcano,Italia,Si notano inclusioni di un minerale scuro,2022,5,1,1,1,0
+1,2,22,4 11,0,Mineral,"Cenere Vulcanica, Zolfo","Cenere Vulcanica, Zolfo","botroidale, massiccio",,Zia Pia,Vulcano,Italia,Fiala con all'interno pezzi piccoli di zolfo e cenere solifificata,2022,9,1,5,2,0
+1,2,23,14,0,Mineral,Amazzonite,Microclino,massiccio,,Nonna,Colorado,U.S.A.,"Semiovale levigata, azzurra",2022,1,1,5,3,0
+1,2,24,3,1,Crystal,Stibnite,Stibnite,prismatico,,Nonna,,,Cristalli colore argento originanti da un singolo punto di matrice,2024,9,1,20,5,0
+1,2,25,7,1,Crystal,Quarzo Fumé,Quarzo,prismatico,,Nonna,,,Costellazione di cristalli fumé,2024,4,1,10,3,0
+1,2,26,1,0,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,Cristallo con doppia punta.,2018,1,4,5,4,0
+1,2,27,4,0,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,"Lago Blu, VdA",Italia,"Primo grande su matrice grigia scura presenta numerosi cristalli anche ben formati, gli altri due sono manifestazioni di cristalli singoli",2022,3,3,5,3,0
+1,2,28,4,0,Crystal,Magnetite,Magnetite,ottaedrico,,Me,"Sarezza, VdA",Italia,Vari cristalli ben formati su matrice,2020,1,1,2,3,0
+1,2,29,7,0,Crystal,Pirite,Pirite,cubico,,Cantina di Muie,,,Monocristallo di pirite sfasciato,2024,1,1,1,1,0
+1,2,30,10,0,Crystal,Aragonite,Aragonite,prismatico,,Nonna,,,Costellazione di cristalli arancioni,2022,8,1,10,3,0
+1,2,31,9,0,Crystal,Bixbite,Berillo,prismatico,,Nonna,,,"Bixbite doppia, cristalli rossi grezzi definiti, naturali, bixbite è lo smeraldo rosso",2022,-,1,10,5,1
+1,3,1,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Lolo,,,"Grigia, sconosciuta la località",2021,26,1,1,1,0
+1,3,2,8,0,Rock,Pietra Lavica,Pietra Lavica,,,Lolo,,,"Rossa, sconosciuta la località",2021,8,1,1,1,0
+1,3,3,1,0,Crystal,Sconosciuto,Sconosciuto,,,Lolo,,,Pietra Opaca Traslucida Bianca,2021,14,1,5,3,0
+1,3,4,20,1,Mineral,Pirite,Pirite,massiccio,,Lolo,,,"Cristallo di pirite indefinito, molto lucente",2021,23,1,5,3,0
+1,3,5,6,0,Crystal,Pirite,Pirite,cubico,,Me,"Sarezza, VdA",Italia,"Cubo con innessi altri cubi più piccoli, molto ossidata; il secondo pezzo ha 3 buone faccie presenti",2021,3,2,1,1,0
+1,3,6,14,0,Mineral,Crisocolla,Crisocolla,massiccio,,Mamma,Nevada,U.S.A.,Pietra azzurra con innessi tratti marroni,2020,4,1,3,1,0
+1,3,7,10 1,0,Mineral,Sconosciuto,Sconosciuto,,,Nonna,,,Pietra bianca e arancione semitrasparente,2020,8,1,1,1,0
+1,3,8,1 3,0,Fossil,Calcedonio Dendridico,Quarzo,dendritico,,Nonna,,,Scaglia di calcedonio con incluso un albero,2021,1,1,1,2,0
+1,3,9,3,1,Crystal,Argento,Argento,dendritico,,Lolo,,,Argento grezzo,2021,1,1,2,3,0
+1,3,10,16,1,Gem,Zaffiro,Corindone,prismatico,,Lolo,,,Zaffiro sintetico ,2021,1,1,50,3,1
+1,3,11,9,1,Gem,Rubino,Corindone,prismatico,,Lolo,,,Rubino sintetico,2021,1,1,50,3,1
+1,3,12,8,1,Gem,Piropo,Piropo,dodecaedrico,,Mamma,,,Granato naturale,2022,1,1,100,3,1
+1,3,13,2,1,Crystal,Muscovite,Muscovite,lamellare,,Me,"Lago Blu, VdA",Italia,Due pezzi che formano un cuore,2025,3,2,1,2,0
+1,3,14,13,1,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,"Lago Blu, VdA",Italia,Monocristallo varietà rosso scura,2022,11,1,2,2,0
+1,3,15,4,0,Crystal,Magnetite,Magnetite,ottaedrico,,Me,"Sarezza, VdA",Italia,Numerosi cristalli su ambe facciate,2025,7,1,1,1,0
+1,3,16,4,0,Crystal,Magnetite,Magnetite,ottaedrico,,Me,"Sarezza, VdA",Italia,Due cristalli definiti,2025,4,1,1,1,0
+1,3,17,1,1,Gem,Zirconia,Zirconia,,,Nonna,,,"Brillante di zirconia cubica sintetica, taglio brillante, nota della nonna: ""con cccc""",2022,0.296,1,50,5,0
+1,4,1,18 1,0,Geode,"Ametista, Okenite","Quarzo, Okenite","prismatico, aciculare",,BDP,"Nasik, Maharastra",India,Geode di ametista con uno splatter di okenite,2017,170,1,70,4,0
+1,4,2,13 4 4,0,Mineral,Orneblenda,Orneblenda,prismatico,,Me,"Lago Blu, VdA",Italia,Pietra di epidoto (verde) con cristalli di horneblenda inclusi sulla matrice,2025,115,1,5,4,1
+1,4,3,4,0,Mineral,Orneblenda,Orneblenda,prismatico,,Me,"Lago Blu, VdA",Italia,"Pezzo piccolo di matrice verde/grigia, con cristalli evidenti di orneblenda",2022,4,1,5,2,1
+1,5,1,17 1,0,Mineral,Diopside,Diopside,prismatico,,Nonna,"Saint Marcel, VdA",Italia,"Diopside manganesifero varietà violano, pietra rarissima dall'unico giacimento in Valle d'Aosta",2017,50,1,50,3,0
+1,5,2,18,0,Crystal,Ametista,Quarzo,prismatico,,Edicola,,,Cristalli chiari di ametista su matrice verde,2018,56,1,10,1,0
+1,5,3,10,0,Mineral,Rosa del Deserto,Gesso,massiccio,,Edicola,,Algeria,Molto sformata e insabbiata,2018,75,1,5,1,1
+1,5,4,12 16,1,Mineral,Azzurrite,Azzurrite,prismatico,,MSN,Kerrouchen,Marocco,"Cristalli blu e azzurri scuro sopra matrice grigia scura e verde, comprato al museo di storia naturale di Milano.",2017,33,1,10,2,0
+1,5,5,2 12 12,0,Crystal,Smeraldo,Berillo,prismatico,,Nonna,Alpi Austriache,Austria,Cristalli a forma esagonale su pietra scistosa,2017,188,1,150,5,0
+1,5,6,19,0,Crystal,Quarzo Rosa,Quarzo,prismatico,,Zia Myriam,,,Monocristallo molto rosa,2017,36,1,30,3,0
+1,5,7,2 10 10,1,Crystal,Aragonite,Aragonite,prismatico,,BDP,Tazouta,Marocco,"Cristalli Grigi, bianchi e arancioni",2017,62,1,30,4,0
+1,5,8,12,1,Crystal,Aragonite,Aragonite,prismatico,,Nonna,,,Cristalli verdi,2018,23,1,25,3,0
+1,5,9,19 1 10,1,Crystal,"Rodocrosite, Quarzo","Rodocrosite, Quarzo","romboedrico, prismatico",,Nonna,,,"Cristalli di quarzo piccoli e appuntiti evidenti su rodocrosite e presenza di magnetite, tutto su una matrice gialla",2017,94,1,30,4,0
+1,5,10,3 6,0,Rock,Sconosciuto,Sconosciuto,,,Me,"Champoluc, VdA",Italia,"Struttura cristallinea, robusto",2017,31,1,5,3,1
+1,5,11,12 2,0,Rock,Sconosciuto,Sconosciuto,,,Me,"Monte Rosso, VdA",Italia,Pietra strana grigio blu chiara rustica,2016,108,1,5,3,0
+1,5,12,1 8 8,1,Crystal,Spessartina,Spessartina,dodecaedrico,,Nonna,Liguria,Italia,"Concentrazione di cristalli arancioni di grossularia con punte rosse, liguria passo del faiollo.",2017,17,1,15,4,0
+1,5,13,2 9,0,Fossil,Legno Pietrificato,Legno Pietrificato,,,Papà,Arizona,U.S.A.,"Legno pietrificato dal viaggio in America 2010, questo ha un colore grigio marrone.",2016,158,1,30,2,0
+1,6,1,13,1,Crystal,Vesuvianite,Vesuvianite,prismatico,,Nonna,,,"Vesuvianite di varietà verde scura, un paio di cristalli ben formati e visibili",2018,15,1,15,4,0
+1,6,2,13,1,Crystal,Epidoto,Epidoto,prismatico,,Nonna,,,"Cristalli visibili molto lucenti di piccole e medie dimensioni, su matrice verde chiara",2018,12,1,15,4,0
+1,6,3,13,0,Crystal,Epidoto,Epidoto,prismatico,,Me,"Monte Rosso, VdA",Italia,Lastra di epidoto su matrice verde chiara,2017,9,1,5,2,0
+1,6,4,8,1,Crystal,Piropo,Piropo,dodecaedrico,,Nonna,,,"Costellazione di granati grossularia rossi intenso, più un cristallo vagante WIP",2018,7,1,20,5,0
+1,6,5,1 9 9,0,Crystal,Spessartina,Spessartina,dodecaedrico,,Me,"Monte Rosso, VdA",Italia,Granato almandino chiaro su quarzite e matrice grigia,2017,6,1,2,2,0
+1,6,6,2 9 9,0,Crystal,Spessartina,Spessartina,dodecaedrico,,Me,"Monte Rosso, VdA",Italia,Granato almandino chiaro su matrice rossa e grigia,2017,8,1,2,2,0
+1,6,7,6 3,0,Mineral,Agata,Quarzo,botroidale,,Nonna,,,Infiltrazioni dendridiche su agata rossa e grigia,2018,22,1,10,1,0
+1,6,8,6 10,0,Fossil,Ambra,Ambra,,,Mamma,,,Cristalli di ambra,2020,1,3,1,1,0
+1,6,9,4,0,Rock,Pietra Lavica,Pietra Lavica,,,Mamma,Etna,Italia,Pietra nera piccola,2020,1,1,1,1,0
+1,6,10,4,0,Rock,Pietra Lavica,Pietra Lavica,,,Mamma,Etna,Italia,Ceneri nere su matrice,2020,4,1,1,1,0
+1,6,11,8,0,Rock,Pietra Lavica,Pietra Lavica,,,Nonna,,,Pietra rossa vulcanica,2018,15,1,1,1,0
+1,6,12,1,0,Crystal,Sale,Halite,cubico,,Guido,Milano,Italia,Singoli cristalli di sale,2021,1,2,1,1,0
+1,6,13,18 1,0,Crystal,Ametista,Quarzo,prismatico,,Professore,,,Monocristallo con sfumatura dalla base bianca in un intenso viola sulla punta,2023,5,1,5,3,0
+1,6,14,15,0,Crystal,Cianite,Cianite,tabulare,,Nonna,Alpi Svizzere,Switzerland,"Cianite dalle alpi svizzere, un monocristallo lungo e blu azzuro lucente",2022,7,1,20,4,0
+1,6,15,9 19,0,Mineral,Agata,Quarzo,botroidale,,Nonna,,,"Lastra di agata rosa con infiltrazioni bianche, potrebbe esser finta",2017,16,1,5,1,0
+1,7,1,4 7,0,Mineral,Quarzo Fumé,Quarzo,massiccio,,Nonna,,,"Cristallo di quarzo fumé spaccato su matrice, buon colore scuro",2019,102,1,15,3,0
+1,7,2,18,0,Mineral,Ametista,Quarzo,prismatico,,Guido,,,Ametista levigata,2016,57,1,2,1,0
+1,7,3,9 19,0,Mineral,Agata,Quarzo,botroidale,,Guido,,,Agata levigata di colore rosa,2016,15,1,2,1,0
+1,7,4,16,0,Mineral,Agata,Quarzo,botroidale,,Guido,,,Agata levigata di colore blu,2016,18,1,2,1,0
+1,7,5,17,0,Mineral,Agata,Quarzo,botroidale,,Guido,,,Agata levigata di colore viola,2016,14,1,2,1,0
+1,7,6,1 3 10,0,Mineral,Calcite,Calcite,massiccio,,Moscatelli,,,Cristalli chiari su matrice rossa,2016,142,1,10,2,0
+1,7,7,11,0,Mineral,Zolfo,Zolfo,bipiramidale,,MSN,"Agrigento, Sicilia",Italia,"Cristalli su matrice chiara, comprato al museo di storia naturale di Milano.",2017,20,1,5,1,0
+1,7,8,15 1,1,Crystal,Celestina,Celestina,prismatico,,Nonna,,,Cristalli piccoli brillanti ,2020,9,1,5,3,0
+1,7,9,1,0,Crystal,Datolite,Datolite,prismatico,,Nonna,Reggio Emilia,Italia,Cristalli opachi bianchi su matrice,2020,23,1,20,3,0
+1,7,10,3 14 20,1,Crystal,Chalcopirite,Calcopirite,massiccio,,MSN,"Dalnegorsk, Primorsky Krai",Russia,"Pietra nera con sfumature di chalcolopirite anche alterata al blu, comprato al museo di storia naturale di Milano.",2017,63,1,10,3,0
+1,7,11,18,0,Geode,Geode di Ametista,Quarzo,massiccio,,Nonna,,Tunisia,Cristalli finti di ametista su matrice sabbiosa beige,2020,157,2,5,1,0
+1,7,12,1,1,Geode,Geode di Calcite,Calcite,geodico,,MSN,Marrakesh-Safi,Marocco,"Cristalli ben definiti su matrice fragile, ho paura sia finta, comprato al museo di storia naturale di Milano.",2017,115,2,15,3,0
+1,8,1,4,0,Crystal,Magnetite,Magnetite,ottaedrico,,"Me, Papà","Sarezza, VdA",Italia,"Monocristalli di grandezza mini, piccola e media",2020,10,182,25,4,0
+1,8,2,1,0,Crystal,Mesolite,Mesolite,aciculare,,Fiera Minerali,"Jalgaon, Maharastra",India,Cristalli sfusi caduti dall’esemplare di Mesolite S2 B20.,2025,15,40,5,2,0
+1,9,1,1,1,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Sezione Work In Progress, cristalli ancora da processare meglio.",2026,119,45,5,1,1
+1,9,2,5,0,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Qualità D, cristalli di varie grandezze, infiltrazioni aurifere, WIP",2020,33,17,10,1,1
+1,9,3,2,0,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Qualità C, cristalli di varie grandezze, infiltrazioni aurifere, WIP",2020,68,64,20,2,1
+1,9,4,1,0,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Qualità B, cristalli di varie grandezze, principalmente opachi, colorito più giallastro, meno trasparenti ma non del tutto opachi, WIP",2020,75,95,30,3,1
+1,9,5,1,1,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Qualità A, cristalli di varie grandezze, include punte cristalline ma basi opache",2020,49,121,50,4,0
+1,9,6,1,1,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Qualità A+, cristalli di varie grandezze, il quarzo più ialino della collezione",2020,19,102,50,5,0
+1,9,7,1,0,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,"Qualità S, cristalli più grossi del normale, fuori dalla scala della qualità",2020,29,9,15,5,0
+1,10,1,3,0,Crystal,Quarzo Fumé,Quarzo,prismatico,,Nonna,,,"Punta grossa di quarzo fumé, superficie ruvida al tatto",2020,60,1,8,2,0
+1,10,2,18,0,Crystal,Ametista,Quarzo,prismatico,,Nonna,,,"Punta grossa di ametista, il viola si innebbia verso la base",2020,75,1,8,2,0
+1,10,3,10,0,Mineral,Rosa del Deserto,Gesso,massiccio,,Mamma,Djerba,Tunisia,"Molto Definita, molto articolata",2021,84,1,15,4,0
+1,10,4,10,0,Mineral,Rosa del Deserto,Gesso,massiccio,,Mamma,Djerba,Tunisia,Poco definita,2021,97,1,5,2,0
+1,10,5,8 2,1,Crystal,Piropo,Piropo,dodecaedrico,,Nonna,,,"Cristallo definito di granato grossularia, matrice marrone chiara",2019,72,1,8,3,0
+1,10,6,7 8 9,0,Fossil,Legno Pietrificato,Legno Pietrificato,,,Guido,Arizona,U.S.A.,"Legno pietrificato dal viaggio in America 2010, questo ha un colore grigio marrone/scuro, a tratti nero.",2016,97,1,30,3,0
+1,10,7,4,0,Rock,Ossidiana,Ossidiana,,,Nonna,,,"Ossidiana di lipari, non levigata quindi molto pungente e vetrosa, a sugli estremi anche trasparente",2022,76,1,5,3,0
+1,10,8,6 1,0,Crystal,"Pirite, Quarzite","Pirite, Quarzite",cubico,,Me,"Bechaz, VdA",Italia,Quarzite con piccolo cristallo di pirite ben formato ed ossidato,2018,145,1,5,3,1
+1,10,9,18 1,0,Mineral,Ametista,Quarzo,massiccio,,Nonna,,,"Ametista levigata su alcuni lati e semitagliata al centro, mostrando la struttura di crescita del cristallo a livelli bianchi e viola",2022,112,1,5,1,1
+1,10,10,7,0,Rock,Pietra Lavica,Pietra Lavica,,,Nonna,,Islanda,"Incrostazione di cenere lavica attaccata sopra ad un flusso grigio solidificato, islanda settentrionale.",2022,72,1,1,1,0
+1,10,11,3 19 19,0,Mineral,Fluorite,Fluorite,cubico,,Nonna,,,"Minerale rosa scuro, tendente al magenta, molto scura non è molto traslucente",2023,34,1,5,3,0
+1,10,12,10,0,Mineral,Agata,Quarzo,botroidale,,Nonna,,,Scaglie di agata,2022,22,3,5,1,1
+1,10,13,10,0,Mineral,Sconosciuto,Sconosciuto,,,Nonna,,,"Pietra rossa, arancione e bianca a tratti in forma ovale-circolare",2022,7,1,1,1,1
+1,10,14,12 12 1,0,Crystal,Epidoto,Epidoto,prismatico,,Me,"Guide d'Ayas, VdA",Italia,Cristalli verdi e semidefiniti su matrice verde/quarzite,2017,84,1,15,3,1
+1,10,15,1,0,Crystal,Quarzo,Quarzo,prismatico,,Nonna,,,Sezione di cristallo opaco poco definita,2021,18,1,1,1,1
+1,10,16,20,1,Crystal,Pirite,Pirite,massiccio,,Edicola,,Perù,"Costellazione di cristalli semiformati, non cubi definiti",2017,46,1,10,3,0
+1,10,17,1,0,Crystal,Danburite,Danburite,prismatico,,Professore,St. Luis Potosi,Messico,"E' un borosilcato di calcio, il suo abito cristallino è quella del topazio (rombica), con durezza 7,2",2023,5,1,15,4,0
+1,10,18,1,0,Crystal,Danburite,Danburite,prismatico,,Professore,St. Luis Potosi,Messico,Cristallo chiaro sulla punta ma giallo alla base,2023,1,1,10,4,0
+1,10,19,1,0,Crystal,Danburite,Danburite,prismatico,,Professore,St. Luis Potosi,Messico,Tris di cristalli paralleli con base opaca e punta trasparente,2023,1,1,10,4,0
+1,10,20,1,0,Crystal,Danburite,Danburite,prismatico,,Professore,St. Luis Potosi,Messico,Coppia di cristalli che si intrecciano,2023,2,1,10,4,0
+1,10,21,1,0,Crystal,Danburite,Danburite,prismatico,,Professore,St. Luis Potosi,Messico,Monocristallo trasparente con struttura rombica,2023,1,1,10,4,0
+1,10,22,19,0,Crystal,Sconosciuto,Sconosciuto,,,Nonna,,,"Cristallo sembra vetro rotto rosa, quasi come un'ossidiana ma rosa/bianca trasparente",2022,7,1,5,2,1
+1,10,23,13,0,Crystal,Epidoto,Epidoto,prismatico,,Me,"Monte Rosso, VdA",Italia,Cristalli piccoli sopra matrice verde/grigia,2022,10,1,3,2,0
+2,11,1,9 19,0,Crystal,Dolomite,Dolomite,romboedrico,,BDP,Bou Azzer,Marocco,Minerali rosa acceso su matrice beige rocciosa,2017,10,1,20,4,0
+2,11,2,13,1,Crystal,Dioptasio,Dioptasio,prismatico,,BDP,Karaganda Region,Kazakhstan,Cristallo verde ben definito su matrice grigio chiaro accompagnata da calcite,2017,9,1,30,5,0
+2,11,3,16,1,Crystal,"Lapislazulo, Pirite","Lapislazzuli, Pirite","massiccio, cubico",,BDP,Saar-e-Sang,Afghanistan,Cristallo a natura esagonale blu intenso sopra quarzite infestata da pirite,2017,55,1,50,4,0
+2,11,4,18,0,Mineral,Charoite,Charoite,massiccio,,Nonna,Siberia,Russia,Rettangolo di Charoite mostrando il tradizionale viola e motivi a van ghogh,2022,15,1,20,4,0
+2,11,5,17,1,Crystal,Fluorite,Fluorite,cubico,,BDP,Tanfit,Marocco,"Cristalli di fluorite ben formati su una rosa senza matrice, color viola intenso e molto lucente sotto la luce",2017,18,1,20,5,0
+2,11,6,14,1,Gem,Acquamarina,Berillo,prismatico,,BDP,Valle di Shigar,Pakistan,"Cristallo di acquamarina poco colorato ma fa il suo sporco lavoro, senza imperfezioni di grande livello",2017,8,1,70,5,0
+2,11,7,15,1,Crystal,Covellite,Covellite,tabulare,,Zia Pia,Vulcano,Italia,"Cristalli azzurrissimi su matrice scura, presenza di un'altra rosa sotto",2022,8,1,30,5,0
+2,11,8,13,1,Crystal,Vesuvianite,Vesuvianite,prismatico,,Nonna,"Bellecombe, VdA",Italia,Cristalli di vesuvianite varietà verde scuro ben formati su una matrice verde simile epidoto,2022,11,1,15,4,0
+2,12,1,20,1,Mineral,Oro,Oro,lamellare,,Lolo,,,Boccetta d'oro non so da quanti grammi,2020,8,1,10,2,0
+2,12,2,20,1,Mineral,Oro,Oro,lamellare,,Edicola,,Spagna,Boccetta d'oro non so da quanti grammi,2017,15,1,10,4,0
+2,12,3,19,0,Mineral,Quarzo Rosa,Quarzo,massiccio,,Edicola,,Brasile,"Quarzo rosa molto infimo, da chiamare quarzite tra poco",2017,41,1,5,1,0
+2,12,4,18,0,Crystal,Ametista,Quarzo,prismatico,,Guido,,Brasile,Cristalli ben definiti e colorati sopra matrice verde scura,2016,64,1,20,3,0
+2,12,5,6,0,Mineral,Occhio di Tigre,Quarzo,fibroso,,Edicola,,,"Semplice occhio di tigre, non molto definito",2018,12,1,5,2,0
+2,12,6,6,0,Mineral,Occhio di Tigre,Quarzo,fibroso,,Guido,,,Il più bello della collezione credo,2017,15,1,5,2,0
+2,12,7,6,0,Mineral,Occhio di Tigre,Quarzo,fibroso,,Nonna,,,Semplice rettangolo di occhio di tigre,2023,11,1,5,2,0
+2,12,8,6,0,Mineral,Occhio di Tigre,Quarzo,fibroso,,Nonna,,Namibia,Il più grosso ma meno carino secondo me,2022,35,1,5,2,0
+2,12,9,10,0,Mineral,Rosa del Deserto,Gesso,massiccio,,Mamma,Djerba,Tunisia,"Rosa ben definita, senza grosse imperfezioni e lastre molto larghe",2019,22,1,10,3,0
+2,12,10,3 3 1,1,Mineral,Galena,Galena,cubico,,Edicola,,Spagna,"Cristalli color metallo scuro, infatti deriva dal gruppo ferroso, sopra quarzite e alla base di tutto un'altra rosa di galena",2017,20,1,10,3,0
+2,12,11,15,0,Mineral,Agata,Quarzo,botroidale,,Edicola,,Brasile,Agata blu scura levigata,2017,48,1,8,2,0
+2,12,12,12 19,1,Mineral,Fucsite,Muscovite,massiccio,,Edicola,,Brasile,Pietra riflettente dato dalla proprietà della fucsite,2017,21,1,8,2,0
+2,12,13,3 19,0,Mineral,Rodonite,Rodonite,massiccio,,Edicola,,Namibia,"Pietra levigata con colori rosa scuro, marrone scuro e a tratti anche grigia, molto pensante",2017,48,1,8,2,0
+2,12,14,15 1,1,Crystal,Celestina,Celestina,prismatico,,Edicola,,Madagascar,Cristalli chiari azzurri cielo su matrice grigia chiara,2017,68,1,8,3,0
+2,12,15,20,1,Crystal,Pirite,Pirite,cubico,,Professore,Gavorrano,Italia,"Costellazione di piriti ben definite, non presenta matrice bensì si situa sopra una patina di pirite stessa",2023,95,1,20,4,0
+2,12,16,13 14,0,Crystal,Fluorite,Fluorite,cubico,,Edicola,,Argentina,"Cristallo di fluorite verdastro chiara, molto lucente sottoluce",2017,83,1,8,3,0
+2,12,17,9,0,Mineral,Diaspro Rosso,Quarzo,massiccio,,Edicola,,Brasile,"Pietra levigata con colori rossi, arancione scuro e linee scure color nero o grigio scuro",2017,27,1,8,1,0
+2,12,18,1,0,Crystal,Calcite,Calcite,romboedrico,,Edicola,,Messico,"Cristallo definito di calcite, rinominato spato d'Islanda e dona all'occhio un effetto strano",2017,19,1,8,3,0
+2,12,19,1,0,Crystal,Calcite,Calcite,romboedrico,,Alessandra Maspero,,Namibia,"Singolo cristallo definito, struttura rettangolare accompagnato da altre formazioni di cristalli",2023,45,1,15,3,0
+2,12,20,1,0,Crystal,Calcite,Calcite,romboedrico,,Me,"Monte Rosso, VdA",Italia,Cristalli singoli di calcite,2025,1,2,1,2,0
+2,12,21,11,0,Mineral,Smithsonite,Smithsonite,botroidale,,Nonna,Sardegna,Italia,Rose di smithsonite gialla e sotto la superficie tratti grigi; le infiltrazioni di ferro le donano il colore giallo.,2021,71,1,15,3,0
+2,12,22,12,0,Mineral,Malachite,Malachite,massiccio,,Nonna,,,Taglio di malachite bubbonica,2018,127,1,40,4,0
+2,12,23,12,0,Mineral,Malachite,Malachite,massiccio,,Nonna,,Congo,"Pezzo grezzo e ruvido su certi punti, e cristalli evidenti ma minuscuni su un lato",2019,29,1,20,3,0
+2,12,24,12,0,Mineral,Malachite,Malachite,massiccio,,Professore,,Africa,Taglio di malachite mostrando le sezioni di un pezzo di bubbonica,2023,32,1,20,3,0
+2,12,25,13,0,Mineral,Malachite,Malachite,massiccio,,Zia Titta,Kolwezi,Congo,"Minerale grezzo, ruvido; comprato al museo di storia naturale a Kolwezi.",2019,20,1,20,3,0
+2,12,26,15 15 1,1,Crystal,Cianite,Cianite,tabulare,,Nonna,Alpi Svizzere,Switzerland,Cristalli definiti di cianite su quarzite,2021,16,1,20,4,0
+2,12,27,1 1 2,1,Crystal,Apofillite,Apofillite,prismatico,,Nonna,,India,Cristalli molto chiari di apofillite su matrice di basalto,2020,31,1,15,3,0
+2,12,28,19,0,Mineral,Rodocrosite,Rodocrosite,massiccio,,Nonna,,Argentina,"Minerale rosa brillante bianco chiaro, tagliato su un lato",2020,53,1,40,3,0
+2,12,29,13 13 1,1,Crystal,Elbaite,Elbaite,prismatico,,Nonna,,Brasile,"Cristalli di tormalina verde chiari su base di quarzite, varietà verdilite.",2021,48,1,30,4,0
+2,12,30,4,0,Crystal,Scorl,Scorl,prismatico,,MSN,Minas Gerais,Brasile,"Tormalina nera Scorl, non ha lucentezza, comprato al museo di storia naturale di Milano.",2017,3,1,3,2,0
+2,12,31,13,1,Crystal,Elbaite,Elbaite,prismatico,,Nonna,,,"Tormalina verde scura, lucente quando messa controluce, varietà verdilite.",2021,3,1,7,3,0
+2,12,32,16,1,Crystal,Elbaite,Elbaite,prismatico,,Nonna,,,"Tormalina blu, esponendo un forte colore blu quando messa controluce, varietà indicolite.",2021,7,1,10,3,0
+2,12,33,12 19,1,Crystal,Elbaite,Elbaite,prismatico,,Nonna,,Brasile,"Tormalina nobile, con effetto anguria quando messa controluce (Watermelon Tourmaline).",2021,9,1,10,3,0
+2,12,34,2 4,0,Rock,Ossidiana,Ossidiana,,,Nonna,,,"Ossidiana varietà fiocco di neve, molte infiltrazioni di ceneri",2022,18,1,8,2,0
+2,13,1,9,0,Crystal,Crocoite,Crocoite,aciculare,,Guido e Lolo,,,"Cristalli rossi fuoco intensi, sottili ma lunghi su una matrice rocciosa gialla scura e marrone",2023,83,1,100,5,0
+2,14,1,13,1,Crystal,Vesuvianite,Vesuvianite,prismatico,,Nonna,Valle d’Aosta,Italia,"Vasuvianite Verde, cristallo definito",2023,20,1,15,4,0
+2,14,2,19,1,Crystal,Spodumene,Spodumene,prismatico,,Professore,,Brasile,"Varietà Kunzite, buon colore rosa riprodotto alla luce, è silicato di alluminio e litio",2023,14,1,50,4,0
+2,14,3,19,1,Crystal,Spodumene,Spodumene,prismatico,,Nonna,,,"Varietà Kunzite, Cristallo Rosa più tendente al viola",2022,8,1,30,4,0
+2,14,4,13 15,0,Mineral,Labradorite,Labradorite,massiccio,,Nonna,,Madagascar,"Simile proprietà all'occhio di tigre, visibili le lastre",2023,12,1,10,4,0
+2,14,5,19,0,Mineral,Morganite,Berillo,massiccio,,Nonna,,,"Berillo varietà morganite rosa, lucido e trasparente alla luce",2023,9,1,15,3,0
+2,14,6,12,0,Mineral,Actinolite,Actinolite,massiccio,,Professore,"Col D'Olen, 2800mt",Italia,Minerale color azzurro-verde,2023,19,1,5,2,0
+2,14,7,1,0,Crystal,Topazio,Topazio,prismatico,,Professore,Ouro Preto,Brasile,"Cristallo rombico, fluoro silicato basico d'alluminio",2023,48,1,20,4,0
+2,14,8,1,1,Crystal,Topazio,Topazio,prismatico,,Nonna,,,"Cristallo unico, trasparente",2023,16,1,15,4,0
+2,14,9,10,0,Mineral,Apofillite,Apofillite,massiccio,,Professore,"Poona, Bombai",India,Cristalli arancioni e bianchi tetragonali pseudocubici,2023,5,1,5,2,1
+2,14,10,19 19 1,1,Mineral,Sconosciuto,Sconosciuto,,,Nonna,,,"Cristalli visibili rosa, su minerale rosa, con anche tratti esposti di cristallini bianchi non definiti ma brillanti",2022,8,1,5,2,1
+2,14,11,1,0,Crystal,Datolite,Datolite,prismatico,,Nonna,Appennino Modenese,Italia,Cristalli opachi bianchi,2023,17,1,15,3,0
+2,14,12,2,0,Crystal,Adularia,Ortoclasio,prismatico,,Nonna,,India,"Pietra di luna, trasparente alla luce ma allo stesso tempo molto opaca, al giusto angolo si vedono colori petrolei",2023,13,1,10,2,0
+2,14,13,19 3,0,Mineral,Rodonite,Rodonite,massiccio,,Professore,"Vallone d'Otro, Alagna",Italia,"Rodonite è silicato di manganese con calcio, da notare la crosta nera esterna di ossido di manganese.",2023,53,1,40,4,0
+2,14,14,4 10,0,Crystal,Magnetite,Magnetite,ottaedrico,,Me,"Sarezza, VdA",Italia,"Cristalli di magnetite su matrice marrone e grigia, erano esposti ad erosione quindi molto rotti e ancora fragili",2021,13,1,3,2,0
+2,14,15,4 3 10,0,Crystal,Magnetite,Magnetite,ottaedrico,,Me,"Sarezza, VdA",Italia,"Cristalli di magnetite su matrice marrone e grigia, un paio di cristalli ben definiti son presenti ma a causa dell'erosione sono pochi e ancora fragili",2021,15,1,3,2,0
+2,14,16,1 1 2,0,Mineral,Calcite,Calcite,romboedrico,,Me,"Lago Blu, VdA",Italia,"Cristalli di calcite poco definiti ma presenti in grande quantità, appoggiati su in parte tremolite e matrice verde come epidoto",2022,176,1,10,3,0
+2,14,17,13 2,1,Crystal,Epidoto,Epidoto,prismatico,,Me,"Lago Blu, VdA",Italia,"Cristalli ben definiti e lucenti di epidoto raggruppati da un lato, su matrice verde/grigio chiara con presente anche mica dall'lato opposto",2025,322,1,20,4,0
+2,14,18,4 13,0,Mineral,Hedenbergite,Hedenbergite,prismatico,,Me,"Colle Bettaforca, VdA",Italia,"Cristalli neri, lunghi e corti, struttura cristallinea credo esagonale ma da meglio esaminare, cristalli appoggiati sulla matrice nera/grigio scura e a tratti verde come se fosse epidoto",2020,84,1,5,3,1
+2,14,19,4 13,0,Mineral,Hedenbergite,Hedenbergite,prismatico,,Me,"Colle Bettaforca, VdA",Italia,"Cristalli neri, lunghi e corti, struttura cristallinea credo esagonale ma da meglio esaminare, cristalli appoggiati sulla matrice nera/grigio scura e a tratti verde come se fosse epidoto",2020,44,1,5,3,1
+2,14,20,4 13,0,Mineral,Hedenbergite,Hedenbergite,prismatico,,Me,"Colle Bettaforca, VdA",Italia,"Cristalli neri, lunghi e corti, struttura cristallinea credo esagonale ma da meglio esaminare, cristalli appoggiati sulla matrice nera/grigio scura e a tratti verde come se fosse epidoto",2020,27,1,5,3,1
+2,14,21,4 13,0,Mineral,Hedenbergite,Hedenbergite,prismatico,,Me,"Colle Bettaforca, VdA",Italia,"Cristalli neri, lunghi e corti, struttura cristallinea credo esagonale ma da meglio esaminare, cristalli appoggiati sulla matrice nera/grigio scura e a tratti verde come se fosse epidoto",2020,19,1,5,3,1
+2,14,22,4 13,0,Mineral,Hedenbergite,Hedenbergite,prismatico,,Me,"Colle Bettaforca, VdA",Italia,"Cristalli neri, lunghi e corti, struttura cristallinea credo esagonale ma da meglio esaminare, cristalli appoggiati sulla matrice nera/grigio scura e a tratti verde come se fosse epidoto",2020,15,1,5,3,1
+2,14,23,4,0,Crystal,Magnetite,Magnetite,ottaedrico,,Me,"Sarezza, VdA",Italia,"Roccia compatta di colore grigio e marrone a tratti, con varie istanze di magnetite presenti su ogni lato, cristalli visibili e alcuni anche definiti",2025,124,1,15,3,0
+2,14,24,4,0,Crystal,Magnetite,Magnetite,ottaedrico,,Me,"Sarezza, VdA",Italia,"Matrice lunga di colore grigio e poco marrone, cristalli di magnetite presenti maggiormente su uno dei lati e alcuni cristalli sono ben definiti, purtroppo molti di essi son saltati, lasciando buchi quadrati",2025,112,1,15,4,0
+2,14,25,13,0,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,"Lago Blu, VdA",Italia,"Cristalli di vesuvianite varietà verde, ben lucenti ma poco definiti, su matrice grigio/verde",2022,72,1,5,1,0
+2,14,26,13,0,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,"Lago Blu, VdA",Italia,"Cristalli abbastanza definiti di vesuvianite verde, attenzione all'erosione sui bordi",2022,48,1,5,1,0
+2,20,1,1 19,0,Crystal,"Mesolite, Stilbite","Mesolite, Stilbite","aciculare, tabulare",,Fiera Minerali,"Jalgaon, Maharastra",India,Mesolite bianca chiara a forma di sfera sopra matrice di stilbite rosa/arancione.,2025,750,1,250,5,1
+3,15,1,8,0,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,"Lago Blu, VdA",Italia,"Cristalli di vesuvianite rossi scuri / neri, ce ne sono due piccoli e ben definiti e accanto un grande cristallo tristemente spaccato, la matrice è molto grossa sarebbe da tagliare, WIP",2021,669,1,20,4,0
+3,15,2,4,0,Rock,Ossido di Ferro,Ossido di Ferro,,,Me,"Sarezza, VdA",Italia,"Rose ferrose su parete scura, aggiunta di di muschi verdi sulla stessa superficie",2025,191,1,10,3,0
+3,15,3,5,0,Rock,Roccia Calcare,Roccia Calcare,,,Me,"Porto Roxa, Zante",Grecia,Roccia calcare per ricordarmi della grecia,2022,147,1,1,1,0
+3,15,4,9 10,1,Crystal,Piropo,Piropo,dodecaedrico,,Me,"Monte Rosso, VdA",Italia,"Cristalli piccoli solo su una singola parete, su matrice marrone chiara, presenza di cristalli neri definiti ma sconosciuti",2025,403,1,15,4,0
+3,15,5,9 10,1,Crystal,Piropo,Piropo,dodecaedrico,,Me,"Monte Rosso, VdA",Italia,"Cristalli di piccolo calibro su matrice marrone chiara e a tratti grigia, presenza di cristalli sembra vesuvianite rossa e altri cristalli neri sconosciuti",2025,239,1,15,3,1
+3,15,6,13,1,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,"Lago Blu, VdA",Italia,"Cristalli verdi anche ben definiti, di vesuvianite varietà verde anche se penso sia tendende anche al rosso, quindi una via di mezzo, su una matrice grigia",2022,437,1,20,4,0
+3,15,7,6 10 2,0,Mineral,Pirite,Pirite,massiccio,,Me,"Lago Blu, VdA",Italia,"Cristalli di pirite poco formati ma ben lucenti, su matrice grigia/verde e minerale marrone sconosciuto",2021,150,1,5,2,0
+3,15,8,12 13 2,0,Crystal,"Epidoto, Sconosciuto","Epidoto, Sconosciuto",prismatico,,Me,"Monte Rosso, VdA",Italia,"Molti cristalli di epidoto fissati su una matrice fragile verde/grigia chiara, non sono cristalli trasparenti perché esposti ad erosione per chissà quanto tempo.",2025,227,1,25,4,1
+3,15,9,1 13,1,Crystal,Epidoto,Epidoto,prismatico,,Me,"Monte Rosso, VdA",Italia,"Numerosi cristalli che patinano un lato, un paio di questi cristalli sono più definiti e lucenti rispetto ad altri, su matrice verde",2023,181,1,15,3,0
+3,15,10,1 2 4,0,Mineral,Sconosciuto,Sconosciuto,,,Sara Rescalli,,,"Cristalli neri lunghi, incastonati nella matrice grigia, struttura rombica, opachi",2021,284,1,20,3,1
+3,15,11,3 1,0,Crystal,Calcite,Calcite,romboedrico,,Me,"Monte Rosso, VdA",Italia,Cristalli di calcite ben formati su matrice scistosa (Pz. 2).,2025,75,1,20,4,0
+3,15,12,3 1,0,Crystal,Calcite,Calcite,romboedrico,,Me,"Monte Rosso, VdA",Italia,"Cristalli ben formati su matrice grigia, marrone scistosa (Pz. 3).",2025,226,1,20,4,0
+3,15,13,3 1,0,Crystal,Calcite,Calcite,romboedrico,,Me,"Monte Rosso, VdA",Italia,"Due cristalli opachi parte del pezzo grosso di calcite (Pz. 4, 5).",2025,5,1,5,1,0
+3,16,1,3,0,Rock,Pietra,Pietra,,,Papà,,Islanda,"Pietra senza evidenti faccie cristalline, presa da una spiaggia",2018,208,1,3,1,0
+3,16,2,7,0,Rock,Pietra,Pietra,,,Papà,,Islanda,"Pietra articolata con pietre di colore grigio scure annesse, presenza di muschio verde",2018,189,1,5,3,0
+3,16,3,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,"Pietra vulcanica grance, presenza di sabbia marrone chiara",2018,95,1,2,1,0
+3,16,4,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,"Pietra grigio scura, presenza di muschio verde",2018,36,1,2,1,0
+3,16,5,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,"Pietra grigia, con un pò di muschio verde",2018,40,1,1,1,0
+3,16,6,8,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,"Pietra vulcanica rossa, molto leggera",2018,4,1,1,1,0
+3,16,7,8,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,"Pietra vulcanica rossa, molto leggera",2018,5,1,1,1,0
+3,16,8,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,Matrice verde con annesse delle pietre di piccolo calibro grigie scure,2018,11,1,1,1,0
+3,16,9,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,"Pietra ovale, grigia",2018,35,1,1,1,0
+3,16,10,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,Pietra grigia e ruvida,2018,35,1,1,1,0
+3,16,11,3,0,Rock,Pietra Lavica,Pietra Lavica,,,Papà,,Islanda,Pietra grigia,2018,39,1,1,1,0
+3,16,12,3,0,Rock,Pietra Lavica,Pietra Lavica,,,,,,Pietra vulcanica grigia scura,2025,13,1,4,1,0
+3,16,13,3,0,Rock,Pietra Lavica,Pietra Lavica,,,,,,Pietra vulcanica grigia scura,2025,17,1,4,1,0
+3,17,1,5 1,0,Crystal,Quarzo,Quarzo,prismatico,,Me,Bechaz,Italia,Minerali rosa acceso su matrice beige rocciosa,2025,482,1,15,5,1
+3,17,2,5 1,0,Crystal,Quarzo,Quarzo,prismatico,,Me,Bechaz,Italia,Cristalli interrati ancora da pulire bene,2025,880,1,15,5,1
+3,17,3,2,0,Mineral,Barite,Barite,tabulare,,Fiera Minerali,"Civitella Paganico, Grosseto, Toscana",Italia,Sfogliettature di barite chiara su matrice grigia scura.,2025,69,1,5,3,1
+3,17,4,2,0,Rock,Argilla,Argilla,,,Fiera Minerali,Toscana,Italia,"Non identificabile ulteriormente, cristalli grigi.",2025,215,1,10,3,1
+3,17,5,1,1,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,Monocristallo chiaro ialino su matrice grigia bianca.,2026,8,1,5,3,1
+3,18,1,16 16 1,1,Crystal,Cavansite,Cavansite,prismatico,,Fiera Minerali,,India,Cristalli blu sopra matrice chiara calcite/quarzo.,2025,173,1,25,4,1
+3,18,2,1,0,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,Cristalli chiari su matrice non formati,2026,20,1,3,2,1
+3,18,3,1,1,Crystal,Quarzo,Quarzo,prismatico,,Me,"Bechaz, VdA",Italia,Cristalli ialini intersecati nel quarzo massivo.,2026,47,1,3,2,1
+3,18,4,7,1,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,Lago Blu,Italia,"Cristallo chiaro brillante trovato nella pietraia sciolto, colorito marron scuro.",2026,46,1,10,3,0
+3,18,5,4 2 1,0,Mineral,Galena,Galena,massiccio,,Me,Lago Blu,Italia,"Vena di galena, forte magnetismo sull’esemplare.",2026,238,1,10,3,0
+3,18,6,4 3 1,1,Crystal,"Vesuvianite, Calcite","Vesuvianite, Calcite","prismatico, romboedrico",,Me,Lago Blu,Italia,Tratti di vesuvianite nera e tratti di insenature di calcite attorno l’esemplare.,2026,573,1,15,3,1
+3,18,7,7,0,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,Lago Blu,Italia,"Cristalli lunghi massivi non totalmente formati, lungo la matrice non sporgono.",2026,205,1,15,3,1
+3,18,8,9 2,1,Crystal,"Piropo, Muscovite","Piropo, Muscovite","dodecaedrico, lamellare",,Me,Monte Rosso,Italia,Cristalli rossi fuoco di granato attorno a muscovite grigia.,2026,16,1,4,2,1
+3,18,9,10 2,1,Crystal,"Spessartina, Muscovite","Spessartina, Muscovite","dodecaedrico, lamellare",,Me,Monte Rosso,Italia,Cristalli arancioni di granato attorno a muscovite grigia.,2026,201,1,5,3,1
+3,18,10,7 2,0,Mineral,"Muscovite, Piropo","Muscovite, Piropo","lamellare, dodecaedrico",,Me,Monte Rosso,Italia,Cristalli di muscovite ben formati e cristalli non formati di granato attorno.,2026,64,1,3,2,1
+3,18,11,12 5,1,Crystal,Forsterite,Forsterite,prismatico,,Me,Monte Rosso,Italia,Cristalli verde chiaro/gialli di olivina su matrice beige.,2026,90,1,5,2,1
+3,18,12,2 4,1,Crystal,Orneblenda,Orneblenda,prismatico,,Me,Monte Rosso,Italia,Cristalli lunghi neri ben formati su matrice soffice al tatto.,2026,377,1,15,4,1
+3,18,13,2 4,1,Crystal,Orneblenda,Orneblenda,prismatico,,Me,Monte Rosso,Italia,Cristalli lunghi neri ben formati su matrice soffice al tatto.,2026,81,1,5,4,1
+3,18,14,2 4,1,Crystal,Orneblenda,Orneblenda,prismatico,,Me,Monte Rosso,Italia,Cristalli lunghi neri ben formati su matrice soffice al tatto.,2026,6,4,3,3,0
+3,18,15,2 4,0,Crystal,Orneblenda,Orneblenda,prismatico,,Me,Monte Rosso,Italia,Cristalli lunghi neri su pietra grigia.,2026,133,1,10,3,1
+3,18,16,8 8 3,0,Crystal,Piropo,Piropo,dodecaedrico,,Me,Monte Rosso,Italia,Cristalli di piropo rossi intenso non ben formati.,2026,69,1,10,3,1
+3,19,1,3 16,0,Geode,Geode di Agata,Quarzo,geodico,,Mamma,,,Geode di agata colorato di blu artificialmente,2026,134,1,5,1,0
+3,19,2,3 18,0,Geode,Geode di Agata,Quarzo,geodico,,Mamma,,,Geode di agata colorato di viola artificialmente,2026,82,1,5,1,0
+3,19,3,5,0,Mineral,Agata,Quarzo,botroidale,,Zia Myriam,,Egitto,Sezioni di agate incollate levigate a forma di piramide,2025,373,1,10,1,0
+3,19,4,8,0,Crystal,Vesuvianite,Vesuvianite,prismatico,,Me,Lago Blu,Italia,Cristalli sfusi di vesuvianite raccolti al lago blu durante lo spaccamento di una vena.,2026,20,31,5,2,1
+4,0,1,1,0,Mineral,Selenite,Gesso,massiccio,,Margherita Rei,,Brasile,"Sfera di selenite, opaca e lucente a tratti.",2017,403,1,20,2,0
+4,0,2,1 1 19,0,Crystal,"Apofillite, Prenhite, Stilbite","Apofillite, Prehnite, Stilbite","prismatico, botroidale, tabulare",,Margherita Rei,,India,"Cristallo di stilbite rosa ben definito, appoggiato sopra cristalli di prehnite (piccola e ruvida) e su cristalli cubici di apofillite bianca.",2017,132,1,25,5,0
+4,0,3,3 18,0,Mineral,Ematite,Ematite,tabulare,,Margherita Rei,Isola d'Elba,Italia,"Ematite ricoperta da cristalli e formazioni cristallinee ferrose, molto pesante al tatto.",2017,641,1,25,4,0
+4,0,4,8 2,1,Crystal,Piropo,Piropo,dodecaedrico,,Guido,,,Cristalli ben definiti di granato grossularia su matrice marron/grigia accompagnata da formazione di cristalli grigi.,2019,31,1,15,4,0
+4,0,5,7 2,0,Crystal,Almandino,Almandino,dodecaedrico,,Margherita Rei,Bolzano,Italia,"Monocristallo di granato almandino opaco, su pietra micosa e scistosa.",2017,100,1,15,4,0
+4,0,6,1,0,Crystal,Calcite,Calcite,romboedrico,,"BDP, Zia Myriam",Hunan,Cina,"Monocristallo di calcite, effetto all'occhio.",2016,127,1,30,4,0
+4,0,7,13 1 10,1,Crystal,"Rosasite, Malachite, Selenite, Dolomite","Rosasite, Malachite, Gesso, Dolomite","botroidale, botroidale, prismatico, romboedrico",,Margherita Rei,,Marocco,"Questo coloratissimo campione contiene piccoli aggregati di rosasite blu-verde brillante, intervallati da gesso trasparente e malachite fibrosa di un verde più intenso, il tutto adagiato su un letto di dolomite ferroasifera (o dolomite ferroan) di un colore violaceo scuro. ",2017,369,1,20,5,0
+4,0,8,5 6,0,Fossil,Legno Pietrificato,Legno Pietrificato,,,"BDP, Zia Myriam",,Madagascar,"Sezione di legno fossile, datato a 225 milioni di ann. Proviene dall’Araucaria.",2016,114,1,50,3,0
+4,0,9,6 7 1,0,Geode,Geode di Agata,Quarzo,geodico,,,,,"Agata marrone scuro agli estremi, quarzo all’interno e al centro marrone chiara.",2021,750,1,30,3,0
+4,0,10,9 1,1,Crystal,"Vanadinite, Barite","Vanadinite, Barite","tabulare, tabulare",,Margherita Rei,,Marocco,Vanadinite rossi fuoco situata su cristalli di barite.,2017,80,1,40,5,0
+4,0,11,11,1,Crystal,Wulfenite,Wulfenite,tabulare,,Margherita Rei,,Marocco,Wulfeinite gialla intenso su matrice beige.,2017,72,1,20,5,0
+4,0,12,3 8 1,0,Crystal,Calcite,Calcite,romboedrico,,Margherita Rei,,Marocco,"Cristalli di calcite posizionati su cristalli di ferro bianchi trasparenti, a tratti opachi o verso il rosso, colore del ferro.",2018,69,1,13,3,0
+4,0,13,3 3 5,1,Geode,Rosa di Ferro,Ematite,tabulare,,Margherita Rei,,Marocco,"Cristalli ferrosi in un geode, da notare 3 pilastri di ferro che sporgono dal fondo del geode verso l’esterno, formati similmente alle stalattiti.",2016,137,1,35,4,0
+4,0,14,1,0,Crystal,Calcite,Calcite,romboedrico,,Me,"Lago Blu, VdA",Italia,Cristalli di calcite opachi estesi (Pz. 1).,2022,760,1,60,5,0
+4,0,15,1,0,Crystal,Calcite,Calcite,romboedrico,,Me,"Lago Blu, VdA",Italia,Cristalli di calcite opachi estesi (Pz. 2).,2022,1030,1,60,5,0
+4,0,16,1,1,Crystal,Okenite,Okenite,aciculare,,Margherita Rei,,India,Cristalli microscopici non visibili all’occhio nudo situati su una sfera. La matrice dimostra la presenza di quarzi e altre formazioni.,2017,181,1,25,5,0
+4,0,17,5 20,1,Crystal,Pirite,Pirite,cubico,,Margherita Rei,,Marocco,"Cristalli definiti su matrice beige, presenza di buchi per altri esemplari di pirite caduti.",2016,333,1,20,5,0
+4,0,18,4 7 5,0,Crystal,"Quarzo Fumé, Ortoclasio","Quarzo, Ortoclasio","prismatico, prismatico",,Margherita Rei,,Malawi,"Quarzi fumé formati su ortoclasio color beige, sul retro una formazione di tormalina nera che taglia l'ortoclasio.",2018,631,1,110,5,0
+4,0,19,14,0,Mineral,Agata,Quarzo,botroidale,,Zia Myriam (BDP),,Brasile,Agata verde scura tendente al verde acqua con crosta nero metallica.,2016,128,1,15,4,0
+4,0,20,1 13,1,Crystal,Quarzo,Quarzo,prismatico,,Nonna,Alpi Occidentali,Italia,Cristalli di quarzo con infiltrazioni di clorite (in verde).,2023,19,1,25,4,0
+4,0,21,2 2 3,0,Crystal,Calcite,Calcite,romboedrico,,Me,"Monte Rosso, VdA",Italia,Cristalli opachi su matrice grigia (Pz. 1).,2025,560,1,20,4,0
+4,0,22,16 16 1,1,Crystal,Cavansite,Cavansite,prismatico,,Fiera Minerali,,India,Cristalli blu sopra matrice chiara calcite/quarzo.,2025,76,1,70,5,1
+4,0,23,1 3 12,1,Crystal,Apofillite,Apofillite,prismatico,,Fiera Minerali,,India,Cristalli verdi chiaro su matrice grigia/bianca.,2025,234,1,45,5,1
+4,0,24,13,1,Crystal,Uvarovite,Uvarovite,dodecaedrico,,Fiera Minerali,,Russia,"Saranovskli Mine, Sarany, Gornozavodskli Distr., Perm Krai. Cristalli di granato verdi su matrice scura",2025,61,1,60,5,1
+4,0,25,9,1,Crystal,Vanadinite,Vanadinite,tabulare,,Fiera Minerali,"Mibladen, Midelt",Marocco,"Cristalli rosso fuoco esagonali sopra matrice marron chiaro con puà neri, ossido di ferro?",2025,62,1,20,5,1
+4,0,26,9,1,Crystal,Vanadinite,Vanadinite,tabulare,,Fiera Minerali,"Mibladen, Midelt",Marocco,Cristalli rosso fuoco esagonali sopra matrice marron chiaro.,2025,29,1,5,5,1
+4,0,27,13 13 10,1,Crystal,Dioptasio,Dioptasio,prismatico,,Muie,,Congo,Cristalli verdi scuri su matrice beige,2025,114,1,120,5,1
+4,0,28,4 4 1,0,Crystal,Scorl,Scorl,prismatico,,Fiera Minerali,Giligit Baltistan,Pakistan,Tormalina Scorl definita su quarzite.,2025,12,1,5,4,1
+4,0,29,4,0,Mineral,Galena,Galena,massiccio,,Me,Lago Blu,Italia,"Cristallo massivo di galena, date le dimensioni ridotte il proprio peso è molto sproporzionato. Forte magnetismo.",2026,65,1,10,4,0

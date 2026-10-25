@@ -1,0 +1,437 @@
+[
+  {
+    "habit": "aciculare",
+    "file": "aciculare",
+    "species": [
+      "Crocoite",
+      "Mesolite",
+      "Okenite"
+    ],
+    "specimen_count": 5,
+    "label": "Crocoite · Mesolite · Okenite"
+  },
+  {
+    "habit": "bipiramidale",
+    "file": "zolfo-bipiramidale",
+    "species": [
+      "Zolfo"
+    ],
+    "specimen_count": 1,
+    "label": "Zolfo"
+  },
+  {
+    "habit": "botroidale",
+    "file": "botroidale",
+    "species": [
+      "Cenere Vulcanica",
+      "Malachite",
+      "Prehnite",
+      "Quarzo",
+      "Rosasite",
+      "Smithsonite"
+    ],
+    "specimen_count": 18,
+    "label": "6 species"
+  },
+  {
+    "habit": "cubico",
+    "file": "fluorite-cubico",
+    "species": [
+      "Fluorite"
+    ],
+    "specimen_count": 3,
+    "label": "Fluorite"
+  },
+  {
+    "habit": "cubico",
+    "file": "cubico",
+    "species": [
+      "Galena",
+      "Halite",
+      "Pirite"
+    ],
+    "specimen_count": 9,
+    "label": "Galena · Halite · Pirite"
+  },
+  {
+    "habit": "dendritico",
+    "file": "dendritico",
+    "species": [
+      "Argento",
+      "Quarzo"
+    ],
+    "specimen_count": 2,
+    "label": "Argento · Quarzo"
+  },
+  {
+    "habit": "dodecaedrico",
+    "file": "dodecaedrico",
+    "species": [
+      "Almandino",
+      "Piropo",
+      "Spessartina",
+      "Uvarovite"
+    ],
+    "specimen_count": 17,
+    "label": "4 species"
+  },
+  {
+    "habit": "fibroso",
+    "file": "fibroso",
+    "species": [
+      "Quarzo"
+    ],
+    "specimen_count": 5,
+    "label": "Quarzo"
+  },
+  {
+    "habit": "geodico",
+    "file": "geodico",
+    "species": [
+      "Calcite",
+      "Quarzo"
+    ],
+    "specimen_count": 5,
+    "label": "Calcite · Quarzo"
+  },
+  {
+    "habit": "lamellare",
+    "file": "muscovite-lamellare",
+    "species": [
+      "Muscovite"
+    ],
+    "specimen_count": 4,
+    "label": "Muscovite"
+  },
+  {
+    "habit": "lamellare",
+    "file": "lamellare",
+    "species": [
+      "Oro"
+    ],
+    "specimen_count": 2,
+    "label": "Oro"
+  },
+  {
+    "habit": "massiccio",
+    "file": "massiccio",
+    "species": [
+      "Actinolite",
+      "Apofillite",
+      "Berillo",
+      "Bornite",
+      "Calcite",
+      "Calcopirite",
+      "Charoite",
+      "Crisocolla",
+      "Galena",
+      "Gesso",
+      "Labradorite",
+      "Lapislazzuli",
+      "Malachite",
+      "Microclino",
+      "Muscovite",
+      "Orneblenda",
+      "Pectolite",
+      "Pirite",
+      "Quarzo",
+      "Rodocrosite",
+      "Rodonite",
+      "Zolfo"
+    ],
+    "specimen_count": 43,
+    "label": "22 species"
+  },
+  {
+    "habit": "ottaedrico",
+    "file": "magnetite-ottaedrico",
+    "species": [
+      "Magnetite"
+    ],
+    "specimen_count": 8,
+    "label": "Magnetite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "apatite-prismatico",
+    "species": [
+      "Apatite"
+    ],
+    "specimen_count": 1,
+    "label": "Apatite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "apofillite-prismatico",
+    "species": [
+      "Apofillite"
+    ],
+    "specimen_count": 3,
+    "label": "Apofillite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "aragonite-prismatico",
+    "species": [
+      "Aragonite"
+    ],
+    "specimen_count": 3,
+    "label": "Aragonite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "azzurrite-prismatico",
+    "species": [
+      "Azzurrite"
+    ],
+    "specimen_count": 1,
+    "label": "Azzurrite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "berillo-prismatico",
+    "species": [
+      "Berillo",
+      "Hedenbergite",
+      "Orneblenda"
+    ],
+    "specimen_count": 14,
+    "label": "Berillo · Hedenbergite · Orneblenda"
+  },
+  {
+    "habit": "prismatico",
+    "file": "cavansite-prismatico",
+    "species": [
+      "Cavansite"
+    ],
+    "specimen_count": 2,
+    "label": "Cavansite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "celestina-prismatico",
+    "species": [
+      "Celestina"
+    ],
+    "specimen_count": 2,
+    "label": "Celestina"
+  },
+  {
+    "habit": "prismatico",
+    "file": "corindone-prismatico",
+    "species": [
+      "Corindone"
+    ],
+    "specimen_count": 3,
+    "label": "Corindone"
+  },
+  {
+    "habit": "prismatico",
+    "file": "danburite-prismatico",
+    "species": [
+      "Danburite"
+    ],
+    "specimen_count": 5,
+    "label": "Danburite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "datolite-prismatico",
+    "species": [
+      "Datolite"
+    ],
+    "specimen_count": 2,
+    "label": "Datolite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "diopside-prismatico",
+    "species": [
+      "Diopside"
+    ],
+    "specimen_count": 1,
+    "label": "Diopside"
+  },
+  {
+    "habit": "prismatico",
+    "file": "dioptasio-prismatico",
+    "species": [
+      "Dioptasio"
+    ],
+    "specimen_count": 2,
+    "label": "Dioptasio"
+  },
+  {
+    "habit": "prismatico",
+    "file": "elbaite-prismatico",
+    "species": [
+      "Elbaite",
+      "Scorl"
+    ],
+    "specimen_count": 6,
+    "label": "Elbaite · Scorl"
+  },
+  {
+    "habit": "prismatico",
+    "file": "epidoto-prismatico",
+    "species": [
+      "Epidoto",
+      "Vesuvianite"
+    ],
+    "specimen_count": 22,
+    "label": "Epidoto · Vesuvianite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "forsterite-prismatico",
+    "species": [
+      "Forsterite"
+    ],
+    "specimen_count": 1,
+    "label": "Forsterite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "gesso-prismatico",
+    "species": [
+      "Gesso"
+    ],
+    "specimen_count": 1,
+    "label": "Gesso"
+  },
+  {
+    "habit": "prismatico",
+    "file": "ortoclasio-prismatico",
+    "species": [
+      "Ortoclasio"
+    ],
+    "specimen_count": 2,
+    "label": "Ortoclasio"
+  },
+  {
+    "habit": "prismatico",
+    "file": "quarzo-prismatico",
+    "species": [
+      "Quarzo"
+    ],
+    "specimen_count": 30,
+    "label": "Quarzo"
+  },
+  {
+    "habit": "prismatico",
+    "file": "spodumene-prismatico",
+    "species": [
+      "Spodumene"
+    ],
+    "specimen_count": 2,
+    "label": "Spodumene"
+  },
+  {
+    "habit": "prismatico",
+    "file": "stibnite-prismatico",
+    "species": [
+      "Stibnite"
+    ],
+    "specimen_count": 1,
+    "label": "Stibnite"
+  },
+  {
+    "habit": "prismatico",
+    "file": "topazio-prismatico",
+    "species": [
+      "Topazio"
+    ],
+    "specimen_count": 3,
+    "label": "Topazio"
+  },
+  {
+    "habit": "romboedrico",
+    "file": "calcite-romboedrico",
+    "species": [
+      "Calcite"
+    ],
+    "specimen_count": 14,
+    "label": "Calcite"
+  },
+  {
+    "habit": "romboedrico",
+    "file": "dolomite-romboedrico",
+    "species": [
+      "Dolomite"
+    ],
+    "specimen_count": 2,
+    "label": "Dolomite"
+  },
+  {
+    "habit": "romboedrico",
+    "file": "rodocrosite-romboedrico",
+    "species": [
+      "Rodocrosite"
+    ],
+    "specimen_count": 1,
+    "label": "Rodocrosite"
+  },
+  {
+    "habit": "tabulare",
+    "file": "barite-tabulare",
+    "species": [
+      "Barite"
+    ],
+    "specimen_count": 2,
+    "label": "Barite"
+  },
+  {
+    "habit": "tabulare",
+    "file": "cianite-tabulare",
+    "species": [
+      "Cianite"
+    ],
+    "specimen_count": 2,
+    "label": "Cianite"
+  },
+  {
+    "habit": "tabulare",
+    "file": "covellite-tabulare",
+    "species": [
+      "Covellite"
+    ],
+    "specimen_count": 1,
+    "label": "Covellite"
+  },
+  {
+    "habit": "tabulare",
+    "file": "ematite-tabulare",
+    "species": [
+      "Ematite"
+    ],
+    "specimen_count": 2,
+    "label": "Ematite"
+  },
+  {
+    "habit": "tabulare",
+    "file": "stilbite-tabulare",
+    "species": [
+      "Stilbite"
+    ],
+    "specimen_count": 2,
+    "label": "Stilbite"
+  },
+  {
+    "habit": "tabulare",
+    "file": "vanadinite-tabulare",
+    "species": [
+      "Vanadinite"
+    ],
+    "specimen_count": 3,
+    "label": "Vanadinite"
+  },
+  {
+    "habit": "tabulare",
+    "file": "wulfenite-tabulare",
+    "species": [
+      "Wulfenite"
+    ],
+    "specimen_count": 1,
+    "label": "Wulfenite"
+  }
+]

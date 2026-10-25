@@ -1,0 +1,21 @@
+{
+  "name": "mineral-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_OPTIONS=--max-old-space-size=8192 npx @11ty/eleventy --serve",
+    "dev":   "cross-env NODE_OPTIONS=--max-old-space-size=8192 npx @11ty/eleventy --serve",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 npx @11ty/eleventy",
+    "optimize:images": "node scripts/optimize-images.js",
+    "optimize:images:dry": "node scripts/optimize-images.js --dry"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "cross-env": "^7.0.3",
+    "sharp": "^0.35.5"
+  }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme) document.documentElement.dataset.theme = theme;
+    } catch {}
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} · My Collection</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f2efe6;
+      --muted: #8c8a82;
+      --bg: #111;
+      --accent: #494949;
+      --surface: #2a2a29;
+      --surface-2: #3a3a39;
+      --surface-3: #4a4a49;
+      --border: #555;
+      --line: rgb(255 255 255 / 10%);
+      --line-hi: rgb(255 255 255 / 16%);
+      --placeholder: #888;
+      --gold: #ffd700;
+      --gold-glow: rgb(255 215 0 / 20%);
+      --gold-ring: rgb(255 215 0 / 40%);
+      --active-bg: #3a3a29;
+      --chart-line: #2fa8a0;
+      --chart-glow: rgb(47 168 160 / 25%);
+      --pop-shadow: rgb(0 0 0 / 60%);
+      --scroll-thumb: #333;
+      --scroll-thumb-hover: #777;
+      --shimmer-a: #e8e8e8;
+      --shimmer-b: #6a6a6a;
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --ink: #1c1b18;
+      --muted: #6f6c63;
+      --bg: #f3f0e9;
+      --accent: #a8a498;
+      --surface: #e6e2d8;
+      --surface-2: #d9d4c8;
+      --surface-3: #cdc7b9;
+      --border: #b3ad9f;
+      --line: rgb(0 0 0 / 10%);
+      --line-hi: rgb(0 0 0 / 16%);
+      --placeholder: #8a867b;
+      --gold: #a67c00;
+      --gold-glow: rgb(166 124 0 / 25%);
+      --gold-ring: rgb(166 124 0 / 40%);
+      --active-bg: #efe4b8;
+      --chart-line: #1f857e;
+      --chart-glow: rgb(31 133 126 / 25%);
+      --pop-shadow: rgb(0 0 0 / 18%);
+      --scroll-thumb: #c4bfb2;
+      --scroll-thumb-hover: #9a9588;
+      --shimmer-a: #1c1b18;
+      --shimmer-b: #8a867b;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      overflow-y: scroll;
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: var(--scroll-thumb) transparent;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-button { display: none; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb {
+      background: var(--scroll-thumb);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--scroll-thumb-hover); }
+
+    main {
+      width: 100%;
+      max-width: 1000px;
+      margin-inline: auto;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .breadcrumb-link,
+    .breadcrumb-current {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    .breadcrumb-link {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color .1s;
+    }
+
+    .breadcrumb-link:hover { color: var(--accent); }
+
+    .breadcrumb-current { color: var(--ink); }
+
+    .breadcrumb-separator {
+      display: inline-flex;
+      align-items: center;
+      color: var(--muted);
+      line-height: 1;
+    }
+
+    .breadcrumb-separator svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 3;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      flex: 0 0 40px;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: var(--ink);
+      cursor: pointer;
+      transition: opacity .15s ease;
+    }
+
+    .theme-toggle:hover { opacity: .6; }
+    .theme-toggle svg { width: 26px; height: 26px; }
+    .theme-toggle .icon-moon { display: none; }
+    :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+    @media (max-width: 600px) {
+      .site-header { padding: 1rem; }
+      .breadcrumb { gap: .5rem; font-size: clamp(22px, 6vw, 32px); }
+      .breadcrumb-separator svg { width: 20px; height: 20px; }
+      .theme-toggle { flex-basis: 36px; width: 36px; height: 36px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .breadcrumb-link,
+      .theme-toggle { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      {% if page.url == '/' %}
+        <span class="breadcrumb-current">Home</span>
+      {% elsif page.url == '/collection/' %}
+        <a class="breadcrumb-link" href="/">Home</a>
+        <span class="breadcrumb-separator" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </span>
+        <span class="breadcrumb-current">The Collection</span>
+      {% elsif specimen %}
+        {% assign specimenIndex = 0 %}
+        {% for s in specimens %}
+          {% if s.slug == specimen.slug %}
+            {% assign specimenIndex = forloop.index %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        <a class="breadcrumb-link" href="/">Home</a>
+        <span class="breadcrumb-separator" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </span>
+        <a class="breadcrumb-link" href="/collection/">The Collection</a>
+        <span class="breadcrumb-separator" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </span>
+        <span class="breadcrumb-current">Specimen {{ specimenIndex }}</span>
+      {% else %}
+        <a class="breadcrumb-link" href="/">Home</a>
+      {% endif %}
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </header>
+
+  <main>{{ content }}</main>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const root = document.documentElement;
+        const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+        root.dataset.theme = nextTheme;
+
+        try {
+          localStorage.setItem('theme', nextTheme);
+        } catch {}
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+# ═══════════════════════════════════════════════════════════════════
+# MATERIALI — rocce, fossili, sostanze organiche e voci generiche
+# Il template mostrerà la composizione o la nota, senza blocco chimico.
+# ═══════════════════════════════════════════════════════════════════
+
+Ambra:
+  categoria: organico (fossile)
+  composizione: "Resina fossile di conifere"
+  nota: "Sostanza amorfa, non cristallina. Può contenere inclusioni di insetti o frammenti vegetali."
+
+Argilla:
+  categoria: roccia (sedimentaria)
+  composizione: "Fillosilicati (illite, caolinite, montmorillonite) + quarzo, feldspati, ossidi di Fe"
+  nota: "Sedimento a granulometria finissima, plastico se umido."
+
+Cenere Vulcanica:
+  categoria: roccia (vulcanica)
+  composizione: "Vetro vulcanico, frammenti litici, cristalli (feldspati, pirosseni, magnetite)"
+  nota: "Materiale piroclastico fine, espulso durante eruzioni esplosive."
+
+Dalmantina:
+  categoria: roccia (commerciale)
+  composizione: "Quarzo, feldspato, tormalina (nera e bianca) in matrice grigia"
+  nota: "Nome commerciale per una roccia a chiazze bianche e nere. Non è una specie mineralogica."
+
+Diaspro Rosso:
+  categoria: roccia (varietà di Quarzo)
+  composizione: "SiO₂ microcristallino con ossidi di Fe"
+  nota: "Varietà opaca di calcedonio, rossa per ematite inclusa. Chimicamente è Quarzo."
+
+Lapislazzuli:
+  categoria: roccia (metamorfica)
+  composizione: "Lazurite (minerale principale), calcite, pirite, diopside, hauyna"
+  nota: "Roccia, non minerale. Il colore blu è dato dalla lazurite."
+
+Lava:
+  categoria: roccia (vulcanica)
+  composizione: "Vetro vulcanico + fenocristalli (feldspati, pirosseni, olivina)"
+  nota: "Magma solidificato in superficie."
+
+Legno Pietrificato:
+  categoria: organico (fossile)
+  composizione: "Silice (SiO₂) subentrata alla cellulosa del legno"
+  nota: "Legno fossile in cui i tessuti organici sono stati completamente sostituiti da minerali (solitamente calcedonio o opale)."
+
+Ossidiana:
+  categoria: roccia (vulcanica)
+  composizione: "Vetro vulcanico (riolite) con acqua e microcristalli"
+  nota: "Vetro naturale formatosi dal rapido raffreddamento di lava acida. Ha frattura concoide."
+
+Ossido di Ferro:
+  categoria: generico
+  nota: "Materiale ricco di ossidi/idrossidi di Fe (ematite, goethite, limonite). Da identificare più precisamente."
+
+Pietra:
+  categoria: sconosciuto
+  composizione: "—"
+  nota: "Placeholder generico. Da identificare."
+
+Pietra Lavica:
+  categoria: roccia (vulcanica)
+  composizione: "Basalto o andesite, con abbondante vetro vulcanico"
+  nota: "Roccia effusiva porosa, spesso usata come materiale decorativo."
+
+Pietra Paesina:
+  categoria: roccia (sedimentaria)
+  composizione: "Calcite + argilla + ossidi di Fe/Mn"
+  nota: "Calcare marnoso con dendriti di ossidi che disegnano paesaggi. Solo da Firenze e dintorni."
+
+Pietra Vulcanica:
+  categoria: roccia (vulcanica)
+  composizione: "Basalto, andesite o riolite, a seconda dell'eruzione"
+  nota: "Termine generico per rocce di origine vulcanica."
+
+Pomice:
+  categoria: roccia (vulcanica)
+  composizione: "Vetro vulcanico espanso, ricco di bolle"
+  nota: "Roccia leggera, galleggiante sull'acqua. Si forma da magma acido schiumoso."
+
+Roccia:
+  categoria: sconosciuto
+  composizione: "—"
+  nota: "Placeholder generico. Da identificare."
+
+Sconosciuto:
+  categoria: sconosciuto
+  nota: "Esemplare non ancora identificato."
+
+Tufo Giallo:
+  categoria: roccia (vulcanica)
+  composizione: "Cenere vulcanica consolidata, lapilli, frammenti litici"
+  nota: "Roccia piroclastica consolidata. Il colore giallo è dato da zeoliti o ossidi di Fe."

@@ -1,0 +1,676 @@
+# ═══════════════════════════════════════════════════════════════════
+# MINERALI — riferimento chimico e cristallografico
+# Chiave = valore del campo `main` (singolo, senza virgole)
+# Le multi-combinazioni (es. "Pirite, Quarzo") vengono spezzate dal
+# template e ogni parte cerca qui la sua entry.
+# ═══════════════════════════════════════════════════════════════════
+
+# ── A ───────────────────────────────────────────────────────────────
+
+Actinolite:
+  formula: "Ca₂(Mg,Fe)₅Si₈O₂₂(OH)₂"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Cristalli allungati, verde chiaro." }
+    fibroso:    { nome: "Fibroso",    nota: "Aggregati a fibre parallele, aspetto setoso." }
+    massiccio:  { nome: "Massiccio",  nota: "Nessuna forma cristallina distinta." }
+
+Almandino:
+  gruppo: Granato
+  formula: "Fe₃Al₂(SiO₄)₃"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    dodecaedrico:  { nome: "Dodecaedrico",  nota: "Forma più comune, 12 facce a rombo." }
+    trapezoedrico: { nome: "Trapezoedrico", nota: "24 facce, meno comune." }
+    massiccio:     { nome: "Massiccio",     nota: "Granulare, senza cristalli distinti." }
+
+Apatite:
+  formula: "Ca₅(PO₄)₃(F,Cl,OH)"
+  sistema: Esagonale
+  classe: Bipolare esagonale (6/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi esagonali, spesso con terminazioni piatte." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari o fibrosi." }
+
+Apofillite:
+  formula: "(K,Na)Ca₄Si₈O₂₀(F,OH)·8H₂O"
+  sistema: Tetragonale
+  classe: Ditetragonale bipiramidale (4/mmm)
+  abiti:
+    prismatico:    { nome: "Prismatico",    nota: "Prismi tozzi con terminazioni piatte." }
+    tabulare:      { nome: "Tabulare",      nota: "Cristalli appiattiti." }
+    pseudo-cubico: { nome: "Pseudo-cubico", nota: "Aspetto cubico per sfaldatura." }
+
+Aragonite:
+  formula: "CaCO₃"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  nota: "Polimorfo del carbonato di calcio; instabile, si trasforma in calcite nel tempo geologico."
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Cristalli prismatici o aciculari." }
+    fibroso:    { nome: "Fibroso",    nota: "Aggregati fibrosi raggiati." }
+    sferulitico: { nome: "Sferulitico", nota: "Aggregati a sfera, struttura interna raggiate." }
+    massiccio:  { nome: "Massiccio",  nota: "Nessuna forma distinta." }
+
+Argento:
+  formula: "Ag"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    dendritico: { nome: "Dendritico", nota: "Ramificazioni arboree." }
+    filiforme:  { nome: "Filiforme",  nota: "Fili sottili aggrovigliati." }
+    massiccio:  { nome: "Massiccio",  nota: "Nativo in placche o pepite." }
+
+Azzurrite:
+  formula: "Cu₃(CO₃)₂(OH)₂"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Cristalli prismatici o tabulari, blu intenso." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari o terrosi." }
+
+# ── B ───────────────────────────────────────────────────────────────
+
+Barite:
+  formula: "BaSO₄"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli appiattiti, spesso a forma di libro." }
+    prismatico: { nome: "Prismatico", nota: "Prismi tozzi, a volte gemelli a 'coda di rondine'." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari o fibrosi." }
+
+Berillo:
+  formula: "Be₃Al₂Si₆O₁₈"
+  sistema: Esagonale
+  classe: Di-esagonale bipiramidale (6/mmm)
+  varietà:
+    Smeraldo:   { nome: "Smeraldo",   nota: "Verde, da tracce di Cr³⁺ e V³⁺.",          abito_default: prismatico }
+    Acquamarina: { nome: "Acquamarina", nota: "Azzurro-verde, da tracce di Fe²⁺.",       abito_default: prismatico }
+    Morganite:  { nome: "Morganite",  nota: "Rosa pesca, da tracce di Mn²⁺.",            abito_default: prismatico }
+    Bixbite:    { nome: "Bixbite",    nota: "Rosso intenso, da Mn²⁺. Rarissimo.",        abito_default: prismatico }
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi esagonali, spesso allungati." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+Bornite:
+  formula: "Cu₅FeS₄"
+  sistema: Ortorombico (pseudocubico)
+  classe: Bipiramidale (mmm)
+  nota: "Chiamata 'pavone' per la iridescenza viola-blu dopo l'esposizione."
+  abiti:
+    massiccio:  { nome: "Massiccio",  nota: "Granulare, spesso in aggregati compatti." }
+    cubico:     { nome: "Pseudo-cubico", nota: "Aspetto cubico, in realtà ortorombico." }
+
+# ── C ───────────────────────────────────────────────────────────────
+
+Calcite:
+  formula: "CaCO₃"
+  sistema: Trigonale
+  classe: Romboedrico (3̄m)
+  nota: "Polimorfo stabile del carbonato di calcio."
+  abiti:
+    romboedrico:   { nome: "Romboedrico",   nota: "Blocchi a facce rombiche. Classico dello spato d'Islanda." }
+    scalenoedrico: { nome: "Scalenoedrico", nota: "Cristalli a punta, 'dente di cane'." }
+    prismatico:    { nome: "Prismatico",    nota: "Prismi colonnari, terminazioni piatte." }
+    massiccio:     { nome: "Massiccio",     nota: "Nessuna forma cristallina distinta." }
+
+Calcopirite:
+  formula: "CuFeS₂"
+  sistema: Tetragonale
+  classe: Scalenoedrico (4̄2m)
+  nota: "Il principale minerale del rame."
+  abiti:
+    tetraedrico: { nome: "Tetraedrico", nota: "Cristalli a tetraedro, ottuso." }
+    massiccio:   { nome: "Massiccio",   nota: "Aggregati granulari, giallo-ottone." }
+
+Cavansite:
+  formula: "Ca(VO)Si₄O₁₀·4H₂O"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    prismatico:  { nome: "Prismatico",  nota: "Cristalli aciculari blu vivido." }
+    raggiate:    { nome: "Raggiato",    nota: "Aggregati a rosetta o sfera di cristalli." }
+
+Celestina:
+  formula: "SrSO₄"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli tabulari, azzurro pallido." }
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati fibrosi o granulari." }
+
+Charoite:
+  formula: "(K,Sr,Ba)₁₅-₁₆(Ca,Na)₃₂[Si₆O₁₁(O,OH)₆]₄(OH,F)₄·nH₂O"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  nota: "Solo nella Siberia orientale (massiccio Charo)."
+  abiti:
+    massiccio: { nome: "Massiccio", nota: "Fibroso o granulare, violetto iridescente." }
+
+Cianite:
+  formula: "Al₂SiO₅"
+  sistema: Triclino
+  classe: Pinacoidale (1̄)
+  nota: "Polimorfo del silicato di alluminio, con due altri polimorfi: andalusite e sillimanite."
+  abiti:
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli a lama appiattiti, azzurro-blu." }
+    prismatico: { nome: "Prismatico", nota: "Lame allungate, spesso striate." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati compatti." }
+
+Corindone:
+  formula: "Al₂O₃"
+  sistema: Trigonale
+  classe: Esagonale scalenoedrico (3̄m)
+  varietà:
+    Rubino:  { nome: "Rubino",  nota: "Rosso, da tracce di Cr³⁺.",        abito_default: prismatico }
+    Zaffiro: { nome: "Zaffiro", nota: "Blu, da tracce di Fe²⁺ e Ti⁴⁺.", abito_default: prismatico }
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi esagonali, spesso a barile." }
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli appiattiti." }
+    massiccio:  { nome: "Massiccio",  nota: "Granulare, senza cristalli distinti." }
+
+Covellite:
+  formula: "CuS"
+  sistema: Esagonale
+  classe: Di-esagonale bipiramidale (6/mmm)
+  abiti:
+    tabulare:  { nome: "Tabulare",  nota: "Lamine sottili, blu iridescente." }
+    massiccio: { nome: "Massiccio", nota: "Aggregati compatti." }
+
+Crisocolla:
+  formula: "(Cu,Al)₂H₂Si₂O₅(OH)₄·nH₂O"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    massiccio: { nome: "Massiccio", nota: "Aggregati amorfi o microcristallini, verde-azzurro." }
+    botroidale: { nome: "Botroidale", nota: "Superfici a grappoli tondeggianti." }
+
+Crocoite:
+  formula: "PbCrO₄"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati, rosso-arancio intenso." }
+    aciculare:  { nome: "Aciculare",  nota: "Aggregati di aghi sottili." }
+
+# ── D ───────────────────────────────────────────────────────────────
+
+Danburite:
+  formula: "CaB₂Si₂O₈"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati con terminazioni a cuneo." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+Datolite:
+  formula: "CaBSiO₄(OH)"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Cristalli tozzi, verde pallido o incolori." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari o nodulari." }
+
+Diopside:
+  formula: "CaMgSi₂O₆"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi a sezione quadrata, verde." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+Dioptasio:
+  formula: "CuSiO₂(OH)₂"
+  sistema: Trigonale
+  classe: Romboedrico (3̄)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi corti, verde smeraldo brillante." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati cristallini o granulari." }
+
+Dolomite:
+  formula: "CaMg(CO₃)₂"
+  sistema: Trigonale
+  classe: Romboedrico (3̄)
+  abiti:
+    romboedrico: { nome: "Romboedrico", nota: "Romboedri con facce spesso curve." }
+    massiccio:   { nome: "Massiccio",   nota: "Aggregati granulari." }
+
+# ── E ───────────────────────────────────────────────────────────────
+
+Ematite:
+  formula: "Fe₂O₃"
+  sistema: Trigonale
+  classe: Romboedrico (3̄m)
+  varietà:
+    Rosa di Ferro: { nome: "Rosa di Ferro", nota: "Aggregato a rosetta di cristalli lamellari.", abito_default: lamellare }
+  abiti:
+    lamellare:  { nome: "Lamellare",  nota: "Cristalli piatti, a volte a rosetta." }
+    reniforme:  { nome: "Reniforme",  nota: "Superfici a rene, lucide." }
+    massiccio:  { nome: "Massiccio",  nota: "Compatto, terroso o speculare." }
+    oolitico:   { nome: "Oolitico",   nota: "Aggregati di piccole sfere." }
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli appiattiti, a volte geminati." }
+
+Epidoto:
+  formula: "Ca₂(Al,Fe)₃(SiO₄)₃(OH)"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati, verde pistacchio." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+# ── F ───────────────────────────────────────────────────────────────
+
+Fluorite:
+  formula: "CaF₂"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    cubico:     { nome: "Cubico",     nota: "Cubi perfetti, spesso con zone di colore diverso." }
+    ottaedrico: { nome: "Ottaedrico", nota: "Ottaedri, più rari." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+Forsterite:
+  gruppo: Olivina
+  formula: "Mg₂SiO₄"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Cristalli tozzi, verde oliva." }
+    massiccio:  { nome: "Massiccio",  nota: "Granulare, senza cristalli distinti." }
+
+# ── G ───────────────────────────────────────────────────────────────
+
+Galena:
+  formula: "PbS"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    cubico:     { nome: "Cubico",     nota: "Cubi perfetti, lucentezza metallica." }
+    ottaedrico: { nome: "Ottaedrico", nota: "Ottaedri, più rari." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+Gesso:
+  formula: "CaSO₄·2H₂O"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  varietà:
+    Selenite:         { nome: "Selenite",         nota: "Trasparente, lamellare.", abito_default: tabulare }
+    Rosa del Deserto: { nome: "Rosa del Deserto", nota: "Aggregato a rosetta, spesso con granelli di sabbia.", abito_default: rosetta }
+  abiti:
+    tabulare:   { nome: "Tabulare",   nota: "Lamine trasparenti, sfaldatura perfetta." }
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati, gemelli a 'coda di rondine'." }
+    rosetta:    { nome: "Rosetta",    nota: "Aggregati a rosetta di cristalli tabulari." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari o terrosi (alabastro)." }
+
+# ── H ───────────────────────────────────────────────────────────────
+
+Halite:
+  formula: "NaCl"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    cubico:    { nome: "Cubico",    nota: "Cubi perfetti, spesso con facce a scalino." }
+    massiccio: { nome: "Massiccio", nota: "Aggregati granulari." }
+
+Hedenbergite:
+  formula: "CaFeSi₂O₆"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi verde scuro o neri." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari o fibrosi." }
+
+# ── L ───────────────────────────────────────────────────────────────
+
+Labradorite:
+  gruppo: Plagioclasio
+  formula: "(Ca,Na)(Al,Si)₄O₈"
+  sistema: Triclino
+  classe: Pinacoidale (1̄)
+  nota: "Feldspato plagioclasio con effetto 'labradorescenza' (iridescenza blu-verde)."
+  abiti:
+    tabulare:  { nome: "Tabulare",  nota: "Cristalli appiattiti." }
+    massiccio: { nome: "Massiccio", nota: "Aggregati granulari." }
+
+# ── M ───────────────────────────────────────────────────────────────
+
+Magnetite:
+  formula: "Fe₃O₄"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    ottaedrico: { nome: "Ottaedrico", nota: "Ottaedri, spesso con facce striate." }
+    dodecaedrico: { nome: "Dodecaedrico", nota: "Raro, dodecaedri rombici." }
+    massiccio:  { nome: "Massiccio",  nota: "Granulare, fortemente magnetico." }
+
+Malachite:
+  formula: "Cu₂(CO₃)(OH)₂"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    botroidale: { nome: "Botroidale", nota: "Superfici a grappoli, verde con bande concentriche." }
+    aciculare:  { nome: "Aciculare",  nota: "Aggregati di aghi sottili." }
+    massiccio:  { nome: "Massiccio",  nota: "Compatto o terroso." }
+
+Mesolite:
+  formula: "Na₂Ca₂Al₆Si₉O₃₀·8H₂O"
+  sistema: Monoclino (pseudortorombico)
+  classe: Prismatico (2/m)
+  abiti:
+    aciculare: { nome: "Aciculare", nota: "Aggregati di aghi sottili, bianco setoso." }
+    fibroso:   { nome: "Fibroso",   nota: "Aggregati a fibre parallele o raggiate." }
+
+Microclino:
+  formula: "KAlSi₃O₈"
+  sistema: Triclino
+  classe: Pinacoidale (1̄)
+  varietà:
+    Amazzonite: { nome: "Amazzonite", nota: "Verde, da tracce di Pb.", abito_default: prismatico }
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi tozzi con geminazione a graticcio." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+Muscovite:
+  formula: "KAl₂(AlSi₃O₁₀)(OH)₂"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  varietà:
+    Fucsite: { nome: "Fucsite", nota: "Varietà verde, da tracce di Cr³⁺.", abito_default: lamellare }
+  abiti:
+    lamellare: { nome: "Lamellare", nota: "Lamine trasparenti o traslucide, sfaldatura perfetta." }
+    massiccio: { nome: "Massiccio", nota: "Aggregati scagliosi o compatti." }
+    tabulare:  { nome: "Tabulare",  nota: "Lastre pseudo-esagonali, spesso a 'libro'." }
+
+# ── O ───────────────────────────────────────────────────────────────
+
+Okenite:
+  formula: "Ca₁₀Si₁₈O₄₆·18H₂O"
+  sistema: Triclino
+  classe: Pinacoidale (1̄)
+  abiti:
+    aciculare: { nome: "Aciculare", nota: "Aggregati di aghi bianchi setosi, a 'palla di cotone'." }
+    fibroso:   { nome: "Fibroso",   nota: "Aggregati a fibre raggiate." }
+
+Orneblenda:
+  categoria: serie
+  famiglia: Anfiboli
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  nota: "Serie di anfiboli calcici con composizione variabile Mg/Fe. Le specie IMA distinte (magnesio-orneblenda, ferro-orneblenda, tschermakite, pargasite, edenite) richiedono analisi chimica per essere differenziate."
+  membri:
+    Magnesio-orneblenda: { formula: "NaCa₂(Mg₄Al)(Si₇Al)O₂₂(OH)₂" }
+    Ferro-orneblenda:    { formula: "NaCa₂(Fe²⁺₄Al)(Si₇Al)O₂₂(OH)₂" }
+    Tschermakite:        { formula: "Ca₂(Mg₃Al₂)(Si₆Al₂)O₂₂(OH)₂" }
+    Pargasite:           { formula: "NaCa₂(Mg₄Al)(Si₆Al₂)O₂₂(OH)₂" }
+    Edenite:             { formula: "NaCa₂Mg₅(Si₇Al)O₂₂(OH)₂" }
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Cristalli allungati, sezione rombica a 56°/124°." }
+    fibroso:    { nome: "Fibroso",    nota: "Aggregati di fibre parallele o raggiate." }
+    massiccio:  { nome: "Massiccio",  nota: "Granulare o compatto." }
+
+Oro:
+  formula: "Au"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    dendritico: { nome: "Dendritico", nota: "Ramificazioni arboree o filiformi." }
+    ottaedrico: { nome: "Ottaedrico", nota: "Ottaedri, rarissimi." }
+    lamellare:  { nome: "Lamellare",  nota: "Lamine sottili, schiacciate." }
+    massiccio:  { nome: "Massiccio",  nota: "Pepite, placche o granuli." }
+
+Ortoclasio:
+  formula: "KAlSi₃O₈"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  varietà:
+    Adularia: { nome: "Adularia", nota: "Varietà trasparente, spesso con effetto adularescenza (pietra di luna).", abito_default: prismatico }
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi tozzi con geminazione di Carlsbad." }
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli appiattiti." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati granulari." }
+
+# ── P ───────────────────────────────────────────────────────────────
+
+Pectolite:
+  formula: "NaCa₂Si₃O₈(OH)"
+  sistema: Triclino
+  classe: Pinacoidale (1̄)
+  varietà:
+    Larimar: { nome: "Larimar", nota: "Varietà azzurra, solo nella Repubblica Dominicana.", abito_default: fibroso }
+  abiti:
+    aciculare: { nome: "Aciculare", nota: "Aggregati di aghi bianchi o azzurri." }
+    fibroso:   { nome: "Fibroso",   nota: "Aggregati a fibre raggiate." }
+    massiccio: { nome: "Massiccio", nota: "Compatto, spesso in aggregati sferulitici." }
+
+Pirite:
+  formula: "FeS₂"
+  sistema: Cubico
+  classe: Diploidale (2/m 3̄)
+  nota: "Chiamata 'oro degli stolti'. L'unico solfuro cubico comune."
+  abiti:
+    cubico:       { nome: "Cubico",       nota: "Cubi con facce striate. Il più comune." }
+    piritoedrico: { nome: "Piritoedrico", nota: "12 facce pentagonali." }
+    ottaedrico:   { nome: "Ottaedrico",   nota: "Ottaedri, meno comuni." }
+    massiccio:    { nome: "Massiccio",    nota: "Granulare, senza forme distinte." }
+
+Piropo:
+  gruppo: Granato
+  formula: "Mg₃Al₂(SiO₄)₃"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    dodecaedrico:  { nome: "Dodecaedrico",  nota: "Forma più comune, 12 facce a rombo." }
+    trapezoedrico: { nome: "Trapezoedrico", nota: "24 facce, meno comune." }
+    massiccio:     { nome: "Massiccio",     nota: "Granulare, senza cristalli distinti." }
+
+Prehnite:
+  formula: "Ca₂Al(AlSi₃O₁₀)(OH)₂"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    botroidale: { nome: "Botroidale", nota: "Superfici a grappoli, verde pallido, traslucido." }
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli tabulari, rari." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati compatti." }
+
+# ── Q ───────────────────────────────────────────────────────────────
+
+Quarzo:
+  formula: "SiO₂"
+  sistema: Trigonale
+  classe: Trapezoedrico (32)
+  varietà:
+    Quarzo:              { nome: "Quarzo",              nota: "Incolore o bianco, trasparente.",              abito_default: prismatico }
+    Ametista:            { nome: "Ametista",            nota: "Viola, da tracce di Fe³⁺.",                    abito_default: prismatico }
+    Quarzo Fumé:         { nome: "Quarzo Fumé",         nota: "Grigio-marrone, da irradiazione naturale.",    abito_default: prismatico }
+    Quarzo Rosa:         { nome: "Quarzo Rosa",         nota: "Rosa pallido, da tracce di Ti/Fe.",            abito_default: massiccio }
+    Occhio di Tigre:     { nome: "Occhio di Tigre",     nota: "Pseudomorfosi di quarzo su crocidolite.",      abito_default: fibroso }
+    Agata:               { nome: "Agata",               nota: "Calcedonio a bande concentriche.",             abito_default: botroidale }
+    Calcedonio Dendritico: { nome: "Calcedonio Dendritico", nota: "Calcedonio con inclusioni dendritiche di Mn/Fe.", abito_default: dendritico }
+    Diaspro Rosso:       { nome: "Diaspro Rosso",       nota: "Calcedonio opaco, rosso da ossidi di Fe.",     abito_default: massiccio }
+    Geode:               { nome: "Geode",               nota: "Cavità rivestita internamente di cristalli.",  abito_default: geodico }
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prisma esagonale con terminazione piramidale." }
+    botroidale: { nome: "Botroidale", nota: "Superficie a grappoli tondeggianti, tipica del calcedonio." }
+    dendritico: { nome: "Dendritico", nota: "Aggregati con inclusioni dendritiche di Mn/Fe." }
+    fibroso:    { nome: "Fibroso",    nota: "Aggregati di fibre parallele, aspetto setoso." }
+    massiccio:  { nome: "Massiccio",  nota: "Nessuna forma cristallina distinta." }
+    geodico:    { nome: "Geodico",    nota: "Cavità rivestita internamente di cristalli." }
+
+# ── R ───────────────────────────────────────────────────────────────
+
+Rodocrosite:
+  formula: "MnCO₃"
+  sistema: Trigonale
+  classe: Romboedrico (3̄m)
+  abiti:
+    romboedrico: { nome: "Romboedrico", nota: "Romboedri rosa-rosso, spesso con facce curve." }
+    botroidale:  { nome: "Botroidale",  nota: "Aggregati a grappoli, rosa con bande." }
+    massiccio:   { nome: "Massiccio",   nota: "Granulare o compatto." }
+
+Rodonite:
+  formula: "CaMn₃Si₅O₁₅"  # (Mn,Ca)Mn₄Si₅O₁₅ simplified
+  sistema: Triclino
+  classe: Pinacoidale (1̄)
+  nota: "Formula completa: (Mn²⁺,Ca)Mn₄Si₅O₁₅. Spesso rosa-rosso con venature nere di ossidi di Mn."
+  abiti:
+    tabulare:  { nome: "Tabulare",  nota: "Cristalli tabulari, rari." }
+    massiccio: { nome: "Massiccio", nota: "Compatto, rosa-rosso con venature nere." }
+
+Rosasite:
+  formula: "(Cu,Zn)₂(CO₃)(OH)₂"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    botroidale: { nome: "Botroidale", nota: "Aggregati a grappoli, verde-azzurro." }
+    aciculare:  { nome: "Aciculare",  nota: "Cristalli a aghi o fibre." }
+    massiccio:  { nome: "Massiccio",  nota: "Incrostazioni." }
+
+# ── S ───────────────────────────────────────────────────────────────
+
+Scorl:
+  gruppo: Tormalina
+  formula: "NaFe²⁺₃Al₆(BO₃)₃Si₆O₁₈(OH)₄"
+  sistema: Trigonale
+  classe: Ditrigonale piramidale (3m)
+  nota: "Il membro nero e ferroso del gruppo delle tormaline. Mai trasparente."
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati con striature longitudinali, neri." }
+    aciculare:  { nome: "Aciculare",  nota: "Aggregati di aghi neri." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati compatti o fibrosi." }
+
+Elbaite:
+  gruppo: Tormalina
+  formula: "Na(Li,Al)₃Al₆(BO₃)₃Si₆O₁₈(OH)₄"
+  sistema: Trigonale
+  classe: Ditrigonale piramidale (3m)
+  nota: "Il membro litico delle tormaline. La specie che dà le tormaline gemme colorate."
+  varietà:
+    Verdelite:    { nome: "Verdelite",    nota: "Verde, da tracce di Fe²⁺.",                abito_default: prismatico }
+    Indicolite:   { nome: "Indicolite",   nota: "Blu, da tracce di Fe²⁺.",                  abito_default: prismatico }
+    Rubellite:    { nome: "Rubellite",    nota: "Rosa-rosso, da tracce di Mn²⁺.",           abito_default: prismatico }
+    Anguria:      { nome: "Anguria",      nota: "Nucleo rosa, bordo verde. Zonatura.",      abito_default: prismatico }
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati, striature longitudinali." }
+    aciculare:  { nome: "Aciculare",  nota: "Aggregati di aghi sottili." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati compatti o fibrosi." }
+
+Smithsonite:
+  formula: "ZnCO₃"
+  sistema: Trigonale
+  classe: Romboedrico (3̄m)
+  nota: "Il colore varia da tracce: verde (Cu), rosa (Co), giallo (Cd), azzurro (Cu)."
+  abiti:
+    botroidale:  { nome: "Botroidale",  nota: "Aggregati a grappoli, spesso traslucidi." }
+    romboedrico: { nome: "Romboedrico", nota: "Romboedri con facce curve." }
+    massiccio:   { nome: "Massiccio",   nota: "Compatto o terroso." }
+
+Spessartina:
+  gruppo: Granato
+  formula: "Mn₃Al₂(SiO₄)₃"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    dodecaedrico:  { nome: "Dodecaedrico",  nota: "Forma più comune, arancione-rosso." }
+    trapezoedrico: { nome: "Trapezoedrico", nota: "24 facce." }
+    massiccio:     { nome: "Massiccio",     nota: "Granulare." }
+
+Spodumene:
+  formula: "LiAlSi₂O₆"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  nota: "Varietà gemme: kunzite (rosa) e hiddenite (verde)."
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi appiattiti, spesso striati." }
+    massiccio:  { nome: "Massiccio",  nota: "Aggregati lamellari o compatti." }
+
+Stibnite:
+  formula: "Sb₂S₃"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi allungati, lucentezza metallica grigia." }
+    aciculare:  { nome: "Aciculare",  nota: "Aggregati di aghi, spesso raggiati." }
+
+Stilbite:
+  formula: "NaCa₄(Si₂₇Al₉)O₇₂·28H₂O"
+  sistema: Monoclino
+  classe: Prismatico (2/m)
+  abiti:
+    tabulare:      { nome: "Tabulare",      nota: "Cristalli tabulari, a volte a 'cravatta'." }
+    raggiate:      { nome: "Raggiato",      nota: "Aggregati a rosetta o emisferici." }
+    massiccio:     { nome: "Massiccio",     nota: "Aggregati compatti." }
+
+# ── T ───────────────────────────────────────────────────────────────
+
+Topazio:
+  formula: "Al₂SiO₄(F,OH)₂"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi con striature longitudinali, terminazioni a cuneo." }
+    massiccio:  { nome: "Massiccio",  nota: "Granulare, raro." }
+
+# ── U ───────────────────────────────────────────────────────────────
+
+Uvarovite:
+  gruppo: Granato
+  formula: "Ca₃Cr₂(SiO₄)₃"
+  sistema: Cubico
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  abiti:
+    dodecaedrico: { nome: "Dodecaedrico", nota: "Piccoli cristalli verde smeraldo brillante." }
+    massiccio:    { nome: "Massiccio",    nota: "Croste microcristalline." }
+
+# ── V ───────────────────────────────────────────────────────────────
+
+Vanadinite:
+  formula: "Pb₅(VO₄)₃Cl"
+  sistema: Esagonale
+  classe: Di-esagonale bipiramidale (6/mmm)
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi esagonali, rosso-arancio o bruno." }
+    aciculare:  { nome: "Aciculare",  nota: "Aggregati di aghi sottili." }
+    botroidale: { nome: "Botroidale", nota: "Aggregati a grappoli." }
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli tabulari esagonali, rosso-arancio o bruno." }
+
+Vesuvianite:
+  formula: "Ca₁₀(Mg,Fe)₂Al₄(SiO₄)₅(Si₂O₇)₂(OH)₄"
+  sistema: Tetragonale
+  classe: Ditetragonale bipiramidale (4/mmm)
+  nota: "Chiamata anche idocrase."
+  abiti:
+    prismatico: { nome: "Prismatico", nota: "Prismi tozzi a sezione quadrata, verde o bruno." }
+    massiccio:  { nome: "Massiccio",  nota: "Granulare, senza cristalli distinti." }
+
+# ── W ───────────────────────────────────────────────────────────────
+
+Wulfenite:
+  formula: "PbMoO₄"
+  sistema: Tetragonale
+  classe: Ditetragonale bipiramidale (4/m)
+  abiti:
+    tabulare:   { nome: "Tabulare",   nota: "Cristalli tabulari, arancione o giallo miele." }
+    prismatico: { nome: "Prismatico", nota: "Prismi tozzi." }
+
+# ── Z ───────────────────────────────────────────────────────────────
+
+Zirconia:
+  categoria: sintetico
+  formula: "ZrO₂"
+  sistema: Cubico (stabilizzato)
+  classe: Esottaedrico (4/m 3̄ 2/m)
+  nota: "Zirconia cubica sintetica (CZ). Non è il minerale naturale Zircone (ZrSiO₄). Usata come simulante del diamante."
+  abiti:
+    cubico: { nome: "Cubico", nota: "Cubi sintetici, incolori o colorati artificialmente." }
+
+Zolfo:
+  formula: "S"
+  sistema: Ortorombico
+  classe: Bipiramidale (mmm)
+  abiti:
+    bipiramidale: { nome: "Bipiramidale", nota: "Cristalli gialli, a volte trasparenti." }
+    massiccio:    { nome: "Massiccio",    nota: "Compatto o terroso." }
