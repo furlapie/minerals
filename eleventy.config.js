@@ -1,20 +1,13 @@
 const yaml = require("js-yaml");
 
 module.exports = function (eleventyConfig) {
-  // YAML data files — register the parser explicitly
+
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
   eleventyConfig.addDataExtension("yml",  (contents) => yaml.load(contents));
 
-  // Copy images as-is
   eleventyConfig.addPassthroughCopy("src/images");
-
-  // Copy habit 3D models as-is
   eleventyConfig.addPassthroughCopy("src/habits");
-
-  // Inside your module.exports function
   eleventyConfig.addPassthroughCopy("src/admin");
-
-  // Inside your module.exports function
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Shuffle filter
