@@ -350,7 +350,7 @@ eleventyComputed:
             {% when 5 %}{% assign m_tier_color = "#7cafe3" %}
             {% else %}{% assign m_tier_color = "#FF42E9" %}
           {% endcase %}
-          {% capture m_image %}/images/the_collection/card/{{ m.box }}.{{ m.number }}.jpg{% endcapture %}
+          {% capture m_image %}/images/the_collection/thumb/{{ m.box }}.{{ m.number }}.jpg{% endcapture %}
 
           <a class="rel-card" href="/collection/{{ m.slug }}/" style="--rt: {{ m_tier_color }};">
             <div class="rel-thumb">
@@ -359,8 +359,7 @@ eleventyComputed:
                   <path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/>
                 </svg>
               </span>
-              <img src="{{ m_image }}" alt="{{ m.name }}" loading="lazy" fetchpriority="low" decoding="async"
-                   onerror="this.style.display='none';"/>
+              <img data-src="{{ m_image }}" alt="{{ m.name }}" decoding="async" onerror="this.style.display='none';"/>
             </div>
             <div class="rel-body">
               <span class="rel-name">{{ m.name }}</span>
