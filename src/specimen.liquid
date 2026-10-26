@@ -111,7 +111,7 @@ eleventyComputed:
           <span>{{ specimen.name }}</span>
           <em>no photo yet</em>
         </div>
-        <img src="{{ image_path }}" alt="{{ specimen.name }}" loading="eager" decoding="async"
+        <img src="{{ image_path }}" alt="{{ specimen.name }}" loading="eager" fetchpriority="high" decoding="async"
              onerror="this.style.opacity='0'; this.parentElement.classList.add('no-img');"/>
         <div class="frame-brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       </div>
@@ -359,7 +359,7 @@ eleventyComputed:
                   <path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/>
                 </svg>
               </span>
-              <img src="{{ m_image }}" alt="{{ m.name }}" loading="lazy" decoding="async"
+              <img src="{{ m_image }}" alt="{{ m.name }}" loading="lazy" fetchpriority="low" decoding="async"
                    onerror="this.style.display='none';"/>
             </div>
             <div class="rel-body">
@@ -384,7 +384,7 @@ eleventyComputed:
                 <path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/>
               </svg>
             </span>
-            <img src="{{ prev_image }}" alt="" loading="lazy" decoding="async"
+            <img src="{{ prev_image }}" alt="" loading="lazy" fetchpriority="low" decoding="async"
                  onerror="this.style.display='none';"/>
           </span>
           <span class="nav-meta">
@@ -426,7 +426,7 @@ eleventyComputed:
                 <path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/>
               </svg>
             </span>
-            <img src="{{ next_image }}" alt="" loading="lazy" decoding="async"
+            <img src="{{ next_image }}" alt="" loading="lazy" fetchpriority="low" decoding="async"
                  onerror="this.style.display='none';"/>
           </span>
           <span class="nav-meta">

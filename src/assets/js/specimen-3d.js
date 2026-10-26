@@ -240,6 +240,5 @@ function bootModels() {
   }
 }
 
-const start = () => (window.requestIdleCallback || setTimeout)(bootModels);
-if (document.readyState === 'complete') start();
-else window.addEventListener('load', start, { once: true });
+if ('requestIdleCallback' in window) requestIdleCallback(bootModels, { timeout: 300 });
+else setTimeout(bootModels, 0);
