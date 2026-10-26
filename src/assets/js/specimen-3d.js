@@ -242,9 +242,3 @@ function bootModels() {
 
 if ('requestIdleCallback' in window) requestIdleCallback(bootModels, { timeout: 300 });
 else setTimeout(bootModels, 0);
-
-(function () {
-  const load = () => document.querySelectorAll('#detail img[data-src]').forEach(i => { i.src = i.dataset.src; i.removeAttribute('data-src'); });
-  if (document.readyState === 'complete') setTimeout(load, 300);
-  else window.addEventListener('load', () => setTimeout(load, 300), { once: true });
-})();
