@@ -383,8 +383,7 @@ eleventyComputed:
                 <path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/>
               </svg>
             </span>
-            <img src="{{ prev_image }}" alt="" loading="lazy" fetchpriority="low" decoding="async"
-                 onerror="this.style.display='none';"/>
+            <img data-src="{{ prev_image }}" alt="" decoding="async" onerror="this.style.display='none';"/>
           </span>
           <span class="nav-meta">
             <span class="nav-dir">
@@ -425,8 +424,7 @@ eleventyComputed:
                 <path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/>
               </svg>
             </span>
-            <img src="{{ next_image }}" alt="" loading="lazy" fetchpriority="low" decoding="async"
-                 onerror="this.style.display='none';"/>
+            <img data-src="{{ next_image }}" alt="" decoding="async" onerror="this.style.display='none';"/>
           </span>
           <span class="nav-meta">
             <span class="nav-dir">
