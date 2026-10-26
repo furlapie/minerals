@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
 
 THREE.Cache.enabled = true;
 
@@ -58,12 +57,7 @@ function makeEdges(geometry, url) {
   return new THREE.LineSegments(lines, mat);
 }
 
-// Setup Draco & GLTF Loaders
-const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath('/assets/js/jsm/libs/draco/');
-
-const loader = new GLTFLoader();
-loader.setDRACOLoader(dracoLoader);
+const loader = new STLLoader();
 
 const tiles  = [];
 
@@ -135,20 +129,8 @@ function buildScene(tile, geometry) {
 function loadTile(tile) {
   if (tile.loading) return;
   tile.loading = true;
-  
   loader.load(tile.el.dataset.model,
-    (gltf) => {
-      let geometry = null;
-      gltf.scene.traverse((child) => {
-        if (child.isMesh && !geometry) {
-          child.updateWorldMatrix(true, false);
-          geometry = child.geometry.clone();
-          geometry.applyMatrix4(child.matrixWorld);
-        }
-      });
-      
-      if (geometry) buildScene(tile, geometry);
-    },
+    (geometry) => buildScene(tile, geometry),
     undefined,
     () => {
       io.unobserve(tile.el);

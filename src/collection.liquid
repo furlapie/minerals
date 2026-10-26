@@ -498,7 +498,7 @@ permalink: /collection/
               {% capture search_text %}{{ g.file }} {{ g.habit }} {{ g.species | join: " " }}{% endcapture %}
               <div class="model-card" data-habit="{{ g.habit }}" data-habit-tag="{{ hab }}" data-name="{{ fparts[0] }}" data-search="{{ search_text | downcase | escape }}" title="{{ g.species | join: ', ' | escape }}">
                 <div class="model-thumb">
-                  <div class="comp-3d" data-model="/habits/{{ g.file }}.glb"></div>
+                  <div class="comp-3d" data-model="/habits/{{ g.file }}.stl"></div>
                 </div>
                 <div class="model-body">
                   <a class="model-name" href="/collection/?habit={{ g.habit | url_encode }}&view=table">{{ hab }}</a>

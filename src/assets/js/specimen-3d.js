@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
 
 THREE.Cache.enabled = true;
 
@@ -188,43 +187,16 @@ function loadSlide(slide) {
   const containerSvg = visualBlock?.querySelector('.comp-svg-container');
   if (!visualBlock || !container3d || !containerSvg) return;
 
-  // Setup Draco & GLTF Loaders
-  const dracoLoader = new DRACOLoader();
-  dracoLoader.setDecoderPath('/assets/js/jsm/libs/draco/');
-  
-  const loader = new GLTFLoader();
-  loader.setDRACOLoader(dracoLoader);
-
-  loader.load(urlSpecific, (gltf) => {
-    let geometry = null;
-    gltf.scene.traverse((child) => {
-      if (child.isMesh && !geometry) {
-        child.updateWorldMatrix(true, false);
-        geometry = child.geometry.clone();
-        geometry.applyMatrix4(child.matrixWorld);
-      }
-    });
-    
+  stlLoader.load(urlSpecific, (geometry) => {
     visualBlock.classList.add('solo-3d');
     containerSvg.style.display = 'none';
     container3d.style.display = 'block';
-    if (geometry) init3D(container, geometry, urlSpecific);
+    init3D(container, geometry, urlSpecific);
   }, undefined, () => {
-    
-    // Generic fallback
-    loader.load(urlGeneric, (gltf) => {
-      let geometry = null;
-      gltf.scene.traverse((child) => {
-        if (child.isMesh && !geometry) {
-          child.updateWorldMatrix(true, false);
-          geometry = child.geometry.clone();
-          geometry.applyMatrix4(child.matrixWorld);
-        }
-      });
-      
+    stlLoader.load(urlGeneric, (geometry) => {
       containerSvg.style.display = 'block';
       container3d.style.display = 'block';
-      if (geometry) init3D(container, geometry, urlGeneric);
+      init3D(container, geometry, urlGeneric);
     }, undefined, () => {
       container3d.style.display = 'none';
       containerSvg.style.display = 'block';
@@ -266,8 +238,6 @@ function bootModels() {
   }
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bootModels, { once: true });
-} else {
-  bootModels();
-}
+const start = () => (window.requestIdleCallback || setTimeout)(bootModels);
+if (document.readyState === 'complete') start();
+else window.addEventListener('load', start, { once: true });
