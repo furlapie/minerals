@@ -173,6 +173,8 @@ function init3D(container, geometry, url) {
   resizeObserver.observe(container);
 }
 
+const stlLoader = new STLLoader();
+
 function loadSlide(slide) {
   if (slide.dataset.modelLoadStarted === 'true') return;
   slide.dataset.modelLoadStarted = 'true';

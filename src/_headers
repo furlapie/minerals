@@ -1,8 +1,8 @@
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
 
-/habits/*
-  Cache-Control: public, max-age=31536000, immutable
+/assets/js/*.js
+  Cache-Control: public, max-age=0, must-revalidate
 
-/images/*
+/assets/js/jsm/*
   Cache-Control: public, max-age=31536000, immutable
