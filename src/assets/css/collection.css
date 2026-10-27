@@ -627,3 +627,71 @@
   body.is-scrolling .specimen-table tbody tr:hover .shiny-fx::after { animation: none; }
   body.is-scrolling .specimen-table tbody tr:hover .locate-dot { background: var(--border); box-shadow: none; }
   body.is-scrolling .specimen-table tbody tr:hover .type-ico { transform: none; }
+
+/* ═════════ RESPONSIVE ═══════════════════════════════════ */
+  @media (max-width: 770px) {
+      main { padding-left: 1rem; padding-right: 1rem; }
+      .coll-toolbar { flex-direction: column; align-items: stretch; gap: 10px; padding-top: 1rem; }
+      .ct-search { flex-basis: 100%; }
+      .ct-search:focus-within { flex-basis: 100%; }
+      .ct-meta { justify-content: space-between; margin-left: 0; flex-wrap: wrap; gap: 6px; }
+      .rail { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 12px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+      .rail::-webkit-scrollbar { display: none; }
+      .rail-group { border-left: none; padding: 0 12px 0 0; flex-shrink: 0; }
+      .table-responsive { overflow: visible; border-radius: 0; min-height: auto; }
+      .specimen-table { display: block; width: 100%; min-width: 0; }
+      .specimen-table thead {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+          scrollbar-width: none;
+          border-bottom: 1px solid var(--border);
+          margin-bottom: 10px;
+      }
+      .specimen-table thead::-webkit-scrollbar { display: none; }
+      .specimen-table thead tr { display: inline-flex; min-width: 100%; }
+      .specimen-table thead th {
+          display: inline-flex;
+          align-items: center;
+          width: auto !important;
+          padding: 8px 12px;
+          border: none;
+          border-bottom: 2px solid transparent;
+      }
+      .specimen-table thead th .th-content { justify-content: center; }
+      .specimen-table tbody { display: flex; flex-direction: column; gap: 10px; }
+      .specimen-table tbody tr { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+      .specimen-table tbody tr:hover { border-color: var(--gold); background: var(--surface-2); }
+      .specimen-table td { display: none; padding: 0; box-shadow: none !important; overflow: visible; white-space: normal; }
+      .specimen-table td:nth-child(2), .specimen-table td:nth-child(3), .specimen-table td:nth-child(4), .specimen-table td:nth-child(5), .specimen-table td:nth-child(7), .specimen-table td:nth-child(8), .specimen-table td:nth-child(10), .specimen-table td:nth-child(11), .specimen-table td:nth-child(12) { display: block; }
+      .specimen-table td.color-cell { width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0; }
+      .specimen-table td.title-cell { flex: 1 1 100%; order: -1; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+      .specimen-table td.from-cell, .specimen-table td.origin-cell { font-size: 11px; color: var(--muted); }
+      .specimen-table td.type-col { width: 18px; margin-left: auto; }
+      .specimen-table td.tier-cell { width: 28px; min-height: 28px; flex-shrink: 0; }
+      .specimen-table td.num-cell { font-size: 12px; }
+      .specimen-table td.date-cell { font-size: 10px; color: var(--muted); width: 100%; text-align: right; margin-top: 4px; }
+      .gallery { grid-template-columns: repeat(3, 1fr); gap: 8px; padding-top: 12px; }
+      .g-card { padding: 4px; gap: 4px; border-radius: 8px; }
+      .g-thumb { border-radius: 6px; }
+      .g-name { font-size: 11px; }
+      .g-meta-txt { font-size: 9px; }
+      .g-loc { display: none; }
+      .g-flag { width: 16px; height: 16px; top: 4px; right: 4px; }
+      .g-wip { right: 24px; }
+      .g-tier { width: 16px; height: 16px; }
+      .g-tier em { font-size: 9px; }
+      .model-cells { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .model-card { padding: 8px 4px; gap: 4px; }
+      .model-name { font-size: 11px; }
+      .model-count { font-size: 9px; }
+      .model-group-head h2 { font-size: 9px; }
+      .coll-footer { display: flex; flex-direction: column; }
+      .cf-cell { padding: 10px 12px; border-right: 0; border-bottom: 1px solid var(--border); flex-direction: row; align-items: center; justify-content: space-between; }
+      .cf-num { font-size: 16px; }
+      .cf-lbl { font-size: 9px; }
+      .cf-mix { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .mix-row { width: 100%; grid-template-columns: 40px 1fr; gap: 8px; }
+      .cf-back { border-bottom: 0; }
+      .cf-back-num svg { width: 16px; height: 16px; }
+  }

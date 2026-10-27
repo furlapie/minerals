@@ -727,3 +727,48 @@ transition: opacity .6s ease calc(var(--i) * 90ms), transform .6s cubic-bezier(.
 
 .home.js .spectrum a { height: 0; }
 .home.js .spectrum.in a { height: 100%; transition: height .7s cubic-bezier(.2,.8,.2,1) var(--dl, 0ms); }
+
+@media (max-width: 770px) {
+    .home { grid-template-columns: 1fr; padding: 1rem 1.25rem 2rem; gap: 2rem; }
+    .collection-title { font-size: 28px; }
+    .sys-container { display: none; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .stat { padding: 10px; gap: 4px; }
+    .stat-num { font-size: 20px; }
+    .stat-label { font-size: 9px; }
+    .stat-grid .explore-stat { padding: 10px 12px; margin-bottom: 2px; }
+    .stat-grid .explore-stat .stat-num { font-size: 16px; }
+    .tier-cols { display: flex; overflow-x: auto; gap: 8px; padding-bottom: 8px; scrollbar-width: none; }
+    .tier-col { flex: 0 0 60px; }
+    .tier-track { height: 90px; }
+    .tier-n { font-size: 16px; }
+    .tier-tag { width: 28px; height: 28px; }
+    .tier-tag em { font-size: 11px; }
+    .type-cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .type-card { padding: 10px; gap: 6px; }
+    .type-ico { width: 32px; height: 32px; }
+    .type-ico svg { width: 18px; height: 18px; }
+    .type-count { font-size: 18px; }
+    .type-name { font-size: 10px; }
+    .type-meta { font-size: 9px; }
+    .home-cta { padding: 12px 16px; gap: 12px; margin-top: 1.5rem; }
+    .cta-text strong { font-size: 15px; }
+    .cta-strip { display: none; }
+    .cta-go { width: 36px; height: 36px; }
+    .cta-go svg { width: 16px; height: 16px; }
+    .spectrum { height: 120px; overflow-x: auto; display: flex; flex-wrap: nowrap; scrollbar-width: none; }
+    .spectrum a { flex: 0 0 16px; min-width: 16px; }
+    .yr-chart { padding: 10px 8px 8px; }
+    .yr-area { left: 20px; right: 0; top: 10px; bottom: 16px; }
+    .yr-line span { left: -20px; width: 16px; font-size: 9px; }
+    .yr-labels { left: 20px; height: 12px; }
+    .yr-labels span { font-size: 9px; }
+    .wm-key-mini { font-size: 7px; }
+    .wm-hud { min-width: 140px; font-size: 9px; padding: 6px 8px; }
+    .wm-row { grid-template-columns: 1fr 30px 16px; gap: 6px; }
+    .ex-panel { left: 1rem; top: 1rem; width: calc(100vw - 2rem); height: calc(100vh - 2rem); }
+    .ex-shelves, .ex-box-grid { grid-template-columns: 1fr; gap: 16px; }
+    .ex-head-text { padding: 6px 10px; gap: 8px; }
+    .ex-title { font-size: 11px; }
+    .ex-sub { font-size: 10px; }
+}

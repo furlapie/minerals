@@ -146,14 +146,10 @@ main {
 :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
-@media (max-width: 600px) {
-    .site-header { padding: 1rem; }
-    .breadcrumb { gap: .5rem; font-size: clamp(22px, 6vw, 32px); }
+@media (max-width: 770px) {
+    main { padding-inline: 1.25rem; }
+    .site-header { padding: 1.25rem 1.25rem 1rem 1.25rem; }
+    .breadcrumb { gap: .5rem; font-size: clamp(24px, 6vw, 32px); line-height: 1.2; }
     .breadcrumb-separator svg { width: 20px; height: 20px; }
-    .theme-toggle { flex-basis: 36px; width: 36px; height: 36px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .breadcrumb-link,
-    .theme-toggle { transition: none; }
+    .theme-toggle { flex-basis: 40px; width: 40px; height: 40px; }
 }
