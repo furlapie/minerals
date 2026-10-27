@@ -148,8 +148,22 @@ eleventyComputed:
       <div class="eyebrow">
         <span class="eb-locate">S{{ specimen.shelf }} · B{{ specimen.box }} <em>#</em>{{ specimen.number }}</span>
 
+        {% if color_count > 0 %}
+        <span class="eb-colors" aria-label="Dominant colors">
+          {% for hex in colors %}
+            {% assign hex_key = hex | remove: '#' | upcase %}
+            {% assign color_name = hex %}
+            {% for pair in color_pairs %}
+              {% assign parts = pair | split: ':' %}
+              {% if parts[0] == hex_key %}{% assign color_name = parts[1] %}{% break %}{% endif %}
+            {% endfor %}
+            <a class="eb-dot" href="/collection/?color={{ hex | url_encode }}" title="{{ color_name }}" aria-label="{{ color_name }}" style="background: {{ hex }};"></a>
+          {% endfor %}
+        </span>
+        {% endif %}
+
         {% if specimen.wip %}
-          <a class="eb-wip" href="/collection/?wip=1" title="View all work in progress specimens">Work in progress</a>
+          <a class="eb-wip" href="/collection/?wip=1" title="View all work in progress specimens"><span class="full">Work in progress</span><span class="abbr">WIP</span></a>
         {% endif %}
 
         <a class="badge badge-type" href="/collection/?type={{ specimen.type | url_encode }}" title="View all {{ specimen.type | downcase }} specimens">
@@ -169,7 +183,7 @@ eleventyComputed:
 
         <a class="badge badge-tier" href="/collection/?tier={{ specimen.tier }}" title="View all tier {{ specimen.tier }} specimens">
           <span class="badge-dot" style="background: {{ tier_color }};"></span>
-          Tier {{ specimen.tier }}
+          <span class="full">Tier {{ specimen.tier }}</span><span class="abbr">T{{ specimen.tier }}</span>
         </a>
 
         {% if specimen.shiny %}
@@ -193,16 +207,35 @@ eleventyComputed:
       {% if specimen.main and specimen.main != "" %}
         {% assign main_parts = specimen.main | split: ", " %}
         {% assign habit_parts = specimen.habit | split: ", " %}
-        <div class="composition" data-count="{{ main_parts.size }}">
+        <div class="composition{% if main_parts.size > 1 %} has-nav{% endif %}" data-count="{{ main_parts.size }}">
+
+          {% if main_parts.size > 1 %}
+          <div class="comp-nav">
+            <button class="comp-btn" type="button" data-comp-dir="prev" aria-label="Previous component">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <span class="comp-dots" aria-hidden="true">{% for part in main_parts %}<i{% if forloop.first %} class="on"{% endif %}></i>{% endfor %}</span>
+            <button class="comp-btn" type="button" data-comp-dir="next" aria-label="Next component">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          {% endif %}
+
           <div class="comp-slides">
             {% for part in main_parts %}
               {% assign m = minerali[part] | default: materiali[part] %}
               {% assign habit_key = habit_parts[forloop.index0] | strip %}
+              {% assign h = nil %}
+              {% if m.abiti and habit_key != "" %}{% assign h = m.abiti[habit_key] %}{% endif %}
+
               <div class="comp-slide" data-idx="{{ forloop.index0 }}"{% unless forloop.first %} hidden{% endunless %}>
                 <span class="comp-name">{{ part }}</span>
-              
+
                 {% if m.formula %}
-                  <span class="comp-formula">{{ m.formula }}</span>
+                  {% assign flen = m.formula | size %}
+                  <span class="comp-formula{% if flen > 36 %} xlong{% elsif flen > 20 %} long{% endif %}">{{ m.formula }}</span>
+                {% elsif m.composizione and m.composizione != "—" %}
+                  <span class="comp-comp">{{ m.composizione }}</span>
                 {% endif %}
 
                 {% if m.sistema or m.classe %}
@@ -210,14 +243,16 @@ eleventyComputed:
                     {%- if m.sistema -%}<em>System</em> {{ m.sistema }}{%- endif -%}
                     {%- if m.classe -%}{% if m.sistema %} · {% endif %}<em>Class</em> {{ m.classe }}{%- endif -%}
                   </span>
+                {% elsif m.categoria %}
+                  <span class="comp-sistema"><em>Category</em> {{ m.categoria }}</span>
                 {% endif %}
-              
-                {% if m.abiti and habit_key != "" and m.abiti[habit_key] %}
-                  {% assign h = m.abiti[habit_key] %}
+
+                {% if h %}
                   <span class="comp-habit">{{ h.nome }}{% if h.nota %} — <em>{{ h.nota }}</em>{% endif %}</span>
-                  
+                {% endif %}
+
+                {% if habit_key != "" %}
                   <div class="comp-visual">
-                    <!-- 3D model container -->
                     <div class="comp-3d-container" style="display: none;">
                       <div class="comp-3d"
                            data-model-specific="/habits/{{ part | slugify }}-{{ habit_key }}.stl"
@@ -226,7 +261,6 @@ eleventyComputed:
                            data-colors="{{ colors | join: '|' }}">
                       </div>
                     </div>
-                    <!-- SVG container (affiancato solo se il 3D è generico) -->
                     <div class="comp-svg-container" style="display: none;">
                       <img class="comp-img" src="/habits/{{ habit_key }}.svg"
                            alt="{{ part }} {{ habit_key }}"
@@ -234,37 +268,20 @@ eleventyComputed:
                     </div>
                   </div>
                 {% endif %}
-              
-                {% if m.categoria == "serie" %}
-                  <span class="comp-note">Serie: {{ m.famiglia }}. {{ m.nota }}</span>
-                {% elsif m.composizione %}
-                  <span class="comp-note">{{ m.composizione }}</span>
-                {% elsif m.nota %}
-                  <span class="comp-note">{{ m.nota }}</span>
+
+                {% capture note_text %}{% if m.categoria == "serie" %}Serie: {{ m.famiglia }}. {{ m.nota }}{% elsif m.nota %}{{ m.nota }}{% endif %}{% endcapture %}
+                {% assign note_text = note_text | strip %}
+                {% if note_text != "" %}
+                  <div class="comp-note-box">
+                    <p class="comp-note">{{ note_text }}</p>
+                    <button class="comp-btn comp-more" type="button" aria-expanded="false" aria-label="Expand note">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                  </div>
                 {% endif %}
               </div>
             {% endfor %}
           </div>
-          
-          {% if main_parts.size > 1 %}
-            <div class="comp-nav">
-              <button class="comp-nav-btn" type="button" data-comp-dir="next" aria-label="Next component">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"/>
-                </svg>
-              </button>
-              <span class="comp-dots">
-                {% for part in main_parts %}<i{% if forloop.first %} class="on"{% endif %}></i>{% endfor %}
-              </span>
-              <button class="comp-nav-btn" type="button" data-comp-dir="prev" aria-label="Previous component">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="15 18 9 12 15 6"/>
-                </svg>
-              </button>
-            </div>
-          {% endif %}
         </div>
       {% endif %}
 
@@ -324,6 +341,19 @@ eleventyComputed:
           <span class="oc-nomap">Origin not mapped</span>
         {% endunless %}
       </div>
+      <div class="oc-info">
+        <div class="oc-line">
+          <span class="oc-label">From</span>
+          <span class="oc-value {% if specimen.from_who == blank %}empty{% endif %}">{{ specimen.from_who | default: '— unknown —' }}</span>
+        </div>
+        <div class="oc-line">
+          <span class="oc-label">Origin</span>
+          <span class="oc-value {% if specimen.from_where == blank %}empty{% endif %}">{{ specimen.from_where | default: '— unspecified —' }}</span>
+        </div>
+        {% if origin_region_label != "" %}
+        <div class="oc-region"><span class="oc-region-dot"></span>{{ origin_region_label }}</div>
+        {% endif %}
+      </div>
     </div>
 
   </section>
@@ -335,7 +365,7 @@ eleventyComputed:
     {% if related_count > 0 %}
     <h2 class="rel-h">
       More {{ specimen.type | downcase }} specimens
-      <span class="rel-count">{{ related_count }}</span>
+            <span class="rel-count"><span class="rc-full">{{ related_count }}</span><span class="rc-m">{% if related_count > 3 %}3{% else %}{{ related_count }}{% endif %}</span></span>
     </h2>
 
     <!-- Related grid -->
@@ -409,7 +439,7 @@ eleventyComputed:
             </svg>
           </span>
           <span class="nav-all-text">
-            <b>All specimens</b>
+            <b>All<span class="nav-all-more"> specimens</span></b>
             <em>#{{ current_index | plus: 1 }} / {{ specimens.size }}</em>
           </span>
         </span>

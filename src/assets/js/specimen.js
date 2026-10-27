@@ -290,31 +290,51 @@
     requestAnimationFrame(tryZoom);
   };
   requestAnimationFrame(tryZoom);
+})();
 
-  /* ── Composition carousel ─────────────────────────────── */
-  (function () {
-    const root = document.querySelector('#detail .composition');
-    if (!root) return;
-    const slides = root.querySelectorAll('.comp-slide');
-    if (slides.length < 2) return;
+/* ── Composition: pager + collapsible note ── */
+(function () {
+  const comp = document.querySelector('#detail .composition');
+  if (!comp) return;
 
-    const dots = root.querySelectorAll('.comp-dots i');
-    let i = 0;
+  const slides = Array.from(comp.querySelectorAll('.comp-slide'));
+  const dots   = comp.querySelectorAll('.comp-dots i');
+  let i = 0;
 
-    const nextBtn = root.querySelector('[data-comp-dir="next"]');
-    const prevBtn = root.querySelector('[data-comp-dir="prev"]');
+  // Collapsed = one line. If the text is wider than the box, show the toggle.
+  const fit = (slide) => {
+    const box = slide && slide.querySelector('.comp-note-box');
+    if (!box || slide.hidden) return;
+    const note = box.querySelector('.comp-note');
+    box.classList.remove('open', 'fits');
+    box.querySelector('.comp-more').setAttribute('aria-expanded', 'false');
+    if (note.scrollWidth <= note.clientWidth + 1) box.classList.add('fits');
+  };
 
+  comp.addEventListener('click', e => {
+    const more = e.target.closest('.comp-more');
+    if (!more) return;
+    const box = more.closest('.comp-note-box');
+    const open = box.classList.toggle('open');
+    more.setAttribute('aria-expanded', open ? 'true' : 'false');
+    more.setAttribute('aria-label', open ? 'Collapse note' : 'Expand note');
+  });
+
+  if (slides.length > 1) {
     const goTo = (n) => {
       slides[i].hidden = true;
-      dots[i]?.classList.remove('on');
+      if (dots[i]) dots[i].classList.remove('on');
       i = ((n % slides.length) + slides.length) % slides.length;
       slides[i].hidden = false;
-      dots[i]?.classList.add('on');
+      if (dots[i]) dots[i].classList.add('on');
+      fit(slides[i]);
     };
+    comp.querySelector('[data-comp-dir="next"]').addEventListener('click', () => goTo(i + 1));
+    comp.querySelector('[data-comp-dir="prev"]').addEventListener('click', () => goTo(i - 1));
+  }
 
-    nextBtn.addEventListener('click', () => goTo(i + 1));
-    prevBtn.addEventListener('click', () => goTo(i - 1));
-  })();
+  fit(slides[0]);
+  window.addEventListener('load', () => fit(slides[i]), { once: true });
 })();
 
 (function () {

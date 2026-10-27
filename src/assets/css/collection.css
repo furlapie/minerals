@@ -116,6 +116,7 @@
   .ct-seg-btn:hover { color: var(--ink); }
   .ct-seg-btn.on { background: color-mix(in srgb, var(--gold) 16%, var(--surface-2)); color: var(--gold); }
   .coll[data-view="grid"] #densityToggle { display: none; }
+  #toggleFiltersMobile { display: none; }
 
 /* ═════════ QUICK FILTER RAIL ═════════════════════════════ */
   .rail { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 0; padding: 4px 0 16px; }
@@ -187,6 +188,7 @@
   .coll[data-view="models"] .ct-chips,
   .coll[data-view="models"] #densityToggle,
   .coll[data-view="models"] #peekToggle,
+  .coll[data-view="models"] #toggleFiltersMobile,
   .coll[data-view="models"] #clearAll { display: none; }
   .coll[data-view="grid"] #densityToggle,
   .coll[data-view="grid"] #peekToggle { display: none; }
@@ -629,69 +631,85 @@
   body.is-scrolling .specimen-table tbody tr:hover .type-ico { transform: none; }
 
 /* ═════════ RESPONSIVE ═══════════════════════════════════ */
-  @media (max-width: 770px) {
-      main { padding-left: 1rem; padding-right: 1rem; }
-      .coll-toolbar { flex-direction: column; align-items: stretch; gap: 10px; padding-top: 1rem; }
-      .ct-search { flex-basis: 100%; }
-      .ct-search:focus-within { flex-basis: 100%; }
-      .ct-meta { justify-content: space-between; margin-left: 0; flex-wrap: wrap; gap: 6px; }
-      .rail { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 12px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-      .rail::-webkit-scrollbar { display: none; }
-      .rail-group { border-left: none; padding: 0 12px 0 0; flex-shrink: 0; }
-      .table-responsive { overflow: visible; border-radius: 0; min-height: auto; }
-      .specimen-table { display: block; width: 100%; min-width: 0; }
-      .specimen-table thead {
-          display: block;
-          overflow-x: auto;
-          white-space: nowrap;
-          scrollbar-width: none;
-          border-bottom: 1px solid var(--border);
-          margin-bottom: 10px;
-      }
-      .specimen-table thead::-webkit-scrollbar { display: none; }
-      .specimen-table thead tr { display: inline-flex; min-width: 100%; }
-      .specimen-table thead th {
-          display: inline-flex;
-          align-items: center;
-          width: auto !important;
-          padding: 8px 12px;
-          border: none;
-          border-bottom: 2px solid transparent;
-      }
-      .specimen-table thead th .th-content { justify-content: center; }
-      .specimen-table tbody { display: flex; flex-direction: column; gap: 10px; }
-      .specimen-table tbody tr { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
-      .specimen-table tbody tr:hover { border-color: var(--gold); background: var(--surface-2); }
-      .specimen-table td { display: none; padding: 0; box-shadow: none !important; overflow: visible; white-space: normal; }
-      .specimen-table td:nth-child(2), .specimen-table td:nth-child(3), .specimen-table td:nth-child(4), .specimen-table td:nth-child(5), .specimen-table td:nth-child(7), .specimen-table td:nth-child(8), .specimen-table td:nth-child(10), .specimen-table td:nth-child(11), .specimen-table td:nth-child(12) { display: block; }
-      .specimen-table td.color-cell { width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0; }
-      .specimen-table td.title-cell { flex: 1 1 100%; order: -1; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
-      .specimen-table td.from-cell, .specimen-table td.origin-cell { font-size: 11px; color: var(--muted); }
-      .specimen-table td.type-col { width: 18px; margin-left: auto; }
-      .specimen-table td.tier-cell { width: 28px; min-height: 28px; flex-shrink: 0; }
-      .specimen-table td.num-cell { font-size: 12px; }
-      .specimen-table td.date-cell { font-size: 10px; color: var(--muted); width: 100%; text-align: right; margin-top: 4px; }
-      .gallery { grid-template-columns: repeat(3, 1fr); gap: 8px; padding-top: 12px; }
-      .g-card { padding: 4px; gap: 4px; border-radius: 8px; }
-      .g-thumb { border-radius: 6px; }
-      .g-name { font-size: 11px; }
-      .g-meta-txt { font-size: 9px; }
-      .g-loc { display: none; }
-      .g-flag { width: 16px; height: 16px; top: 4px; right: 4px; }
-      .g-wip { right: 24px; }
-      .g-tier { width: 16px; height: 16px; }
-      .g-tier em { font-size: 9px; }
-      .model-cells { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      .model-card { padding: 8px 4px; gap: 4px; }
-      .model-name { font-size: 11px; }
-      .model-count { font-size: 9px; }
-      .model-group-head h2 { font-size: 9px; }
-      .coll-footer { display: flex; flex-direction: column; }
-      .cf-cell { padding: 10px 12px; border-right: 0; border-bottom: 1px solid var(--border); flex-direction: row; align-items: center; justify-content: space-between; }
-      .cf-num { font-size: 16px; }
-      .cf-lbl { font-size: 9px; }
-      .cf-mix { flex-direction: column; align-items: flex-start; gap: 6px; }
-      .mix-row { width: 100%; grid-template-columns: 40px 1fr; gap: 8px; }
-      .cf-back { border-bottom: 0; }
-      .cf-back-num svg { width: 16px; height: 16px; }
-  }
+@media (max-width: 770px) {
+    /* 1. Layout & Toolbar */
+    main, .coll { padding: 0 !important; max-width: 100vw !important; overflow-x: hidden; }
+    .coll-toolbar, .rail, .gallery, .models-grid, .coll-footer, .empty-state { padding-left: 1rem; padding-right: 1rem; }
+    .coll-toolbar { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 1rem; padding-bottom: 0; }
+    .ct-search { flex-basis: 100%; }
+    .ct-search:focus-within { flex-basis: 100%; }
+    .ct-kbd { display: none; }
+    
+    /* 2. Button Sizing (Perfect Match) */
+    .ct-meta { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 6px; flex-wrap: nowrap; margin-left: 0; }
+    .ct-count { margin-right: auto; font-size: 12px; white-space: nowrap; }
+    
+    #densityToggle, #peekToggle { display: none !important; }
+    
+    /* Force uniform height and width for all buttons */
+    .ct-seg { height: 32px; padding: 2px; margin-left: 0; }
+    .ct-seg-btn { height: 26px; width: 32px; } /* Inner buttons fit inside the 32px container */
+    .ct-icon-btn, #toggleFiltersMobile { height: 32px; width: 32px; border-radius: 8px; }
+    .ct-seg-btn svg, .ct-icon-btn svg { width: 14px; height: 14px; }
+
+    /* 3. Filter Rail */
+    #toggleFiltersMobile { display: grid; }
+    .rail {
+        display: flex; flex-wrap: wrap; gap: 8px 12px;
+        max-height: 0; overflow: hidden; opacity: 0; visibility: hidden;
+        padding-top: 0; padding-bottom: 0;
+        transition: max-height .4s cubic-bezier(.2,.8,.2,1), padding .4s cubic-bezier(.2,.8,.2,1),
+                    opacity .25s ease, visibility 0s .4s;
+    }
+    .rail.mobile-visible {
+        max-height: 700px; opacity: 1; visibility: visible;
+        padding-top: 12px; padding-bottom: 12px;
+        box-shadow: inset 0 1px 0 var(--border), inset 0 -1px 0 var(--border);
+        transition: max-height .4s cubic-bezier(.2,.8,.2,1), padding .4s cubic-bezier(.2,.8,.2,1),
+                    opacity .25s .05s ease, visibility 0s;
+    }
+    .rail-group { border-left: none; padding: 0; width: 100%; display: flex; align-items: center; gap: 8px; }
+    .rail-label { font-size: 10px; width: 40px; flex-shrink: 0; }
+    .rail-items { flex-wrap: wrap; gap: 6px; }
+    .tp, .fl, .mt-chip { padding: 4px 8px; font-size: 11px; gap: 5px; }
+    .tp .ti { width: 12px; height: 12px; }
+    .tt { width: 24px; height: 24px; }
+    .tt span { font-size: 10px; }
+    .cd { width: 16px; height: 16px; }
+
+    /* 4. Table view doesn't exist on mobile (rows stay in the DOM for filters/stats) */
+    .table-responsive { display: none !important; }
+    .ct-seg-btn[data-view="table"] { display: none; }
+
+    /* 5. Gallery, Models, Footer */
+    .gallery { grid-template-columns: repeat(3, 1fr); gap: 8px; padding-top: 12px; }
+    .g-card { padding: 4px; gap: 4px; border-radius: 8px; }
+    .g-thumb { border-radius: 6px; }
+    .g-name { font-size: 11px; }
+    .g-meta-txt { font-size: 9px; }
+    .g-origin { display: none; }
+    .g-loc { display: none; }
+    .g-flag { width: 16px; height: 16px; top: 4px; right: 4px; }
+    .g-wip { right: 24px; }
+    .g-tier { width: 16px; height: 16px; }
+    .g-tier em { font-size: 9px; }
+    
+    .model-cells { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .model-card { padding: 8px 4px; gap: 4px; }
+    .model-name { font-size: 11px; }
+    .model-count { font-size: 9px; }
+    .model-group-head h2 { font-size: 9px; }
+    
+    .coll-footer { display: grid; grid-template-columns: 1fr 1fr; padding: 0; margin-left: 1rem; margin-right: 1rem; }
+    .cf-cell { padding: 10px 12px; border-right: 0; border-bottom: 1px solid var(--border); flex-direction: row; align-items: center; justify-content: space-between; }
+    .cf-cell:nth-child(1), .cf-cell:nth-child(3) { border-right: 1px solid var(--border); }
+    .cf-num { font-size: 16px; }
+    .cf-lbl { font-size: 9px; }
+
+    .cf-mix { grid-column: 1 / -1; flex-direction: column; align-items: stretch; gap: 8px; }
+    .mix-row { width: 100%; grid-template-columns: 58px minmax(0, 1fr); gap: 8px; }
+    .mix-lbl { white-space: nowrap; }
+
+    .cf-back { grid-column: 1 / -1; border-bottom: 0; }
+    .cf-back-num svg { width: 16px; height: 16px; }
+}

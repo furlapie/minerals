@@ -58,36 +58,28 @@ html {
     scrollbar-width: thin;
     scrollbar-color: var(--scroll-thumb) transparent;
 }
-
 body {
     margin: 0;
     background: var(--bg);
     color: var(--ink);
     font-family: Consolas, "Courier New", monospace;
 }
-
-::-webkit-scrollbar { width: 4px; height: 4px; }
-::-webkit-scrollbar-button { display: none; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb {
-    background: var(--scroll-thumb);
-    border-radius: 4px;
-}
+::-webkit-scrollbar             { width: 4px; height: 4px; }
+::-webkit-scrollbar-button      { display: none; }
+::-webkit-scrollbar-track       { background: transparent; }
+::-webkit-scrollbar-thumb       { background: var(--scroll-thumb); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--scroll-thumb-hover); }
-
 main {
     width: 100%;
     max-width: 1000px;
     margin-inline: auto;
 }
-
 .site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 2rem;
 }
-
 .breadcrumb {
     display: flex;
     align-items: center;
@@ -95,30 +87,24 @@ main {
     font-size: 40px;
     font-weight: 700;
 }
-
 .breadcrumb-link,
 .breadcrumb-current {
     font-size: inherit;
     font-weight: inherit;
 }
-
 .breadcrumb-link {
     color: var(--ink);
     text-decoration: none;
     transition: color .1s;
 }
-
 .breadcrumb-link:hover { color: var(--accent); }
-
 .breadcrumb-current { color: var(--ink); }
-
 .breadcrumb-separator {
     display: inline-flex;
     align-items: center;
     color: var(--muted);
     line-height: 1;
 }
-
 .breadcrumb-separator svg {
     width: 28px;
     height: 28px;
@@ -148,8 +134,9 @@ main {
 
 @media (max-width: 770px) {
     main { padding-inline: 1.25rem; }
-    .site-header { padding: 1.25rem 1.25rem 1rem 1.25rem; }
-    .breadcrumb { gap: .5rem; font-size: clamp(24px, 6vw, 32px); line-height: 1.2; }
-    .breadcrumb-separator svg { width: 20px; height: 20px; }
-    .theme-toggle { flex-basis: 40px; width: 40px; height: 40px; }
+    .site-header { padding: 1rem 1rem 0.5rem 1rem; gap: 1rem; }
+    .breadcrumb { gap: .35rem; font-size: clamp(14px, 4vw, 18px); line-height: 1.2; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .breadcrumb-separator svg { width: 14px; height: 14px; }
+    .theme-toggle { flex-shrink: 0; flex-basis: 32px; width: 32px; height: 32px; }
+    .theme-toggle svg { width: 20px; height: 20px; }
 }

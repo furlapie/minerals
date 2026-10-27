@@ -238,7 +238,26 @@ function bootModels() {
   } else {
     slides.forEach(loadSlide);
   }
+  /* Once the page and its pictures are done, quietly load the models of the
+     components that are still hidden, so the pager finds them ready. */
+  const preloadHidden = () => {
+    const queue = Array.from(slides).filter(s => s.hidden);
+    const next = () => {
+      const s = queue.shift();
+      if (!s) return;
+      loadSlide(s);
+      setTimeout(next, 150); // one at a time, so it never competes with anything
+    };
+    next();
+  };
+  const startPreload = () => setTimeout(() => {
+    if ('requestIdleCallback' in window) requestIdleCallback(preloadHidden, { timeout: 2000 });
+    else preloadHidden();
+  }, 800); // the gallery images in specimen.js start at load + 300ms
+  if (document.readyState === 'complete') startPreload();
+  else window.addEventListener('load', startPreload, { once: true });
 }
+
 
 if ('requestIdleCallback' in window) requestIdleCallback(bootModels, { timeout: 300 });
 else setTimeout(bootModels, 0);
