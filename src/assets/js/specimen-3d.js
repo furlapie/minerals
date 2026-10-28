@@ -45,7 +45,7 @@ function init3D(container, geometry, url) {
   const height = Math.max(1, container.clientHeight);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-  camera.position.set(0, 0, 5);
+  camera.position.set(2.8, 2, 2.8);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -69,7 +69,14 @@ function init3D(container, geometry, url) {
   const box = new THREE.Box3().setFromObject(new THREE.Mesh(geometry));
   const size = box.getSize(new THREE.Vector3());
   const maxDim = Math.max(size.x, size.y, size.z) || 1;
-  geometry.scale(3 / maxDim, 3 / maxDim, 3 / maxDim);
+
+  const lowerUrl = (url || '').split('?')[0].toLowerCase();
+  
+  const isCubic = lowerUrl.includes('cubico') && !lowerUrl.includes('fluorite');
+
+  const scaleTarget = isCubic ? 1.95 : 2.6;
+
+  geometry.scale(scaleTarget / maxDim, scaleTarget / maxDim, scaleTarget / maxDim);
 
   const minLightness = 0.55;
   const colors = (container.dataset.colors || hexColor).split('|').filter(Boolean).map(value => {

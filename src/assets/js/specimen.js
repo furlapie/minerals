@@ -33,7 +33,7 @@
   const largeSrc = frame ? frame.dataset.large : '';
   let lbToken = 0;
 
-  const MIN_S = 1, MAX_S = 3;
+  const MIN_S = 1, MAX_S = 5;
 
   let s = 1;
   let x = 0, y = 0;
@@ -109,7 +109,8 @@
     });
   }
   lbClose.addEventListener('click', closeLightbox);
-  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  let gestureEnd = 0;
+  lb.addEventListener('click', e => { if (e.target === lb && Date.now() - gestureEnd > 400) closeLightbox(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lb.hidden) closeLightbox(); });
 
   lb.addEventListener('wheel', e => {
@@ -119,47 +120,100 @@
     zoomAt(e.clientX, e.clientY, s * factor);
   }, { passive: false });
 
-  lbImg.addEventListener('pointerdown', e => {
-    if (e.button !== 0) return;
-    if (s <= 1.001) return;
-    e.preventDefault();
-    dragging = true;
-    moved = false;
-    startX = e.clientX;
-    startY = e.clientY;
-    startTX = x;
-    startTY = y;
-    lbImg.classList.add('is-dragging');
-    try { lbImg.setPointerCapture(e.pointerId); } catch (_) {}
+  /* 1 pointer = pan (when zoomed) · 2 pointers = pinch · touch double-tap = zoom in/out
+     mouse: click zooms, dblclick resets */
+  const pts = new Map();
+  let pinch = null;
+  let lastTap = 0, tapX = 0, tapY = 0;
+  let downT = 0, downTarget = null, lastType = 'mouse';
+
+  const pair = () => {
+    const [a, b] = [...pts.values()];
+    return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2, d: Math.hypot(a.x - b.x, a.y - b.y) || 1 };
+  };
+
+  lb.addEventListener('pointerdown', e => {
+    if (lbClose.contains(e.target)) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    lastType = e.pointerType;
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pts.size === 1) {
+      downT = Date.now(); downTarget = e.target; moved = false;
+      startX = e.clientX; startY = e.clientY; startTX = x; startTY = y;
+      dragging = s > 1.001;
+      if (dragging) lbImg.classList.add('is-dragging');
+    } else if (pts.size === 2) {
+      const m = pair();
+      pinch = { d: m.d, s, cx: m.x, cy: m.y, x, y };
+      dragging = false; moved = true;
+    }
   });
-  lbImg.addEventListener('pointermove', e => {
+
+  lb.addEventListener('pointermove', e => {
+    if (!pts.has(e.pointerId)) return;
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const W = window.innerWidth, H = window.innerHeight;
+
+    if (pinch && pts.size >= 2) {
+      const m = pair();
+      const ns = Math.max(MIN_S, Math.min(MAX_S, pinch.s * m.d / pinch.d));
+      const k = ns / pinch.s;
+      s = ns;
+      /* keep the point that was between the fingers under the fingers */
+      x = (m.x - W / 2) - k * (pinch.cx - W / 2 - pinch.x);
+      y = (m.y - H / 2) - k * (pinch.cy - H / 2 - pinch.y);
+      clamp(); apply();
+      return;
+    }
+
+    const dx = e.clientX - startX, dy = e.clientY - startY;
+    if (Math.abs(dx) + Math.abs(dy) > 6) moved = true;
     if (!dragging) return;
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-    if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
-    x = startTX + dx;
-    y = startTY + dy;
-    clamp();
-    apply();
+    x = startTX + dx; y = startTY + dy;
+    clamp(); apply();
   });
-  function endDrag(e) {
-    if (!dragging) return;
+
+  function endPointer(e) {
+    if (!pts.has(e.pointerId)) return;
+    const wasPinch = !!pinch;
+    const wasSingle = pts.size === 1;
+    pts.delete(e.pointerId);
+
+    if (wasPinch) {
+      gestureEnd = Date.now();
+      if (pts.size < 2) {
+        pinch = null;
+        const r = [...pts.values()][0];       // the finger still down keeps panning
+        if (r && s > 1.001) {
+          dragging = true; startX = r.x; startY = r.y; startTX = x; startTY = y;
+          lbImg.classList.add('is-dragging');
+        } else dragging = false;
+      }
+      return;
+    }
+
     dragging = false;
     lbImg.classList.remove('is-dragging');
-    try { lbImg.releasePointerCapture(e.pointerId); } catch (_) {}
-  }
-  lbImg.addEventListener('pointerup', endDrag);
-  lbImg.addEventListener('pointercancel', endDrag);
+    if (!wasSingle || e.type === 'pointercancel' || moved || downTarget !== lbImg || Date.now() - downT > 350) return;
 
-  lbImg.addEventListener('click', e => {
-    if (moved) { moved = false; return; }
-    if (s > 1.001) return;
-    zoomAt(e.clientX, e.clientY, 2);
-  });
+    if (e.pointerType === 'mouse') {
+      if (s <= 1.001) zoomAt(e.clientX, e.clientY, 2);
+      return;
+    }
+    const now = Date.now();
+    if (now - lastTap < 300 && Math.hypot(e.clientX - tapX, e.clientY - tapY) < 30) {
+      if (s > 1.001) reset(); else zoomAt(e.clientX, e.clientY, 2.5);
+      lastTap = 0;
+    } else {
+      lastTap = now; tapX = e.clientX; tapY = e.clientY;
+    }
+  }
+  lb.addEventListener('pointerup', endPointer);
+  lb.addEventListener('pointercancel', endPointer);
 
   lbImg.addEventListener('dblclick', e => {
     e.preventDefault();
-    reset();
+    if (lastType === 'mouse') reset();       // on touch, double-tap is handled above
   });
 
 

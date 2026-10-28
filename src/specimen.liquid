@@ -229,22 +229,27 @@ eleventyComputed:
               {% if m.abiti and habit_key != "" %}{% assign h = m.abiti[habit_key] %}{% endif %}
 
               <div class="comp-slide" data-idx="{{ forloop.index0 }}"{% unless forloop.first %} hidden{% endunless %}>
-                <span class="comp-name">{{ part }}</span>
-
-                {% if m.formula %}
-                  {% assign flen = m.formula | size %}
-                  <span class="comp-formula{% if flen > 36 %} xlong{% elsif flen > 20 %} long{% endif %}">{{ m.formula }}</span>
-                {% elsif m.composizione and m.composizione != "—" %}
-                  <span class="comp-comp">{{ m.composizione }}</span>
-                {% endif %}
+                <div class="comp-main">
+                  <span class="comp-name">{{ part }}</span>
+                              
+                  {% if m.formula %}
+                    {% assign flen = m.formula | size %}
+                    <span class="comp-formula{% if flen > 36 %} xlong{% elsif flen > 20 %} long{% endif %}">{{ m.formula }}</span>
+                  {% elsif m.composizione and m.composizione != "—" %}
+                    <span class="comp-comp">{{ m.composizione }}</span>
+                  {% endif %}
+                </div>
 
                 {% if m.sistema or m.classe %}
-                  <span class="comp-sistema">
-                    {%- if m.sistema -%}<em>System</em> {{ m.sistema }}{%- endif -%}
-                    {%- if m.classe -%}{% if m.sistema %} · {% endif %}<em>Class</em> {{ m.classe }}{%- endif -%}
+                  {% assign s_len = m.sistema | default: "" | size %}
+                  {% assign c_len = m.classe | default: "" | size %}
+                  {% assign sc_len = s_len | plus: c_len %}
+                  <span class="comp-sistema{% if sc_len > 58 %} xlong{% elsif sc_len > 42 %} long{% endif %}">
+                    {%- if m.sistema -%}<span class="cs-item"><em>System</em><span>{{ m.sistema }}</span></span>{%- endif -%}
+                    {%- if m.classe -%}<span class="cs-item"><em>Class</em><span>{{ m.classe }}</span></span>{%- endif -%}
                   </span>
                 {% elsif m.categoria %}
-                  <span class="comp-sistema"><em>Category</em> {{ m.categoria }}</span>
+                  <span class="comp-sistema"><span class="cs-item"><em>Category</em><span>{{ m.categoria }}</span></span></span>
                 {% endif %}
 
                 {% if h %}
