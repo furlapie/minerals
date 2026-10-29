@@ -2,13 +2,12 @@ backend:
   name: github
   repo: furlapie/minerals
   branch: main
-  base_url: https://api.netlify.com
+  base_url: https://mineral-cms-auth.furlapie.workers.dev
 
 # Allows you to edit the CMS locally without logging in
 local_backend: true
 
-# Your custom logo for the login screen and header
-logo_url: https://your-site.netlify.app/images/logo.svg # Replace with your actual logo URL
+logo_url: /assets/favicon.svg
 
 media_folder: "src/images" # Where uploaded images go
 public_folder: "/images"   # How they're referenced in the site
