@@ -96,7 +96,7 @@ eleventyComputed:
 <!-- ═════════ PAGE WRAPPER — HERO · BOTTOM ═══════════════ -->
 <div class="detail" id="detail" style="--accent: {{ type_color }}; --tier: {{ tier_color }};">
 
-  <a class="edit-link" href="/admin/#/collections/specimens/entries/{{ specimen.slug }}" aria-hidden="true" tabindex="-1">EDIT</a>
+  <a class="edit-link" href="/admin/#/collections/specimens/entries/{{ specimen.cms_index | default: current_index }}" aria-hidden="true" tabindex="-1">EDIT</a>
 
   <!-- ═══════ HERO ═══════════════════════════════════════ -->
   <section class="hero">

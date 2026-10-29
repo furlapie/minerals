@@ -8,6 +8,7 @@ Usage: python3 src/_data/derive.py
 import hashlib
 import json
 import os
+import shutil
 import sys
 import re
 import unicodedata
@@ -16,7 +17,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 HABITS_DIR = os.path.abspath(os.path.join(HERE, "..", "habits"))
 SPECIMENS = os.path.join(HERE, "specimens.json")
 GALLERY = os.path.join(HERE, "modelgallery.json")
-
+ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
+ORIGINALS = os.path.join(ROOT, "originals")
 
 def slugify(text):
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
@@ -100,14 +102,25 @@ def main():
         if slug != expected:
             print(f"WARNING: slug '{slug}' != box-number '{expected}'")
         s["models"] = compute_models(s)
+        photo = s.get("photo")
+        if photo:
+            src = os.path.join(ROOT, photo.lstrip("/"))
+            ext = os.path.splitext(src)[1].lower()
+            dst = os.path.join(ORIGINALS, f"{s['box']}.{s['number']}{ext}")
+            if os.path.exists(src) and not os.path.exists(dst):
+                shutil.copyfile(src, dst)
         s["has_specific"] = bool(s["models"])
 
     if dupes:
         print(f"ERROR: duplicate slugs: {sorted(dupes)}")
         sys.exit(1)
 
+    # Sveltia identifies entries by array position, so capture it before sorting.
+    for i, s in enumerate(specimens):
+        s["cms_index"] = i
+
     # new CMS entries land at the end of the file; prev/next navigation needs this order
-    specimens.sort(key=lambda m: (m.get("shelf", 0), m.get("box", 0), m.get("number", 0)))
+    specimens.sort(key=lambda m: (m.get("shelf") or 0, m.get("box") or 0, m.get("number") or 0))
 
     with open(SPECIMENS, "w", encoding="utf-8") as f:
         json.dump(specimens, f, ensure_ascii=False, indent=2)

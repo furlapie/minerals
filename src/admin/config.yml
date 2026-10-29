@@ -18,7 +18,7 @@ collections:
     label_singular: "Specimen"
     file: "src/_data/specimens.json"
     identifier_field: "slug"
-    summary: "{{slug}} · {{name}} · {{type}} · T{{tier}}"
+    summary: "S{{shelf}} B{{box}} #{{number}} · {{name}} · {{quantity}} · {{type}} · {{date_acquired}} · {{price}} · T{{tier}}"
     sortable_fields: [slug, name, type, tier, date_acquired, weight_g, price]
     view_filters:
       - { label: Shiny, field: shiny, pattern: true }
@@ -32,10 +32,12 @@ collections:
       - { label: Shelf, name: shelf, widget: number, value_type: int }
       - { label: Box, name: box, widget: number, value_type: int }
       - { label: Number, name: number, widget: number, value_type: int }
+      - { label: Name, name: name, widget: string }
       - label: Colors
         name: colors
         widget: list
         max: 3
+        required: false
         field:
           label: Color
           name: color
@@ -62,17 +64,23 @@ collections:
             - { label: Purple, value: "#7B4FA0" }
             - { label: Pink, value: "#E8A0BF" }
       - { label: Shiny, name: shiny, widget: boolean, default: false }
-      - { label: Type, name: type, widget: select, options: [Crystal, Gem, Rock, Mineral, Geode, Fossil] }
-      - { label: Name, name: name, widget: string }
-      - { label: Main, name: main, widget: string, hint: "Comma + space separated, e.g. Pirite, Quarzo" }
+      - { label: Type, name: type, widget: select, options: [Crystal, Gem, Rock, Mineral, Geode, Fossil], required: false }
+      - { label: Main, name: main, widget: string, required: false, hint: "Comma + space separated, e.g. Pirite, Quarzo" }
       - { label: Habit, name: habit, widget: string, required: false, hint: "Same order as Main" }
       - { label: Matrix, name: matrix, widget: string, required: false }
       - { label: From who, name: from_who, widget: string, required: false }
       - { label: From where, name: from_where, widget: string, required: false, hint: "Include the country, e.g. Lago Blu, VdA, Italia" }
-      - { label: Year acquired, name: date_acquired, widget: number, value_type: int }
-      - { label: Weight (g), name: weight_g, widget: number, value_type: float }
-      - { label: Quantity, name: quantity, widget: number, value_type: int, min: 1 }
-      - { label: Price (€), name: price, widget: number, value_type: float }
-      - { label: Tier, name: tier, widget: number, value_type: int, min: 1, max: 5 }
+      - { label: Year acquired, name: date_acquired, widget: number, value_type: int, required: false }
+      - { label: Weight (g), name: weight_g, widget: number, value_type: float, required: false }
+      - { label: Quantity, name: quantity, widget: number, value_type: int, min: 1, default: 1, required: false }
+      - { label: Price (€), name: price, widget: number, value_type: float, required: false }
+      - { label: Tier, name: tier, widget: number, value_type: int, min: 1, max: 5, required: false }
       - { label: Description, name: description, widget: text, required: false }
       - { label: Work in progress, name: wip, widget: boolean, default: false }
+      - label: Photo
+        name: photo
+        widget: image
+        required: false
+        media_folder: /originals
+        public_folder: /originals
+        hint: "Drop the original photo here (JPG). It is optimized on the next build."
