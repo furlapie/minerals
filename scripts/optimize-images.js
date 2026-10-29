@@ -1,13 +1,11 @@
 // scripts/optimize-images.js
-// originals/  ->  the_collection/display/{name}.jpg  (hero, 1800)
-//                 the_collection/large/{name}.jpg    (lightbox, 2800 or 4000)
-//                 the_collection/card/{name}.jpg     (related cards, 1000)
+// originals/  ->  the_collection/large/{name}.jpg    (hero, 5000)
+//                 the_collection/display/{name}.jpg  (lightbox, 5000)
 //                 the_collection/thumb/{name}.jpg    (peek, nav, gallery, 480)
 
 // node scripts/optimize-images.js            normal run (skips up-to-date files)
 // node scripts/optimize-images.js --dry      list what would be done
 // node scripts/optimize-images.js --force    regenerate everything
-// node scripts/optimize-images.js --no-large skip the 2800px tier
 
 const fs    = require('fs');
 const path  = require('path');
@@ -19,23 +17,29 @@ const OUT    = path.join(ROOT, 'src', 'images', 'the_collection');
 
 const DRY      = process.argv.includes('--dry');
 const FORCE    = process.argv.includes('--force');
-const NO_LARGE = process.argv.includes('--no-large');
 
 const TIERS = [
+  { name: 'large',   dir: path.join(OUT, 'large'),   prefix: '', edge: 5000, quality: 85 },
   { name: 'display', dir: path.join(OUT, 'display'), prefix: '', edge: 1800, quality: 82 },
-  { name: 'large',   dir: path.join(OUT, 'large'),   prefix: '', edge: 2800, quality: 80 },
-  { name: 'card',    dir: path.join(OUT, 'card'),    prefix: '', edge: 1000, quality: 82 },
-  { name: 'thumb',   dir: path.join(OUT, 'thumb'),   prefix: '', edge: 480,  quality: 80 },
+  { name: 'thumb',   dir: path.join(OUT, 'thumb'),   prefix: '', edge: 600,  quality: 80 },
 ];
 
 const kb = n => (n / 1024).toFixed(0).padStart(6) + ' KB';
 
 async function main() {
   if (!fs.existsSync(SRC)) {
-    console.log('Originals folder not found. Skipping image optimization (images are already optimized in src/images).');
+    console.log('Originals folder not found. Skipping image optimization.');
     process.exit(0);
   }
+  
   const files = fs.readdirSync(SRC).filter(f => /\.(jpe?g|png)$/i.test(f)).sort();
+  
+  // If there are no images to process, exit immediately
+  if (files.length === 0) {
+    console.log('No images found in originals/. Skipping image optimization.');
+    process.exit(0);
+  }
+
   console.log(`${DRY ? '[dry run] ' : ''}Found ${files.length} original(s) in ${SRC}\n`);
 
   if (!DRY) TIERS.forEach(t => fs.mkdirSync(t.dir, { recursive: true }));

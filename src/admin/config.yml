@@ -81,6 +81,6 @@ collections:
         name: photo
         widget: image
         required: false
-        media_folder: /originals
-        public_folder: /originals
-        hint: "Drop the original photo here (JPG). It is optimized on the next build."
+        media_folder: "/src/_data/_uploads"
+        public_folder: "/src/_data/_uploads"
+        hint: "Drop the original photo here. It will be renamed and optimized automatically."

@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-# python3 src/_data/derive.py && node scripts/optimize-images.js && npx @11ty/eleventy
-"""Reads specimens.json (edited via Sveltia) and recomputes derived data:
-  - `models` / `has_specific` on every specimen
-  - modelgallery.json
-Usage: python3 src/_data/derive.py
-"""
 import hashlib
 import json
 import os
@@ -19,19 +13,18 @@ SPECIMENS = os.path.join(HERE, "specimens.json")
 GALLERY = os.path.join(HERE, "modelgallery.json")
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 ORIGINALS = os.path.join(ROOT, "originals")
+# The temporary folder where Sveltia drops new images
+UPLOADS_DIR = os.path.abspath(os.path.join(HERE, "..", "_uploads"))
 
 def slugify(text):
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
     text = re.sub(r"[^a-zA-Z0-9\s-]", "", text).lower()
     return re.sub(r"[\s-]+", "-", text).strip("-")
 
-
 def split_list(value):
     return [p.strip() for p in (value or "").split(",")]
 
-
 def resolve_model(main, habit):
-    """specific (species-habit.stl) -> generic (habit.stl) -> None"""
     stems = []
     if main:
         stems.append(f"{slugify(main)}-{habit}")
@@ -40,7 +33,6 @@ def resolve_model(main, habit):
         if os.path.exists(os.path.join(HABITS_DIR, stem + ".stl")):
             return stem
     return None
-
 
 def compute_models(s):
     mains, habits = split_list(s.get("main")), split_list(s.get("habit"))
@@ -53,7 +45,6 @@ def compute_models(s):
         if stem:
             models.append({"main": main, "habit": h, "file": stem})
     return models
-
 
 def build_gallery(specimens):
     groups = {}
@@ -87,10 +78,15 @@ def build_gallery(specimens):
     out.sort(key=lambda e: (e["habit"], e["label"].lower()))
     return out
 
-
 def main():
     with open(SPECIMENS, encoding="utf-8") as f:
         specimens = json.load(f)
+
+    # Check if we have new images to process
+    has_uploads = os.path.exists(UPLOADS_DIR) and len(os.listdir(UPLOADS_DIR)) > 0
+    if has_uploads:
+        print(f"Found new images in {UPLOADS_DIR}, processing...")
+        os.makedirs(ORIGINALS, exist_ok=True)
 
     seen, dupes = set(), set()
     for s in specimens:
@@ -101,25 +97,37 @@ def main():
         expected = f"{s.get('box')}-{s.get('number')}"
         if slug != expected:
             print(f"WARNING: slug '{slug}' != box-number '{expected}'")
+        
         s["models"] = compute_models(s)
+        
+        # Image processing logic
         photo = s.get("photo")
-        if photo:
-            src = os.path.join(ROOT, photo.lstrip("/"))
-            ext = os.path.splitext(src)[1].lower()
+        if photo and has_uploads:
+            # Sveltia saves the path as "/src/_uploads/IMG_123.jpg"
+            # We only need the filename
+            filename = os.path.basename(photo)
+            src = os.path.join(UPLOADS_DIR, filename)
+            ext = os.path.splitext(filename)[1].lower()
             dst = os.path.join(ORIGINALS, f"{s['box']}.{s['number']}{ext}")
-            if os.path.exists(src) and not os.path.exists(dst):
+            
+            if os.path.exists(src):
+                # 1. Copy to originals with correct name
                 shutil.copyfile(src, dst)
+                print(f"  -> Copied {filename} to originals/{s['box']}.{s['number']}{ext}")
+                
+                # 2. Scrap the temporary upload
+                os.remove(src)
+                print(f"  -> Deleted {filename} from _uploads")
+                
         s["has_specific"] = bool(s["models"])
 
     if dupes:
         print(f"ERROR: duplicate slugs: {sorted(dupes)}")
         sys.exit(1)
 
-    # Sveltia identifies entries by array position, so capture it before sorting.
     for i, s in enumerate(specimens):
         s["cms_index"] = i
 
-    # new CMS entries land at the end of the file; prev/next navigation needs this order
     specimens.sort(key=lambda m: (m.get("shelf") or 0, m.get("box") or 0, m.get("number") or 0))
 
     with open(SPECIMENS, "w", encoding="utf-8") as f:
@@ -130,7 +138,6 @@ def main():
         json.dump(gallery, f, ensure_ascii=False, indent=2)
 
     print(f"{len(specimens)} specimens, {len(gallery)} unique 3D shapes")
-
 
 if __name__ == "__main__":
     main()

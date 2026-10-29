@@ -33,6 +33,19 @@
   const largeSrc = frame ? frame.dataset.large : '';
   let lbToken = 0;
 
+  // Preload the 5000px image in the background after the page is done
+  if (largeSrc) {
+    const preloadLarge = () => {
+      const img = new Image();
+      img.src = largeSrc;
+    };
+    if (document.readyState === 'complete') {
+      setTimeout(preloadLarge, 1500); // wait 1.5s after load to not compete with other assets
+    } else {
+      window.addEventListener('load', () => setTimeout(preloadLarge, 1500), { once: true });
+    }
+  }
+
   const MIN_S = 1, MAX_S = 5;
 
   let s = 1;
@@ -81,15 +94,32 @@
 
   function openLightbox() {
     if (!frame || frame.classList.contains('no-img') || !heroImg || !heroImg.src) return;
-    lbImg.src = heroImg.src;                       // opens instantly with the 1800px file
+    
+    const thisToken = ++lbToken;
+    
+    // 1. Open INSTANTLY with the display image
+    lbImg.src = heroImg.src; 
     lbImg.alt = heroImg.alt || '';
+    
     lb.hidden = false;
     lb.setAttribute('aria-hidden', 'false');
     reset();
     requestAnimationFrame(() => lb.classList.add('open'));
     document.documentElement.style.overflow = 'hidden';
-    lbToken++;
+    
+    // 2. Fetch the massive 5000px image in the background
+    if (largeSrc && largeSrc !== heroImg.src) {
+      const highResImg = new Image();
+      highResImg.src = largeSrc;
+      highResImg.onload = () => {
+        // 3. Swap it in when ready, IF the user hasn't closed the lightbox
+        if (lbToken === thisToken) {
+          lbImg.src = largeSrc;
+        }
+      };
+    }
   }
+  
   function closeLightbox() {
     lbToken++;                                     // cancels any pending upgrade
     lb.classList.remove('open');
