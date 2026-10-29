@@ -45,7 +45,7 @@ function init3D(container, geometry, url) {
   const height = Math.max(1, container.clientHeight);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-  camera.position.set(0, 0, 5);
+  camera.position.set(2.8, 2, 2.8);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -69,7 +69,14 @@ function init3D(container, geometry, url) {
   const box = new THREE.Box3().setFromObject(new THREE.Mesh(geometry));
   const size = box.getSize(new THREE.Vector3());
   const maxDim = Math.max(size.x, size.y, size.z) || 1;
-  geometry.scale(3 / maxDim, 3 / maxDim, 3 / maxDim);
+
+  const lowerUrl = (url || '').split('?')[0].toLowerCase();
+  
+  const isCubic = lowerUrl.includes('cubico') && !lowerUrl.includes('fluorite');
+
+  const scaleTarget = isCubic ? 1.95 : 2.6;
+
+  geometry.scale(scaleTarget / maxDim, scaleTarget / maxDim, scaleTarget / maxDim);
 
   const minLightness = 0.55;
   const colors = (container.dataset.colors || hexColor).split('|').filter(Boolean).map(value => {
@@ -238,7 +245,26 @@ function bootModels() {
   } else {
     slides.forEach(loadSlide);
   }
+  /* Once the page and its pictures are done, quietly load the models of the
+     components that are still hidden, so the pager finds them ready. */
+  const preloadHidden = () => {
+    const queue = Array.from(slides).filter(s => s.hidden);
+    const next = () => {
+      const s = queue.shift();
+      if (!s) return;
+      loadSlide(s);
+      setTimeout(next, 150); // one at a time, so it never competes with anything
+    };
+    next();
+  };
+  const startPreload = () => setTimeout(() => {
+    if ('requestIdleCallback' in window) requestIdleCallback(preloadHidden, { timeout: 2000 });
+    else preloadHidden();
+  }, 800); // the gallery images in specimen.js start at load + 300ms
+  if (document.readyState === 'complete') startPreload();
+  else window.addEventListener('load', startPreload, { once: true });
 }
+
 
 if ('requestIdleCallback' in window) requestIdleCallback(bootModels, { timeout: 300 });
 else setTimeout(bootModels, 0);

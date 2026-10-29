@@ -978,6 +978,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } catch (_) {}
 
+  const mobileMQ = matchMedia('(max-width: 770px)');
+  const forceGridOnMobile = () => {
+    if (mobileMQ.matches && coll.dataset.view === 'table') setView('grid', false);
+  };
+  forceGridOnMobile();
+  mobileMQ.addEventListener('change', forceGridOnMobile);
+
   updateToggleHighlights();
   updateFooterStats();
   syncRails();
@@ -991,5 +998,14 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(() => requestAnimationFrame(() => {
       document.documentElement.classList.remove('coll-boot');
     }));
+  }
+
+  const toggleFiltersBtn = document.getElementById('toggleFiltersMobile');
+  const rail = document.querySelector('.rail');
+  if (toggleFiltersBtn && rail) {
+    toggleFiltersBtn.addEventListener('click', () => {
+      rail.classList.toggle('mobile-visible');
+      toggleFiltersBtn.classList.toggle('active');
+    });
   }
 });
