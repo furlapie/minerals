@@ -9,36 +9,72 @@ local_backend: true
 
 logo_url: /assets/favicon.svg
 
-media_folder: "src/images" # Where uploaded images go
-public_folder: "/images"   # How they're referenced in the site
+media_folder: "src/images/the_collection/display"
+public_folder: "/images/the_collection/display"
 
 collections:
   - name: "specimens"
-    label: "Specimen Collection"
-    label_singular: "Specimen"
-    file: "src/_data/specimens.json" # Path to your JSON file
-    identifier_field: "slug" # The unique field for each specimen
+    label: Specimen Collection
+    # >>> PASTE YOUR ORIGINAL DATA-LOCATION LINES HERE (folder/file/format...) <<<
+    summary: "{{slug}} · {{name}} · {{type}} · T{{tier}}"
+    sortable_fields: [slug, name, type, tier, date_acquired, weight_g, price]
+    view_filters:
+      - { label: Shiny, field: shiny, pattern: true }
+      - { label: Work in progress, field: wip, pattern: true }
+    view_groups:
+      - { label: Shelf, field: shelf }
+      - { label: Type, field: type }
+      - { label: Tier, field: tier }
     fields:
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Shelf", name: "shelf", widget: "number", value_type: "int" }
-      - { label: "Box", name: "box", widget: "number", value_type: "int" }
-      - { label: "Number", name: "number", widget: "number", value_type: "int" }
-      - { label: "Colors", name: "colors", widget: "list", field: { label: "Color (Hex)", name: "color", widget: "string" } }
-      - { label: "Shiny", name: "shiny", widget: "boolean", default: false }
-      - { label: "Type", name: "type", widget: "select", options: ["Crystal", "Gem", "Rock", "Mineral", "Geode", "Fossil"] }
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Main Mineral", name: "main", widget: "string", required: false }
-      - { label: "Habit", name: "habit", widget: "string", required: false }
-      - { label: "Matrix", name: "matrix", widget: "string", required: false }
-      - { label: "From (Who)", name: "from_who", widget: "string", required: false }
-      - { label: "Origin (Where)", name: "from_where", widget: "string", required: false }
-      - { label: "Date Acquired", name: "date_acquired", widget: "number", value_type: "int", required: false }
-      - { label: "Weight (g)", name: "weight_g", widget: "number", value_type: "float", required: false }
-      - { label: "Quantity", name: "quantity", widget: "number", value_type: "int", default: 1 }
-      - { label: "Price", name: "price", widget: "number", value_type: "float", required: false }
-      - { label: "Tier", name: "tier", widget: "number", value_type: "int", required: false }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Work in Progress", name: "wip", widget: "boolean", default: false }
-      - { label: "Has Specific 3D Model", name: "has_specific", widget: "boolean", default: false }
-      # The 'models' array is complex; for now, you can manage it manually in the JSON.
-      # Adding a full object-list widget is possible but adds complexity.
+      - label: Slug
+        name: slug
+        widget: string
+        pattern: ['^\d+-\d+$', "Format: box-number, e.g. 3-12"]
+        hint: "Must equal box-number"
+      - { label: Shelf, name: shelf, widget: number, value_type: int }
+      - { label: Box, name: box, widget: number, value_type: int }
+      - { label: Number, name: number, widget: number, value_type: int }
+      - label: Colors
+        name: colors
+        widget: list
+        max: 3
+        field:
+          label: Color
+          name: color
+          widget: select
+          options:
+            - { label: Cream, value: "#F5F0E6" }
+            - { label: Gray, value: "#8A8A8A" }
+            - { label: Charcoal, value: "#525252" }
+            - { label: Black, value: "#1A1A1A" }
+            - { label: Sand, value: "#D9C7A3" }
+            - { label: Brown, value: "#7B5233" }
+            - { label: Umber, value: "#4A3728" }
+            - { label: Maroon, value: "#531A13" }
+            - { label: Red, value: "#C0392B" }
+            - { label: Orange, value: "#E08B2F" }
+            - { label: Gold, value: "#C9A227" }
+            - { label: Yellow, value: "#E8C547" }
+            - { label: Green, value: "#4C9A5B" }
+            - { label: Forest, value: "#1F5C33" }
+            - { label: Teal, value: "#2FA8A0" }
+            - { label: Blue, value: "#3468C0" }
+            - { label: Navy, value: "#1B3A8C" }
+            - { label: Plum, value: "#402B52" }
+            - { label: Purple, value: "#7B4FA0" }
+            - { label: Pink, value: "#E8A0BF" }
+      - { label: Shiny, name: shiny, widget: boolean, default: false }
+      - { label: Type, name: type, widget: select, options: [Crystal, Gem, Rock, Mineral, Geode, Fossil] }
+      - { label: Name, name: name, widget: string }
+      - { label: Main, name: main, widget: string, hint: "Comma + space separated, e.g. Pirite, Quarzo" }
+      - { label: Habit, name: habit, widget: string, required: false, hint: "Same order as Main" }
+      - { label: Matrix, name: matrix, widget: string, required: false }
+      - { label: From who, name: from_who, widget: string, required: false }
+      - { label: From where, name: from_where, widget: string, required: false, hint: "Include the country, e.g. Lago Blu, VdA, Italia (the world map matches on it)" }
+      - { label: Year acquired, name: date_acquired, widget: number, value_type: int }
+      - { label: Weight (g), name: weight_g, widget: number, value_type: float }
+      - { label: Quantity, name: quantity, widget: number, value_type: int, min: 1 }
+      - { label: Price (€), name: price, widget: number, value_type: float }
+      - { label: Tier, name: tier, widget: number, value_type: int, min: 1, max: 5 }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Work in progress, name: wip, widget: boolean, default: false }

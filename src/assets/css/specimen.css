@@ -38,6 +38,23 @@ main {
           mask-image: radial-gradient(ellipse 70% 55% at 25% 12%, #000 0%, transparent 85%);
 }
 
+/* ── Stealth edit link → opens this specimen in Sveltia ── */
+.edit-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  font-family: Consolas, monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  color: color-mix(in srgb, var(--muted) 30%, transparent);
+  text-decoration: none;
+  user-select: none;
+  transition: color .2s ease;
+}
+.edit-link:hover { color: var(--accent); }
+@media (max-width: 770px) { .edit-link { display: none; } }
+
 /* ═════════ HERO ═════════════════════════════════════════ */
 .hero {
   display: grid;
@@ -280,20 +297,13 @@ main {
 .comp-habit { font-size: 15px; color: var(--ink); line-height: 1.35; }
 .comp-habit em { font-style: normal; color: var(--muted); font-size: 14px; }
 
-/* 3D + 2D side by side */
+/* 3D model */
 .comp-visual {
   min-height: 200px;
-  display: flex; flex-direction: row;
-  align-items: center; justify-content: center;
-  gap: 24px; width: 100%;
+  display: flex; align-items: center; justify-content: center;
+  width: 100%;
 }
-.comp-3d-container, .comp-svg-container { flex: 0 0 auto; width: 200px; height: 200px; position: relative; }
-.comp-visual.solo-3d .comp-3d-container { width: 200px; height: 200px; }
-.comp-img {
-  width: 100%; height: 100%; object-fit: contain;
-  color: var(--accent);
-  filter: drop-shadow(0 0 16px color-mix(in srgb, var(--accent) 30%, transparent));
-}
+.comp-3d-container { flex: 0 0 auto; width: 200px; height: 200px; position: relative; }
 .comp-3d { width: 100%; height: 100%; cursor: grab; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 .comp-3d:active { cursor: grabbing; }
 .comp-3d canvas { display: block; width: 100% !important; height: 100% !important; outline: none; background: transparent; }
@@ -955,7 +965,6 @@ main {
   .comp-formula { font-size: 26px; }
   .comp-formula.long { font-size: 21px; }
   .comp-formula.xlong { font-size: 17px; }
-  .comp-svg-container { display: none !important; }
   .comp-name { font-size: 11px; }
   .comp-comp, .comp-habit { font-size: 14px; }
   .comp-habit em { font-size: 13px; }

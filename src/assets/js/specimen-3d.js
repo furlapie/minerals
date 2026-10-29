@@ -193,22 +193,17 @@ function loadSlide(slide) {
   const urlGeneric = container.dataset.modelGeneric;
   const visualBlock = container.closest('.comp-visual');
   const container3d = visualBlock?.querySelector('.comp-3d-container');
-  const containerSvg = visualBlock?.querySelector('.comp-svg-container');
-  if (!visualBlock || !container3d || !containerSvg) return;
+  if (!visualBlock || !container3d) return;
 
-  stlLoader.load(urlSpecific, (geometry) => {
-    visualBlock.classList.add('solo-3d');
-    containerSvg.style.display = 'none';
+  const show = (geometry, url) => {
     container3d.style.display = 'block';
-    init3D(container, geometry, urlSpecific);
-  }, undefined, () => {
-    stlLoader.load(urlGeneric, (geometry) => {
-      containerSvg.style.display = 'block';
-      container3d.style.display = 'block';
-      init3D(container, geometry, urlGeneric);
-    }, undefined, () => {
-      container3d.style.display = 'none';
-      containerSvg.style.display = 'block';
+    init3D(container, geometry, url);
+  };
+
+  stlLoader.load(urlSpecific, g => show(g, urlSpecific), undefined, () => {
+    stlLoader.load(urlGeneric, g => show(g, urlGeneric), undefined, () => {
+      // no model at all: collapse the block so it doesn't leave an empty 200px gap
+      visualBlock.style.display = 'none';
     });
   });
 }
