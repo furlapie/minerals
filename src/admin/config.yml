@@ -14,8 +14,11 @@ public_folder: "/images/the_collection/display"
 
 collections:
   - name: "specimens"
-    label: Specimen Collection
-    # >>> PASTE YOUR ORIGINAL DATA-LOCATION LINES HERE (folder/file/format...) <<<
+    label: "Specimen Collection"
+    label_singular: "Specimen"
+    file: "src/_data/specimens.json"
+    identifier_field: "slug"
+    summary: "{{slug}} · {{name}} · {{type}} · T{{tier}}"
     summary: "{{slug}} · {{name}} · {{type}} · T{{tier}}"
     sortable_fields: [slug, name, type, tier, date_acquired, weight_g, price]
     view_filters:
