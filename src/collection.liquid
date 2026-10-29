@@ -72,18 +72,9 @@ permalink: /collection/
         <b id="resultCount">0</b><span class="ct-sep">/</span><span class="ct-total" id="totalCount">{{ specimens.size }}</span>
       </span>
 
-      <div class="ct-seg" role="group" aria-label="View">
-        <button class="ct-seg-btn on" type="button" data-view="table" aria-pressed="true" title="Table view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></svg>
-        </button>
-        <button class="ct-seg-btn" type="button" data-view="grid" aria-pressed="false" title="Gallery view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.4"/><rect x="14" y="3" width="7" height="7" rx="1.4"/><rect x="3" y="14" width="7" height="7" rx="1.4"/><rect x="14" y="14" width="7" height="7" rx="1.4"/></svg>
-        </button>
-        <button class="ct-seg-btn" type="button" data-view="models" aria-pressed="false" title="3D Models view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/></svg>
-        </button>
-      </div>
-
+      <button class="ct-icon-btn" id="toggleFiltersMobile" type="button" aria-label="Toggle filters">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+      </button>
       <button class="ct-icon-btn" id="densityToggle" type="button" title="Toggle row density" aria-pressed="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
@@ -98,6 +89,18 @@ permalink: /collection/
       <button class="ct-icon-btn ct-clear" id="clearAll" type="button" title="Clear all filters">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
+
+      <div class="ct-seg" role="group" aria-label="View">
+        <button class="ct-seg-btn on" type="button" data-view="table" aria-pressed="true" title="Table view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></svg>
+        </button>
+        <button class="ct-seg-btn" type="button" data-view="grid" aria-pressed="false" title="Gallery view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.4"/><rect x="14" y="3" width="7" height="7" rx="1.4"/><rect x="3" y="14" width="7" height="7" rx="1.4"/><rect x="14" y="14" width="7" height="7" rx="1.4"/></svg>
+        </button>
+        <button class="ct-seg-btn" type="button" data-view="models" aria-pressed="false" title="3D Models view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/><path d="M5 7 L12 11 L19 7 M12 11 V22"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -465,7 +468,7 @@ permalink: /collection/
           <span class="g-name">{{ specimen.name }}</span>
           <span class="g-meta">
             <svg class="ti" viewBox="0 0 24 24" aria-hidden="true"><use href="#ti-{{ specimen.type }}"/></svg>
-            <span class="g-meta-txt">{{ specimen.weight_g }}g{% if specimen.from_where != "" %} · {{ specimen.from_where }}{% endif %}</span>
+            <span class="g-meta-txt">{{ specimen.weight_g }}g{% if specimen.from_where != "" %}<span class="g-origin"> · {{ specimen.from_where }}</span>{% endif %}</span>
             <span class="g-tier" title="Tier {{ specimen.tier }}"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#tier-blob"/></svg><em>{{ specimen.tier }}</em></span>
           </span>
         </div>
