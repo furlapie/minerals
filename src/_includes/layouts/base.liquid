@@ -24,7 +24,6 @@
   </script>
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="/assets/favicon.ico" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
@@ -52,49 +51,20 @@
   {% endif %}
 
   <style>
-    /* 🛑 LOADER STYLES */
-    html.is-loading body {
-      overflow: hidden;
+    /* LOADER */
+    html.is-loading body { overflow: hidden; }
+    
+    #global-loader { position: fixed; inset: 0; z-index: 99999; background-color: var(--bg); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 20px; transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.6s;
     }
 
-    #global-loader {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      background-color: var(--bg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.6s;
-    }
+    #global-loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-    #global-loader.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    /* The Spinning Crystal */
     .loader-crystal {
-      width: 50px;
-      height: 50px;
-      color: var(--gold);
+      width: 70px;
+      height: auto;
       animation: spin-crystal 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.4));
-    }
-
-    .loader-crystal path {
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-    }
-
-    .loader-crystal .inner {
-      opacity: 0.5;
-      stroke-dasharray: 4 2;
     }
 
     @keyframes spin-crystal {
@@ -119,10 +89,7 @@
 </head>
 <body>
   <div id="global-loader">
-    <svg class="loader-crystal" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2 L19 7 V17 L12 22 L5 17 V7 Z"/>
-      <path class="inner" d="M5 7 L12 11 L19 7 M12 11 V22"/>
-    </svg>
+    <img class="loader-crystal" src="/assets/favicon.svg" alt="" aria-hidden="true" draggable="false">
     <span class="loader-text">Loading</span>
   </div>
   <header class="site-header">

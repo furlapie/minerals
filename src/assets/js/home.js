@@ -776,7 +776,7 @@
   function apply(hidden) {
     document.documentElement.classList.toggle('values-hidden', hidden);
     btn.setAttribute('data-state', hidden ? 'hidden' : 'visible');
-    label.textContent = hidden ? 'VALUES OFF' : 'VALUES ON';
+    label.textContent = hidden ? 'V OFF' : 'V ON';
   }
 
   // Sync the initial button state with whatever base.liquid applied
