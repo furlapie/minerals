@@ -767,3 +767,24 @@
   });
   window.addEventListener('resize', () => { if (expanded && !busy) close(true); });
 })();
+
+(function(){
+  var btn = document.getElementById('valuesToggle');
+  if (!btn) return;
+  var label = btn.querySelector('span');
+
+  function apply(hidden) {
+    document.documentElement.classList.toggle('values-hidden', hidden);
+    btn.setAttribute('data-state', hidden ? 'hidden' : 'visible');
+    label.textContent = hidden ? 'VALUES OFF' : 'VALUES ON';
+  }
+
+  // Sync the initial button state with whatever base.liquid applied
+  apply(document.documentElement.classList.contains('values-hidden'));
+
+  btn.addEventListener('click', function(){
+    var nextHidden = !document.documentElement.classList.contains('values-hidden');
+    try { localStorage.setItem('minerals-values', nextHidden ? 'hidden' : 'visible'); } catch(e){}
+    apply(nextHidden);
+  });
+})();

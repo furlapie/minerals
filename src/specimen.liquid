@@ -299,7 +299,7 @@ eleventyComputed:
           <span class="sc-label">{% if specimen.quantity == 1 %}Piece{% else %}Pieces{% endif %}</span>
           <span class="sc-bar" aria-hidden="true"><i style="--w: {{ specimen.quantity | times: 1.0 | divided_by: 5.0 | at_most: 1.0 }};"></i></span>
         </div>
-        <div class="stat-cell">
+        <div class="stat-cell value-item">
           <span class="sc-value">{% if specimen.price > 0 %}€{{ specimen.price }}{% else %}<span class="dash">—</span>{% endif %}</span>
           <span class="sc-label">Paid</span>
           <span class="sc-bar" aria-hidden="true"><i style="--w: {{ specimen.price | times: 1.0 | divided_by: 100.0 | at_most: 1.0 }};"></i></span>

@@ -137,6 +137,14 @@ title: Home
     </button>
     <div class="sys-container">
       <span class="sys-status"><i></i>SYSTEM ONLINE</span>
+      <button class="sys-values-toggle" id="valuesToggle" type="button" data-state="visible"
+              title="Toggle price / value visibility">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        <span>VALUES ON</span>
+      </button>
       <a href="/admin/" class="sys-admin-link" aria-hidden="true" tabindex="-1">ADMIN</a>
     </div>
   </header>
@@ -167,7 +175,7 @@ title: Home
         <span class="stat-num"><span data-count="{{ total_kg }}">{{ total_kg }}</span><small>kg</small></span>
         <span class="stat-label">Weight</span>
       </a>
-      <a class="stat" style="--i:4; --c:#C9A227" href="/collection/?sort=10:desc">
+      <a class="stat value-item" style="--i:4; --c:#C9A227" href="/collection/?sort=10:desc">
         <span class="stat-num">€<span data-count="{{ total_spent }}">{{ total_spent }}</span></span>
         <span class="stat-label">Invested</span>
       </a>

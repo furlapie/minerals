@@ -140,3 +140,32 @@ main {
     .theme-toggle { flex-shrink: 0; flex-basis: 32px; width: 32px; height: 32px; }
     .theme-toggle svg { width: 20px; height: 20px; }
 }
+
+/* Value / price visibility toggle */
+html.values-hidden .value-item,
+html.values-hidden .value-col,
+html.values-hidden .price-cell {
+  display: none !important;
+}
+
+/* Toggle button — matches the sys-* HUD style */
+.sys-values-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: inherit;
+  background: transparent;
+  border: 1px solid currentColor;
+  padding: 0.3em 0.65em;
+  border-radius: 2px;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+}
+.sys-values-toggle:hover { opacity: 1; }
+.sys-values-toggle[data-state="hidden"] { opacity: 0.4; }
+.sys-values-toggle svg { width: 0.95em; height: 0.95em; }

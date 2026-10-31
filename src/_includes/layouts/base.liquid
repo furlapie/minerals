@@ -12,6 +12,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title }} · My Collection</title>
 
+  <script>
+  (function(){
+    try {
+      // Default = hidden. Set to 'visible' to show values.
+      if (localStorage.getItem('minerals-values') !== 'visible') {
+        document.documentElement.classList.add('values-hidden');
+      }
+    } catch(e) {}
+  })();
+  </script>
+
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/assets/favicon.ico" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
